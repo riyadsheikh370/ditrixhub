@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>newsGrid</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <style>
+    :root {
+      --primary-color: #db2525;
+      --secondary-color: #052278;
+    }
+    .shape {
+      background: var(--primary-color);
+      border-radius: 4px;
+    }
+
+    .shape::before,
+    .shape::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 30px;
+      height: 100%;
+      background: var(--primary-color);
+
+      transition: clip-path 0.3s;
+      clip-path: polygon(100% 0, 0 50%, 100% 100%);
+    }
+
+    .shape::before {
+      right: -28px;
+      transform: scaleX(-1);
+      border-radius: 8px 0 0 8px;
+    }
+
+    .shape::after {
+      left: -28px;
+      border-radius: 8px 0 0 8px;
+    }
+
+    .card:hover .shape::before {
+      clip-path: polygon(100% 0, 0 80%, 100% 100%);
+    }
+
+    .card:hover .shape::after {
+      clip-path: polygon(100% 0, 0 20%, 100% 100%);
+    }
+  </style>
+  <body>
+    <!-- navbar start  -->
+    <!-- Top Info Bar -->
+    <div class="hidden lg:block w-full bg-white border-b text-sm">
+      <div
+        class="max-w-11/12 mx-auto flex justify-between items-center px-6 py-2"
+      >
+        <div class="flex flex-wrap items-center gap-6 text-gray-700">
+          <div class="flex items-center gap-2">
+            <i class="bi bi-geo-alt text-red-600"></i>
+            <span>Boshila, Mohammadpur, Dhaka</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <i class="bi bi-clock text-red-600"></i>
+            <span>Sat - Thu: 09.00am - 10.00pm</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <i class="bi bi-envelope text-red-600"></i>
+            <span>fahimadiptywork@gmail.com</span>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-4">
+          <div class="flex items-center gap-1">
+            <a href="#" class="bg-red-600 text-white px-2 py-1 rounded-sm"
+              ><i class="bi bi-x"></i
+            ></a>
+            <a href="#" class="bg-red-600 text-white px-2 py-1 rounded-sm"
+              ><i class="bi bi-facebook"></i
+            ></a>
+            <a href="#" class="bg-red-600 text-white px-2 py-1 rounded-sm"
+              ><i class="bi bi-pinterest"></i
+            ></a>
+            <a href="#" class="bg-red-600 text-white px-2 py-1 rounded-sm"
+              ><i class="bi bi-instagram"></i
+            ></a>
+          </div>
+          <a
+            href="termsandcondition.html"
+            class="text-gray-600 hover:text-red-600"
+            >Privacy & Policy</a
+          >
+          <a href="#" class="text-gray-600 hover:text-red-600">FAQ’S</a>
+          <a href="login.html" class="text-gray-600 hover:text-red-600"
+            >Login</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Navbar -->
+    <nav
+      id="mainNav"
+      class="w-full bg-white shadow-sm transition-all duration-500 z-50"
+    >
+      <div
+        class="max-w-11/12 mx-auto flex justify-between items-center px-6 md:px-6 h-20"
+      >
+        <!--  Logo -->
+
+        <div class="bg-white flex items-center px-4 py-2 -ml-8">
+          <a href="index.html">
+            <img
+              src="assets/ditrixitlogo.png"
+              alt="DitrixitHub company logo"
+              class="h-16 object-contain cursor-pointer"
+            />
+          </a>
+        </div>
+
+        <!-- Desktop Menu -->
+        <ul class="hidden md:flex items-center gap-8 font-medium">
+          <li class="relative group">
+            <a href="aboutus.html" class="nav-link">About Us+</a>
+            <span
+              class="absolute left-0 bottom-0 w-0 h-[2px] bg-red-600 transition-all duration-300 group-hover:w-full"
+            ></span>
+          </li>
+
+          <li class="relative group">
+            <a
+              href="servicedetails.html"
+              class="nav-link flex items-center gap-1"
+            >
+              Services +
+            </a>
+            <span
+              class="absolute left-0 bottom-0 w-0 h-[2px] bg-red-600 transition-all duration-300 group-hover:w-full"
+            ></span>
+
+            <ul
+              class="absolute left-0 top-full hidden group-hover:block bg-white shadow-lg rounded-lg py-2 w-64 h-[43rem] text-gray-700 z-50 overflow-y-scroll [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+            >
+              <li>
+                <a
+                  href="servicedetails.html"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                >
+                  Custom Software Development
+                </a>
+              </li>
+              <li>
+                <a
+                  href="servicedetails.html"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                >
+                  Consulting Software Projects
+                </a>
+              </li>
+              <li>
+                <a
+                  href="servicedetails.html"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                >
+                  Education Platform Development
+                </a>
+              </li>
+              <li>
+                <a
+                  href="servicedetails.html"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                >
+                  OTT Platform Development
+                </a>
+              </li>
+              <li>
+                <a
+                  href="servicedetails.html"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                >
+                  Web and Mobile App Development
+                </a>
+              </li>
+              <li>
+                <a
+                  href="servicedetails.html"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                >
+                  Android & iOS App Development
+                </a>
+              </li>
+              <li>
+                <a
+                  href="servicedetails.html"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                >
+                  Framework & Application Development
+                </a>
+              </li>
+              <li>
+                <a
+                  href="servicedetails.html"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                >
+                  E-commerce Solution
+                </a>
+              </li>
+              <li>
+                <a
+                  href="servicedetails.html"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                >
+                  ERP Solution
+                </a>
+              </li>
+              <li>
+                <a
+                  href="servicedetails.html"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                >
+                  Hospital Management Software
+                </a>
+              </li>
+              <li>
+                <a
+                  href="servicedetails.html"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                >
+                  Pharmacy Management Software
+                </a>
+              </li>
+              <li>
+                <a
+                  href="servicedetails.html"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                >
+                  Restaurant Management Software
+                </a>
+              </li>
+              <li>
+                <a
+                  href="servicedetails.html"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                >
+                  Real Estate Management Software
+                </a>
+              </li>
+              <li>
+                <a
+                  href="servicedetails.html"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                >
+                  Point of Sale (POS) Software
+                </a>
+              </li>
+              <li>
+                <a
+                  href="servicedetails.html"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                >
+                  HRM Software Solutions
+                </a>
+              </li>
+              <li>
+                <a
+                  href="servicedetails.html"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                >
+                  Accounts & Finance Software Solutions
+                </a>
+              </li>
+              <li>
+                <a
+                  href="servicedetails.html"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                >
+                  AI-powered Solutions
+                </a>
+              </li>
+              <li>
+                <a
+                  href="servicedetails.html"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                >
+                  CRM Solutions
+                </a>
+              </li>
+              <li>
+                <a
+                  href="servicedetails.html"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                >
+                  Classified Website Development
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="relative group">
+            <a
+              href="newsgrid.html"
+              class="nav-link inline-block relative px-2 py-1"
+            >
+              Our Team
+              <span
+                class="absolute left-0 bottom-0 w-0 h-[2px] bg-red-600 transition-all duration-300 group-hover:w-full"
+              ></span>
+            </a>
+          </li>
+
+          <li class="relative group">
+            <a
+              href="contactus.html"
+              class="nav-link inline-block relative px-2 py-1"
+            >
+              Contact +
+              <span
+                class="absolute left-0 bottom-0 w-0 h-[2px] bg-red-600 transition-all duration-300 group-hover:w-full"
+              ></span>
+            </a>
+          </li>
+        </ul>
+
+        <!-- Right Side Icons -->
+        <div class="flex items-center gap-4">
+          <div
+            class="hidden md:flex items-center bg-gray-100 rounded-full px-4 py-1"
+          >
+            <i class="bi bi-headphones text-red-600 text-xl mr-2"></i>
+            <div>
+              <p class="text-xs text-gray-500 leading-none">Call Us Now</p>
+              <p class="text-sm font-semibold text-gray-800">+8801730974804</p>
+            </div>
+          </div>
+
+          <i
+            class="bi bi-search text-xl text-gray-700 hover:text-red-600 cursor-pointer"
+          ></i>
+
+          <div class="relative cursor-pointer">
+            <i class="bi bi-cart2 text-xl text-gray-700 hover:text-red-600"></i>
+            <span
+              class="absolute -top-2 -right-2 bg-red-600 text-white text-xs px-1 rounded-full"
+              >0</span
+            >
+          </div>
+
+          <!-- Hamburger -->
+          <button
+            id="menu-btn"
+            class="block md:hidden text-2xl text-gray-700 hover:text-red-600"
+          >
+            <i class="bi bi-list"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="fixed inset-0 z-50 hidden md:hidden bg-black bg-opacity-95 overflow-y-auto"
+      >
+        <div class="flex flex-col text-white font-medium min-h-screen">
+          <!-- Top: Close Button and Logo -->
+          <div
+            class="flex items-center justify-between px-6 py-4 border-b border-gray-700"
+          >
+            <!-- Logo -->
+            <a href="index.html">
+              <img
+                src="assets/ditrixitlogo.png"
+                alt="Company Logo"
+                class="h-16 object-contain"
+              />
+            </a>
+            <!-- Close Button -->
+            <button
+              id="mobile-menu-close"
+              class="text-white text-3xl hover:text-red-500"
+            >
+              <i class="bi bi-x-lg"></i>
+            </button>
+          </div>
+
+          <!-- Navigation Links -->
+          <ul
+            class="flex flex-col w-full text-white font-medium border-b border-gray-700"
+          >
+            <li class="px-6 py-3 border-b border-gray-700">
+              <a href="aboutus.html">About Us</a>
+            </li>
+
+            <!-- Services Dropdown -->
+            <li class="px-6 py-3 border-b border-gray-700 relative">
+              <button
+                id="services-toggle"
+                class="w-full text-left flex items-center justify-between"
+              >
+                Services <i class="bi bi-plus-lg"></i>
+              </button>
+              <ul id="services-list" class="hidden mt-2 ml-4 text-sm space-y-1">
+                <li class="px-6 py-3 border-b border-gray-700">
+                  <a href="servicedetails.html" class="hover:text-red-500"
+                    >Software & App Development</a
+                  >
+                </li>
+                <li class="px-6 py-3 border-b border-gray-700">
+                  <a href="servicedetails.html" class="hover:text-red-500"
+                    >Consulting Software Projects</a
+                  >
+                </li>
+                <li class="px-6 py-3 border-b border-gray-700">
+                  <a href="servicedetails.html" class="hover:text-red-500"
+                    >Education Platform Development</a
+                  >
+                </li>
+                <li class="px-6 py-3 border-b border-gray-700">
+                  <a href="servicedetails.html" class="hover:text-red-500"
+                    >OTT Platform Development
+                  </a>
+                </li>
+                <li class="px-6 py-3 border-b border-gray-700">
+                  <a href="servicedetails.html" class="hover:text-red-500"
+                    >Web and Mobile App Development</a
+                  >
+                </li>
+                <li class="px-6 py-3 border-b border-gray-700">
+                  <a href="servicedetails.html" class="hover:text-red-500"
+                    >Android & iOS App Development
+                  </a>
+                </li>
+                <li class="px-6 py-3 border-b border-gray-700">
+                  <a href="servicedetails.html" class="hover:text-red-500"
+                    >Framework & Application Development
+                  </a>
+                </li>
+                <li class="px-6 py-3 border-b border-gray-700">
+                  <a href="servicedetails.html" class="hover:text-red-500"
+                    >E-commerce Solution</a
+                  >
+                </li>
+                <li class="px-6 py-3 border-b border-gray-700">
+                  <a href="servicedetails.html" class="hover:text-red-500"
+                    >ERP Solution</a
+                  >
+                </li>
+                <li class="px-6 py-3 border-b border-gray-700">
+                  <a href="servicedetails.html" class="hover:text-red-500"
+                    >Hospital Management Software</a
+                  >
+                </li>
+                <li class="px-6 py-3 border-b border-gray-700">
+                  <a href="servicedetails.html" class="hover:text-red-500"
+                    >Pharmacy Management Software</a
+                  >
+                </li>
+                <li class="px-6 py-3 border-b border-gray-700">
+                  <a href="servicedetails.html" class="hover:text-red-500"
+                    >Restaurant Management Software</a
+                  >
+                </li>
+                <li class="px-6 py-3 border-b border-gray-700">
+                  <a href="servicedetails.html" class="hover:text-red-500"
+                    >Real Estate Management Software</a
+                  >
+                </li>
+                <li class="px-6 py-3 border-b border-gray-700">
+                  <a href="servicedetails.html" class="hover:text-red-500"
+                    >Point of Sale (POS) Software</a
+                  >
+                </li>
+                <li class="px-6 py-3 border-b border-gray-700">
+                  <a href="servicedetails.html" class="hover:text-red-500"
+                    >HRM Software Solutions</a
+                  >
+                </li>
+                <li class="px-6 py-3 border-b border-gray-700">
+                  <a href="servicedetails.html" class="hover:text-red-500"
+                    >Accounts & Finance Software Solutions</a
+                  >
+                </li>
+                <li class="px-6 py-3 border-b border-gray-700">
+                  <a href="servicedetails.html" class="hover:text-red-500"
+                    >AI-powered Solutions</a
+                  >
+                </li>
+                <li class="px-6 py-3 border-b border-gray-700">
+                  <a href="servicedetails.html" class="hover:text-red-500"
+                    >CRM Solutions</a
+                  >
+                </li>
+                <li class="px-6 py-3 border-b border-gray-700">
+                  <a href="servicedetails.html" class="hover:text-red-500"
+                    >Classified Website Development</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li class="px-6 py-3 border-b border-gray-700">
+              <a href="newsgrid.html">Our Team</a>
+            </li>
+            <li class="px-6 py-3 border-b border-gray-700">
+              <a href="contactus.html">Contact</a>
+            </li>
+          </ul>
+
+          <!-- Contact Info -->
+          <div class="flex flex-col space-y-4 text-white px-6 py-4">
+            <!-- Phone -->
+            <div class="flex items-center gap-2">
+              <i class="bi bi-telephone-fill text-red-500"></i>
+              <span>+88012345678</span>
+            </div>
+
+            <!-- Email -->
+            <div class="flex items-start gap-2">
+              <i class="bi bi-envelope-fill text-red-500 mt-1"></i>
+              <div class="flex flex-col leading-tight">
+                <span>Send Mail</span>
+                <span class="text-gray-400 text-sm"
+                  >fahimadiptywork@gmail.com</span
+                >
+              </div>
+            </div>
+
+            <!-- Timing -->
+            <div class="flex items-start gap-2">
+              <i class="bi bi-clock-fill text-red-500 mt-1"></i>
+              <div class="flex flex-col leading-tight">
+                <span>Timing</span>
+                <span class="text-gray-400 text-sm">Mon–Sat: 8:00 – 6:30</span>
+                <span class="text-gray-400 text-sm">Sunday – Closed</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social Icons -->
+          <div class="flex gap-4 text-xl px-6 py-4">
+            <a href="#" class="hover:text-red-500"
+              ><i class="bi bi-twitter"></i
+            ></a>
+            <a href="#" class="hover:text-red-500"
+              ><i class="bi bi-facebook"></i
+            ></a>
+            <a href="#" class="hover:text-red-500"
+              ><i class="bi bi-pinterest"></i
+            ></a>
+            <a href="#" class="hover:text-red-500"
+              ><i class="bi bi-instagram"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- navbar end  -->
+
+    <!-- background section start -->
+    <section
+      class="relative h-[260px] bg-cover bg-center flex items-center justify-center"
+      style="background-image: url('assets/background/page-title.jpg')"
+    >
+      <div class="absolute inset-0 bg-black/60"></div>
+      <div class="relative text-center text-white">
+        <h1 class="text-5xl font-bold mb-3">Team Member</h1>
+        <p class="text-sm">
+          <a href="index.html" class="text-red-500 hover:underline">Home</a>
+          /News
+        </p>
+      </div>
+    </section>
+    <!-- background section start -->
+
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-800">
+            The People Behind Our Success
+          </h2>
+          <p class="text-gray-500 mt-2">
+            A talent group of individuals to excellence and innovation
+          </p>
+        </div>
+
+        <!-- team Cards -->
+        <div class="md:px-4 xl:px-8 text-white">
+          <div
+            class="flex flex-col items-center shape relative py-3 px-6 mb-12 mx-6 w-fit"
+          >
+            <h3 class="text-lg font-bold">Board of Director</h3>
+          </div>
+          <div
+            class="flex gap-x-4 items-center justify-center md:justify-start"
+          >
+            <!--- card 1 --->
+            <div
+              class="card group rounded-[0.5rem] transition-all duration-500 2xl:place-self-start p-2 w-[22rem] h-[24rem] flex flex-col items-center gap-y-4 shadow-xl hover:shadow-sm bg-gradient-to-b from-[var(--primary-color)] to-white hover:bg-none hover:bg-white ease-out"
+            >
+              <div
+                class="rounded-[0.2rem] self-end mr-4 mt-1 text-xs font-semibold border border-white/30 bg-[var(--primary-color)]/20 group-hover:text-black group-hover:border-black/30 backdrop-blur-md shadow-sm px-1.5 py-0.5"
+              >
+                Active
+              </div>
+              <div
+                class="w-[6rem] h-[6rem] rounded-full shadow-[0_0_25px_5px_var(--primary-color)] mt-2"
+              >
+                <div
+                  class="w-full h-full rounded-full bg-[var(--primary-color)] p-0.5"
+                >
+                  <img
+                    src="assets/fahimaMam.jpeg"
+                    alt=""
+                    class="w-full h-full rounded-full object-cover"
+                  />
+                </div>
+              </div>
+              <div
+                class="flex flex-col items-center shape relative py-2 px-6 mt-12 text-white"
+              >
+                <h2 class="text-xl font-semibold">Fahima Dipty</h2>
+                <p class="text-sm font-semibold">COO</p>
+              </div>
+              <div class="text-center px-4 text-black">
+                <p class="text-sm font-semibold">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad,
+                  unde?
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="md:px-4 xl:px-8 text-white mt-16">
+          <div
+            class="flex flex-col items-center shape relative py-3 px-6 mb-12 mx-6 w-fit"
+          >
+            <h3 class="text-lg font-bold">Member</h3>
+          </div>
+          <div
+            class="flex gap-6 items-center justify-center md:justify-start flex-wrap"
+          >
+            <!--- card 1 --->
+            <div
+              class="card group rounded-[0.5rem] transition-all duration-500 2xl:place-self-start p-2 w-[22rem] h-[24rem] flex flex-col items-center gap-y-4 shadow-xl hover:shadow-sm bg-gradient-to-b from-[var(--primary-color)] to-white hover:bg-none hover:bg-white ease-out"
+            >
+              <div
+                class="rounded-[0.2rem] self-end mr-4 mt-1 text-xs font-semibold border border-white/30 bg-[var(--primary-color)]/20 group-hover:text-black group-hover:border-black/30 backdrop-blur-md shadow-sm px-1.5 py-0.5"
+              >
+                Active
+              </div>
+              <div
+                class="w-[6rem] h-[6rem] rounded-full shadow-[0_0_25px_5px_var(--primary-color)] mt-2"
+              >
+                <div
+                  class="w-full h-full rounded-full bg-[var(--primary-color)] p-0.5"
+                >
+                  <img
+                    src="assets/cardImage/testimonial-1.jpg"
+                    alt=""
+                    class="w-full h-full rounded-full object-cover"
+                  />
+                </div>
+              </div>
+              <div
+                class="flex flex-col items-center shape relative py-2 px-6 mt-12 text-white"
+              >
+                <h2 class="text-xl font-semibold">Jhon Doe</h2>
+                <p class="text-sm font-semibold">CEO</p>
+              </div>
+            </div>
+            <!--- card 2 --->
+            <div
+              class="card group rounded-[0.5rem] transition-all duration-500 2xl:place-self-start p-2 w-[22rem] h-[24rem] flex flex-col items-center gap-y-4 shadow-xl hover:shadow-sm bg-gradient-to-b from-[var(--primary-color)] to-white hover:bg-none hover:bg-white ease-out"
+            >
+              <div
+                class="rounded-[0.2rem] self-end mr-4 mt-1 text-xs font-semibold border border-white/30 bg-[var(--primary-color)]/20 group-hover:text-black group-hover:border-black/30 backdrop-blur-md shadow-sm px-1.5 py-0.5"
+              >
+                Active
+              </div>
+              <div
+                class="w-[6rem] h-[6rem] rounded-full shadow-[0_0_25px_5px_var(--primary-color)] mt-2"
+              >
+                <div
+                  class="w-full h-full rounded-full bg-[var(--primary-color)] p-0.5"
+                >
+                  <img
+                    src="assets/cardImage/testimonial-2.jpg"
+                    alt=""
+                    class="w-full h-full rounded-full object-cover"
+                  />
+                </div>
+              </div>
+              <div
+                class="flex flex-col items-center shape relative py-2 px-6 mt-12 text-white"
+              >
+                <h2 class="text-xl font-semibold">Thomas Fay</h2>
+                <p class="text-sm font-semibold">IT Consultant</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- scroll to top start  -->
+    <button
+      id="scrollToTopBtn"
+      class="fixed bottom-6 right-6 bg-red-600 hover:bg-black text-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg transition-all duration-300 z-50"
+      aria-label="Scroll to top"
+      style="
+        display: none;
+        opacity: 0;
+        transform: translateY(12px);
+        transition: opacity 250ms ease, transform 250ms ease,
+          background-color 150ms;
+      "
+    >
+      <i class="bi bi-caret-up-fill text-2xl"></i>
+    </button>
+
+    <!-- scroll to top end  -->
+
+    <!-- footer section  start -->
+
+    <footer class="bg-[#0d0d10] text-gray-300">
+      <div
+        class="border-b border-gray-700 flex flex-col md:flex-row justify-between items-center px-6 md:px-16 py-6 gap-4"
+      >
+        <div class="flex items-center gap-4">
+          <img
+            src="assets/ditrixitlogo.png"
+            alt="DitrixitHub Logo"
+            class="w-44"
+          />
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-6">
+          <div
+            class="flex items-center gap-3 bg-[#0d0d10] px-4 py-3 rounded-lg"
+          >
+            <div
+              class="bg-red-600 p-3 rounded-md flex items-center justify-center"
+            >
+              <i class="bi bi-telephone-fill"></i>
+            </div>
+
+            <div>
+              <p class="text-sm text-gray-300">Call Us On</p>
+              <p class="font-semibold text-white">
+                <a href="https://wa.me/8801730974804" target="_blank" class="">
+                  +8801730974804</a
+                >
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="flex items-center gap-3 bg-[#0d0d10] px-4 py-3 rounded-lg"
+          >
+            <div
+              class="bg-red-600 p-3 rounded-md flex items-center justify-center"
+            >
+              <i class="bi bi-envelope-fill text-white text-xl"></i>
+            </div>
+
+            <div>
+              <p class="text-sm text-gray-300">Mail to Us</p>
+              <p class="font-semibold text-white">info@dtrixithub.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Footer -->
+      <div
+        class="px-6 md:px-16 py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 relative"
+      >
+        <div>
+          <h3 class="text-lg font-semibold text-white mb-3">About Us</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-4">
+            To get started with us, please go over all of our internet plans and
+            other plans to let our operators.
+          </p>
+          <div class="flex gap-3">
+            <a
+              href="#"
+              class="w-8 h-8 flex items-center justify-center bg-gray-800 hover:bg-red-600 rounded-full"
+            >
+              <i class="bi bi-facebook"></i>
+            </a>
+            <a
+              href="#"
+              class="w-8 h-8 flex items-center justify-center bg-gray-800 hover:bg-red-600 rounded-full"
+            >
+              <i class="bi bi-twitter-x"></i>
+            </a>
+            <a
+              href="#"
+              class="w-8 h-8 flex items-center justify-center bg-gray-800 hover:bg-red-600 rounded-full"
+            >
+              <i class="bi bi-linkedin"></i>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-semibold text-white mb-3">Useful Links</h3>
+          <ul class="space-y-2 text-sm">
+            <li>
+              <a href="aboutus.html" class="hover:text-red-500 transition"
+                >› About Us</a
+              >
+            </li>
+            <li>
+              <a
+                href="servicedetails.html"
+                class="hover:text-red-500 transition"
+                >› Our Services</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-red-500 transition"
+                >› Our Clients</a
+              >
+            </li>
+            <li>
+              <a href="teammembers.html" class="hover:text-red-500 transition"
+                >› Our Team</a
+              >
+            </li>
+            <li>
+              <a href="newsdetails.html" class="hover:text-red-500 transition"
+                >› News & Media</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Services  -->
+        <div>
+          <h3 class="text-lg font-semibold text-white mb-3">Services</h3>
+          <ul class="space-y-2 text-sm">
+            <li>
+              <a
+                href="servicedetails.html"
+                class="hover:text-red-500 transition"
+                >› Software & App Development</a
+              >
+            </li>
+            <li>
+              <a
+                href="servicedetails.html"
+                class="hover:text-red-500 transition"
+                >› Consulting Software Projects</a
+              >
+            </li>
+            <li>
+              <a
+                href="servicedetails.html"
+                class="hover:text-red-500 transition"
+                >› Education Platform Development</a
+              >
+            </li>
+            <li>
+              <a
+                href="servicedetails.html"
+                class="hover:text-red-500 transition"
+                >› OTT Platform Development</a
+              >
+            </li>
+            <li>
+              <a
+                href="servicedetails.html"
+                class="hover:text-red-500 transition"
+                >› Web & Mobile App Development</a
+              >
+            </li>
+
+            <!--- hidden list --->
+            <div id="moreItems" class="hidden">
+              <li>
+                <a
+                  href="servicedetails.html"
+                  class="hover:text-red-500 transition"
+                  >› Android & iOS App Development</a
+                >
+              </li>
+              <li class="mt-2">
+                <a
+                  href="servicedetails.html"
+                  class="hover:text-red-500 transition"
+                  >› Framework & Application Development</a
+                >
+              </li>
+              <li class="mt-2">
+                <a
+                  href="servicedetails.html"
+                  class="hover:text-red-500 transition"
+                  >› E-commerce Solutions</a
+                >
+              </li>
+              <li class="mt-2">
+                <a
+                  href="servicedetails.html"
+                  class="hover:text-red-500 transition"
+                  >› ERP Solutions</a
+                >
+              </li>
+              <li class="mt-2">
+                <a
+                  href="servicedetails.html"
+                  class="hover:text-red-500 transition"
+                  >› Hospital Management Software</a
+                >
+              </li>
+              <li class="mt-2">
+                <a
+                  href="servicedetails.html"
+                  class="hover:text-red-500 transition"
+                  >› Pharmacy Management Software</a
+                >
+              </li>
+              <li class="mt-2">
+                <a
+                  href="servicedetails.html"
+                  class="hover:text-red-500 transition"
+                  >› Restaurant Management Software</a
+                >
+              </li>
+              <li class="mt-2">
+                <a
+                  href="servicedetails.html"
+                  class="hover:text-red-500 transition"
+                  >› Real Estate Management Software</a
+                >
+              </li>
+              <li class="mt-2">
+                <a
+                  href="servicedetails.html"
+                  class="hover:text-red-500 transition"
+                  >› Point of Sale (POS) Software</a
+                >
+              </li>
+              <li class="mt-2">
+                <a
+                  href="servicedetails.html"
+                  class="hover:text-red-500 transition"
+                  >› HRM Software Solutions</a
+                >
+              </li>
+              <li class="mt-2">
+                <a
+                  href="servicedetails.html"
+                  class="hover:text-red-500 transition"
+                  >› Accounts & Finance Software Solutions</a
+                >
+              </li>
+              <li class="mt-2">
+                <a
+                  href="servicedetails.html"
+                  class="hover:text-red-500 transition"
+                  >› AI-Powered Solutions</a
+                >
+              </li>
+              <li class="mt-2">
+                <a
+                  href="servicedetails.html"
+                  class="hover:text-red-500 transition"
+                  >› CRM Solutions</a
+                >
+              </li>
+              <li class="mt-2">
+                <a
+                  href="servicedetails.html"
+                  class="hover:text-red-500 transition"
+                  >› Classified Website Development</a
+                >
+              </li>
+            </div>
+          </ul>
+          <button
+            id="toggleBtn"
+            class="text-red-500 text-sm mt-2 hover:underline"
+          >
+            See More...
+          </button>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-semibold text-white mb-3">Newsletter</h3>
+          <p class="text-gray-400 text-sm mb-4">
+            Sign up for alerts, our latest blogs, thoughts, and insights.
+          </p>
+          <div class="flex">
+            <input
+              type="email"
+              placeholder="Your Email"
+              class="w-full px-3 py-2 text-gray-900 rounded-l-md focus:outline-none"
+            />
+            <button
+              class="bg-red-600 hover:bg-red-700 px-4 rounded-r-md text-white"
+            >
+              <i class="bi bi-send-fill"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="border-t border-gray-700 py-4 text-center text-sm text-gray-500"
+      >
+        © Copyrights reserved by <span class="text-red-500">Rafusoft</span>
+      </div>
+    </footer>
+    <!-- footer section  end -->
+
+    <script>
+      // Sticky Navbar
+      const navbar = document.getElementById("mainNav");
+      let lastScrollY = window.scrollY;
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 100) {
+          navbar.classList.add("fixed", "top-0", "shadow-md");
+        } else {
+          navbar.classList.remove("fixed", "top-0", "shadow-md");
+        }
+      });
+
+      // Hamburger Menu
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      // Mobile Services Toggle
+      const servicesToggle = document.getElementById("services-toggle");
+      const servicesList = document.getElementById("services-list");
+      servicesToggle.addEventListener("click", () => {
+        servicesList.classList.toggle("hidden");
+      });
+
+      // Mobile menu close
+      document
+        .getElementById("mobile-menu-close")
+        .addEventListener("click", () => {
+          document.getElementById("mobile-menu").classList.add("hidden");
+        });
+
+      // Mobile menu close
+      document
+        .getElementById("mobile-menu-close")
+        .addEventListener("click", () => {
+          document.getElementById("mobile-menu").classList.add("hidden");
+        });
+
+      //footer service see more
+      const moreItems = document.getElementById("moreItems");
+      const toggleBtn = document.getElementById("toggleBtn");
+
+      toggleBtn.addEventListener("click", () => {
+        if (moreItems.classList.contains("hidden")) {
+          moreItems.classList.remove("hidden");
+          toggleBtn.textContent = "See Less...";
+        } else {
+          moreItems.classList.add("hidden");
+          toggleBtn.textContent = "See More...";
+        }
+      });
+    </script>
+
+    <!-- scroll to top start  -->
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const btn = document.getElementById("scrollToTopBtn");
+
+        function toggleScrollBtn() {
+          if (window.scrollY > 200) {
+            btn.style.display = "block";
+
+            requestAnimationFrame(() => {
+              btn.style.opacity = "1";
+              btn.style.transform = "translateY(0)";
+              btn.style.pointerEvents = "auto";
+            });
+          } else {
+            btn.style.opacity = "0";
+            btn.style.transform = "translateY(12px)";
+            btn.style.pointerEvents = "none";
+
+            setTimeout(() => {
+              if (btn.style.opacity === "0") btn.style.display = "none";
+            }, 260);
+          }
+        }
+
+        toggleScrollBtn();
+
+        window.addEventListener("scroll", toggleScrollBtn, { passive: true });
+
+        btn.addEventListener("click", () => {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+      });
+    </script>
+    <!-- scroll to top end  -->
+  </body>
+</html>

@@ -1,0 +1,1967 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Service details</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Bootstrap Icons CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    />
+
+    <!-- navbar style start   -->
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      .services {
+        scroll-margin-top: 7rem;
+      }
+      @media (min-width: 768px) and (max-width: 900px) {
+        #mainNav {
+          font-size: 14px;
+          /* padding: 0.5rem 1rem;  */
+          gap: 0.5rem;
+        }
+      }
+    </style>
+    <!-- navbar style end   -->
+  </head>
+  <body>
+    <!-- navbar start  -->
+
+    <!-- Top Info Bar -->
+    <div class="hidden lg:block w-full bg-white border-b text-sm">
+      <div
+        class="max-w-11/12 mx-auto flex justify-between items-center px-6 py-2"
+      >
+        <div class="flex flex-wrap items-center gap-6 text-gray-700">
+          <div class="flex items-center gap-2">
+            <i class="bi bi-geo-alt text-red-600"></i>
+            <span>Boshila, Mohammadpur, Dhaka</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <i class="bi bi-clock text-red-600"></i>
+            <span>Sat - Thu: 09.00am - 10.00pm</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <i class="bi bi-envelope text-red-600"></i>
+            <span>fahimadiptywork@gmail.com</span>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-4">
+          <div class="flex items-center gap-1">
+            <a href="#" class="bg-red-600 text-white px-2 py-1 rounded-sm"
+              ><i class="bi bi-x"></i
+            ></a>
+            <a href="#" class="bg-red-600 text-white px-2 py-1 rounded-sm"
+              ><i class="bi bi-facebook"></i
+            ></a>
+            <a href="#" class="bg-red-600 text-white px-2 py-1 rounded-sm"
+              ><i class="bi bi-pinterest"></i
+            ></a>
+            <a href="#" class="bg-red-600 text-white px-2 py-1 rounded-sm"
+              ><i class="bi bi-instagram"></i
+            ></a>
+          </div>
+          <a
+            href="termsandcondition.html"
+            class="text-gray-600 hover:text-red-600"
+            >Privacy & Policy</a
+          >
+          <a href="#" class="text-gray-600 hover:text-red-600">FAQ’S</a>
+          <a href="login.html" class="text-gray-600 hover:text-red-600"
+            >Login</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Navbar -->
+    <nav
+      id="mainNav"
+      class="w-full bg-white shadow-sm transition-all duration-500 z-50"
+    >
+      <div
+        class="max-w-11/12 mx-auto flex justify-between items-center px-6 md:px-6 h-20"
+      >
+        <!--  Logo -->
+
+        <div class="bg-white flex items-center px-4 py-2 -ml-8">
+          <a href="index.html">
+            <img
+              src="assets/ditrixitlogo.png"
+              alt="DitrixitHub company logo"
+              class="h-16 object-contain cursor-pointer"
+            />
+          </a>
+        </div>
+
+        <!-- Desktop Menu -->
+        <ul class="hidden md:flex items-center gap-8 font-medium">
+          <li class="relative group">
+            <a href="aboutus.html" class="nav-link">About Us+</a>
+            <span
+              class="absolute left-0 bottom-0 w-0 h-[2px] bg-red-600 transition-all duration-300 group-hover:w-full"
+            ></span>
+          </li>
+
+          <li class="relative group">
+            <a href="#" class="nav-link flex items-center gap-1">
+              Services +
+            </a>
+            <span
+              class="absolute left-0 bottom-0 w-0 h-[2px] bg-red-600 transition-all duration-300 group-hover:w-full"
+            ></span>
+
+            <ul
+              class="absolute left-0 top-full hidden group-hover:block bg-white shadow-lg rounded-lg py-2 w-64 h-[43rem] text-gray-700 z-50 overflow-y-scroll [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+            >
+              <li>
+                <a
+                  href="#software-app-development"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                >
+                  Custom Software Development
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#consulting-software-projects"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                >
+                  Consulting Software Projects
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#education-platform-development"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                >
+                  Education Platform Development
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#ott-platform-development"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                >
+                  OTT Platform Development
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#web-and-mobile-app-development"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                >
+                  Web and Mobile App Development
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#android-iOS-app-development"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                >
+                  Android & iOS App Development
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#framework-application-development"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                >
+                  Framework & Application Development
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#ecommerce-solution"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                >
+                  E-commerce Solution
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#erp-solution"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                >
+                  ERP Solution
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#hospital-management-software"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                >
+                  Hospital Management Software
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#pharmacy-management-software"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                >
+                  Pharmacy Management Software
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#restaurant-management-software"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                >
+                  Restaurant Management Software
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#real-estate-management-software"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                >
+                  Real Estate Management Software
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#point-of-sale-(POS)-software"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                >
+                  Point of Sale (POS) Software
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#HRM-software-solutions"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                >
+                  HRM Software Solutions
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#accounts-finance-software-solutions"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                >
+                  Accounts & Finance Software Solutions
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#ai-powered-solutions"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                >
+                  AI-powered Solutions
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#CRM-solutions"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                >
+                  CRM Solutions
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#classified-website-development"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                >
+                  Classified Website Development
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="relative group">
+            <a
+              href="newsgrid.html"
+              class="nav-link inline-block relative px-2 py-1"
+            >
+              Our Team
+              <span
+                class="absolute left-0 bottom-0 w-0 h-[2px] bg-red-600 transition-all duration-300 group-hover:w-full"
+              ></span>
+            </a>
+          </li>
+
+          <li class="relative group">
+            <a
+              href="contactus.html"
+              class="nav-link inline-block relative px-2 py-1"
+            >
+              Contact +
+              <span
+                class="absolute left-0 bottom-0 w-0 h-[2px] bg-red-600 transition-all duration-300 group-hover:w-full"
+              ></span>
+            </a>
+          </li>
+        </ul>
+
+        <!-- Right Side Icons -->
+        <div class="flex items-center gap-4">
+          <div
+            class="hidden md:flex items-center bg-gray-100 rounded-full px-4 py-1"
+          >
+            <i class="bi bi-headphones text-red-600 text-xl mr-2"></i>
+            <div>
+              <p class="text-xs text-gray-500 leading-none">Call Us Now</p>
+              <p class="text-sm font-semibold text-gray-800">+8801730974804</p>
+            </div>
+          </div>
+
+          <i
+            class="bi bi-search text-xl text-gray-700 hover:text-red-600 cursor-pointer"
+          ></i>
+
+          <div class="relative cursor-pointer">
+            <i class="bi bi-cart2 text-xl text-gray-700 hover:text-red-600"></i>
+            <span
+              class="absolute -top-2 -right-2 bg-red-600 text-white text-xs px-1 rounded-full"
+              >0</span
+            >
+          </div>
+
+          <!-- Hamburger -->
+          <button
+            id="menu-btn"
+            class="block md:hidden text-2xl text-gray-700 hover:text-red-600"
+          >
+            <i class="bi bi-list"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="fixed inset-0 z-50 hidden md:hidden bg-black bg-opacity-95 overflow-y-auto"
+      >
+        <div class="flex flex-col text-white font-medium min-h-screen">
+          <!-- Top: Close Button and Logo -->
+          <div
+            class="flex items-center justify-between px-6 py-4 border-b border-gray-700"
+          >
+            <!-- Logo -->
+            <a href="index.html">
+              <img
+                src="assets/ditrixitlogo.png"
+                alt="Company Logo"
+                class="h-16 object-contain"
+              />
+            </a>
+            <!-- Close Button -->
+            <button
+              id="mobile-menu-close"
+              class="text-white text-3xl hover:text-red-500"
+            >
+              <i class="bi bi-x-lg"></i>
+            </button>
+          </div>
+
+          <!-- Navigation Links -->
+          <ul
+            class="flex flex-col w-full text-white font-medium border-b border-gray-700"
+          >
+            <li class="px-6 py-3 border-b border-gray-700">
+              <a href="aboutus.html">About Us</a>
+            </li>
+
+            <!-- Services Dropdown -->
+            <li class="px-6 py-3 border-b border-gray-700 relative">
+              <button
+                id="services-toggle"
+                class="w-full text-left flex items-center justify-between"
+              >
+                Services <i class="bi bi-plus-lg"></i>
+              </button>
+              <ul id="services-list" class="hidden mt-2 ml-4 text-sm space-y-1">
+                <li class="px-6 py-3 border-b border-gray-700">
+                  <a href="#software-app-development" class="hover:text-red-500"
+                    >Software & App Development</a
+                  >
+                </li>
+                <li class="px-6 py-3 border-b border-gray-700">
+                  <a
+                    href="#consulting-software-projects"
+                    class="hover:text-red-500"
+                    >Consulting Software Projects</a
+                  >
+                </li>
+                <li class="px-6 py-3 border-b border-gray-700">
+                  <a
+                    href="#education-platform-development"
+                    class="hover:text-red-500"
+                    >Education Platform Development</a
+                  >
+                </li>
+                <li class="px-6 py-3 border-b border-gray-700">
+                  <a href="#ott-platform-development" class="hover:text-red-500"
+                    >OTT Platform Development
+                  </a>
+                </li>
+                <li class="px-6 py-3 border-b border-gray-700">
+                  <a
+                    href="#web-and-mobile-app-development"
+                    class="hover:text-red-500"
+                    >Web and Mobile App Development</a
+                  >
+                </li>
+                <li class="px-6 py-3 border-b border-gray-700">
+                  <a
+                    href="#android-iOS-app-development"
+                    class="hover:text-red-500"
+                    >Android & iOS App Development
+                  </a>
+                </li>
+                <li class="px-6 py-3 border-b border-gray-700">
+                  <a
+                    href="#framework-application-development"
+                    class="hover:text-red-500"
+                    >Framework & Application Development
+                  </a>
+                </li>
+                <li class="px-6 py-3 border-b border-gray-700">
+                  <a href="#ecommerce-solution" class="hover:text-red-500"
+                    >E-commerce Solution</a
+                  >
+                </li>
+                <li class="px-6 py-3 border-b border-gray-700">
+                  <a href="#erp-solution" class="hover:text-red-500"
+                    >ERP Solution</a
+                  >
+                </li>
+                <li class="px-6 py-3 border-b border-gray-700">
+                  <a
+                    href="#hospital-management-software"
+                    class="hover:text-red-500"
+                    >Hospital Management Software</a
+                  >
+                </li>
+                <li class="px-6 py-3 border-b border-gray-700">
+                  <a
+                    href="#pharmacy-management-software"
+                    class="hover:text-red-500"
+                    >Pharmacy Management Software</a
+                  >
+                </li>
+                <li class="px-6 py-3 border-b border-gray-700">
+                  <a
+                    href="#restaurant-management-software"
+                    class="hover:text-red-500"
+                    >Restaurant Management Software</a
+                  >
+                </li>
+                <li class="px-6 py-3 border-b border-gray-700">
+                  <a
+                    href="#real-estate-management-software"
+                    class="hover:text-red-500"
+                    >Real Estate Management Software</a
+                  >
+                </li>
+                <li class="px-6 py-3 border-b border-gray-700">
+                  <a
+                    href="#point-of-sale-(POS)-software"
+                    class="hover:text-red-500"
+                    >Point of Sale (POS) Software</a
+                  >
+                </li>
+                <li class="px-6 py-3 border-b border-gray-700">
+                  <a href="#HRM-software-solutions" class="hover:text-red-500"
+                    >HRM Software Solutions</a
+                  >
+                </li>
+                <li class="px-6 py-3 border-b border-gray-700">
+                  <a
+                    href="#accounts-finance-software-solutions"
+                    class="hover:text-red-500"
+                    >Accounts & Finance Software Solutions</a
+                  >
+                </li>
+                <li class="px-6 py-3 border-b border-gray-700">
+                  <a href="#ai-powered-solutions" class="hover:text-red-500"
+                    >AI-powered Solutions</a
+                  >
+                </li>
+                <li class="px-6 py-3 border-b border-gray-700">
+                  <a href="#CRM-solutions" class="hover:text-red-500"
+                    >CRM Solutions</a
+                  >
+                </li>
+                <li class="px-6 py-3 border-b border-gray-700">
+                  <a
+                    href="#classified-website-development"
+                    class="hover:text-red-500"
+                    >Classified Website Development</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li class="px-6 py-3 border-b border-gray-700">
+              <a href="newsgrid.html">Our Team</a>
+            </li>
+            <li class="px-6 py-3 border-b border-gray-700">
+              <a href="contactus.html">Contact</a>
+            </li>
+          </ul>
+
+          <!-- Contact Info -->
+          <div class="flex flex-col space-y-4 text-white px-6 py-4">
+            <!-- Phone -->
+            <div class="flex items-center gap-2">
+              <i class="bi bi-telephone-fill text-red-500"></i>
+              <span>+8801730974804</span>
+            </div>
+
+            <!-- Email -->
+            <div class="flex items-start gap-2">
+              <i class="bi bi-envelope-fill text-red-500 mt-1"></i>
+              <div class="flex flex-col leading-tight">
+                <span>Send Mail</span>
+                <span class="text-gray-400 text-sm">info@dtrixithub.com</span>
+              </div>
+            </div>
+
+            <!-- Timing -->
+            <div class="flex items-start gap-2">
+              <i class="bi bi-clock-fill text-red-500 mt-1"></i>
+              <div class="flex flex-col leading-tight">
+                <span>Timing</span>
+                <span class="text-gray-400 text-sm">Mon–Sat: 8:00 – 6:30</span>
+                <span class="text-gray-400 text-sm">Sunday – Closed</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social Icons -->
+          <div class="flex gap-4 text-xl px-6 py-4">
+            <a href="#" class="hover:text-red-500"
+              ><i class="bi bi-twitter"></i
+            ></a>
+            <a href="#" class="hover:text-red-500"
+              ><i class="bi bi-facebook"></i
+            ></a>
+            <a href="#" class="hover:text-red-500"
+              ><i class="bi bi-pinterest"></i
+            ></a>
+            <a href="#" class="hover:text-red-500"
+              ><i class="bi bi-instagram"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- navbar  end   -->
+
+    <!-- Hero section start -->
+
+    <section
+      class="relative h-[260px] bg-cover bg-center flex items-center justify-center"
+      style="background-image: url('assets/background/page-title.jpg')"
+    >
+      <div class="absolute inset-0 bg-black/60"></div>
+      <div class="relative text-center text-white">
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-3">
+          Services Details
+        </h1>
+        <p class="text-sm">
+          <a href="index.html" class="text-red-500 hover:underline">Home</a>
+          /Service details
+        </p>
+      </div>
+    </section>
+
+    <!-- Hero section end  -->
+
+    <!-- =====================  INTRO SECTION start ===================== -->
+
+    <section class="bg-gray-50 py-12 px-4 sm:py-16 sm:px-6 lg:px-8">
+      <div class="max-w-4xl mx-auto text-center space-y-6">
+        <!-- Main Heading -->
+        <h1
+          class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight"
+        >
+          Dtrix IT Hub – Driving Growth Through Innovative IT, Software, and
+          Professional Solutions
+        </h1>
+
+        <p
+          class="text-gray-700 text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed"
+        >
+          Dtrix IT Hub delivers cutting-edge IT, software, and professional
+          solutions designed to enhance efficiency, streamline operations, and
+          accelerate business growth. Our comprehensive services span
+          <strong>software and app development</strong>,
+          <strong>digital marketing</strong>,
+          <strong>IT infrastructure</strong>,
+          <strong>business consultancy</strong>, and
+          <strong>specialized enterprise solutions</strong>.
+        </p>
+
+        <div>
+          <button
+            class="mt-4 bg-red-600 text-white px-6 py-3 rounded-full font-semibold text-base sm:text-lg hover:bg-red-700 transition"
+          >
+            Explore Services
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================  INTRO SECTION  bend ===================== -->
+
+    <!-- service detils page start  -->
+
+    <!-- service  section start  -->
+    <!-- <section class="bg-gray-50 py-16">
+  <div class="max-w-7xl mx-auto px-6 space-y-16"> -->
+    <section class="bg-gray-50 py-16 services">
+      <div
+        class="max-w-full sm:max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16"
+      >
+        <!-- Card 1 -->
+        <div
+          class="flex flex-col md:flex-row items-center bg-white rounded-2xl shadow-lg overflow-hidden"
+        >
+          <div class="md:w-1/2">
+            <div class="aspect-[16/8] w-full overflow-hidden rounded-xl">
+              <img
+                src="assets/background/2.jpg"
+                alt="Software Development"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+          <div class="md:w-1/2 p-8">
+            <h2
+              id="software-app-development"
+              class="text-2xl font-bold text-gray-800 mb-3"
+            >
+              Software & App Development
+            </h2>
+            <h3 class="text-lg font-semibold text-gray-700 mb-2">
+              Customized Software & App Development
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Build bespoke software and apps tailored to your business,
+              optimizing operations and enhancing user experience.
+            </p>
+            <ul class="list-disc list-inside text-gray-600 mb-6 space-y-1">
+              <li>Tailored solutions for unique business needs</li>
+              <li>Scalable, secure software architecture</li>
+              <li>Mobile-friendly and responsive designs</li>
+            </ul>
+            <button
+              class="bg-red-600 text-white px-6 py-2 rounded-full hover:bg-red-700 transition"
+            >
+              Show Details
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div
+          class="flex flex-col md:flex-row-reverse items-center bg-white rounded-2xl shadow-lg overflow-hidden"
+        >
+          <div class="md:w-1/2">
+            <div class="aspect-[16/8] w-full overflow-hidden rounded-xl">
+              <img
+                src="assets/background/10.jpg"
+                alt="Software Development"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+          <div class="md:w-1/2 p-8">
+            <h2
+              id="consulting-software-projects"
+              class="text-2xl font-bold text-gray-800 mb-3"
+            >
+              Consulting Software Projects
+            </h2>
+            <p class="text-gray-600 mb-4">
+              Implement software solutions for consulting businesses, including
+              project management, workflow automation, and client reporting.
+            </p>
+            <ul class="list-disc list-inside text-gray-600 mb-6 space-y-1">
+              <li>Streamlined project and workflow management</li>
+              <li>Client-centric reporting tools</li>
+              <li>Improved operational efficiency</li>
+            </ul>
+            <button
+              class="bg-red-600 text-white px-6 py-2 rounded-full hover:bg-red-700 transition"
+            >
+              Show Details
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div
+          class="flex flex-col md:flex-row items-center bg-white rounded-2xl shadow-lg overflow-hidden"
+        >
+          <div class="md:w-1/2">
+            <div class="aspect-[16/8] w-full overflow-hidden rounded-xl">
+              <img
+                src="assets/background/12.jpg"
+                alt="Software Development"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+          <div class="md:w-1/2 p-8">
+            <h2
+              id="education-platform-development"
+              class="text-2xl font-bold text-gray-800 mb-3"
+            >
+              Education Platform Development
+            </h2>
+            <p class="text-gray-600 mb-4">
+              Design interactive LMS and education platforms for schools,
+              universities, and training centers.
+            </p>
+            <ul class="list-disc list-inside text-gray-600 mb-6 space-y-1">
+              <li>Efficient course and student management</li>
+              <li>Engaging learning experiences</li>
+              <li>Secure access for teachers and students</li>
+            </ul>
+            <button
+              class="bg-red-600 text-white px-6 py-2 rounded-full hover:bg-red-700 transition"
+            >
+              Show Details
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div
+          class="flex flex-col md:flex-row-reverse items-center bg-white rounded-2xl shadow-lg overflow-hidden"
+        >
+          <div class="md:w-1/2">
+            <div class="aspect-[16/8] w-full overflow-hidden rounded-xl">
+              <img
+                src="assets/background/2.jpg"
+                alt="Software Development"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+          <div class="md:w-1/2 p-8">
+            <h2
+              id="ott-platform-development"
+              class="text-2xl font-bold text-gray-800 mb-3"
+            >
+              OTT Platform Development
+            </h2>
+            <p class="text-gray-600 mb-4">
+              Launch robust OTT platforms for streaming video, live events, or
+              educational content with full CMS, subscription, and monetization
+              support.
+            </p>
+            <ul class="list-disc list-inside text-gray-600 mb-6 space-y-1">
+              <li>Multi-device streaming</li>
+              <li>Flexible subscription and pay-per-view options</li>
+              <li>Audience engagement analytics</li>
+            </ul>
+            <button
+              class="bg-red-600 text-white px-6 py-2 rounded-full hover:bg-red-700 transition"
+            >
+              Show Details
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div
+          class="flex flex-col md:flex-row items-center bg-white rounded-2xl shadow-lg overflow-hidden"
+        >
+          <div class="md:w-1/2">
+            <div class="aspect-[16/8] w-full overflow-hidden rounded-xl">
+              <img
+                src="assets/background/10.jpg"
+                alt="Software Development"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+          <div class="md:w-1/2 p-8">
+            <h2
+              id="web-and-mobile-app-development"
+              class="text-2xl font-bold text-gray-800 mb-3"
+            >
+              Web & Mobile App Development
+            </h2>
+            <p class="text-gray-600 mb-4">
+              Create high-performance websites and mobile applications that are
+              visually appealing, responsive, and user-friendly.
+            </p>
+            <ul class="list-disc list-inside text-gray-600 mb-6 space-y-1">
+              <li>Modern, responsive design</li>
+              <li>Optimized for performance and speed</li>
+              <li>Enhanced user engagement</li>
+            </ul>
+            <button
+              class="bg-red-600 text-white px-6 py-2 rounded-full hover:bg-red-700 transition"
+            >
+              Show Details
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div
+          class="flex flex-col md:flex-row-reverse items-center bg-white rounded-2xl shadow-lg overflow-hidden"
+        >
+          <div class="md:w-1/2">
+            <div class="aspect-[16/8] w-full overflow-hidden rounded-xl">
+              <img
+                src="assets/background/12.jpg"
+                alt="Software Development"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+          <div class="md:w-1/2 p-8">
+            <h2
+              id="android-iOS-app-development"
+              class="text-2xl font-bold text-gray-800 mb-3"
+            >
+              Android & iOS App Development
+            </h2>
+            <p class="text-gray-600 mb-4">
+              Develop native and cross-platform mobile applications to engage
+              users seamlessly across devices.
+            </p>
+            <ul class="list-disc list-inside text-gray-600 mb-6 space-y-1">
+              <li>Smooth mobile performance</li>
+              <li>Intuitive UI/UX design</li>
+              <li>High device compatibility</li>
+            </ul>
+            <button
+              class="bg-red-600 text-white px-6 py-2 rounded-full hover:bg-red-700 transition"
+            >
+              Show Details
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 7 -->
+        <div
+          class="flex flex-col md:flex-row items-center bg-white rounded-2xl shadow-lg overflow-hidden"
+        >
+          <div class="md:w-1/2">
+            <div class="aspect-[16/8] w-full overflow-hidden rounded-xl">
+              <img
+                src="assets/background/10.jpg"
+                alt="Software Development"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+          <div class="md:w-1/2 p-8">
+            <h2
+              id="framework-application-development"
+              class="text-2xl font-bold text-gray-800 mb-3"
+            >
+              Framework & Application Development
+            </h2>
+            <p class="text-gray-600 mb-4">
+              Build scalable, high-performance applications using modern
+              development frameworks.
+            </p>
+            <ul class="list-disc list-inside text-gray-600 mb-6 space-y-1">
+              <li>Reliable, secure systems</li>
+              <li>Optimized development lifecycle</li>
+              <li>Scalable solutions for growth</li>
+            </ul>
+            <button
+              class="bg-red-600 text-white px-6 py-2 rounded-full hover:bg-red-700 transition"
+            >
+              Show Details
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 8 -->
+        <div
+          class="flex flex-col md:flex-row-reverse items-center bg-white rounded-2xl shadow-lg overflow-hidden"
+        >
+          <div class="md:w-1/2">
+            <div class="aspect-[16/8] w-full overflow-hidden rounded-xl">
+              <img
+                src="assets/background/2.jpg"
+                alt="Software Development"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+          <div class="md:w-1/2 p-8">
+            <h2
+              id="ecommerce-solution"
+              class="text-2xl font-bold text-gray-800 mb-3"
+            >
+              E-commerce Website Development
+            </h2>
+            <p class="text-gray-600 mb-4">
+              Develop online stores with secure payments, inventory management,
+              and smooth shopping experiences.
+            </p>
+            <ul class="list-disc list-inside text-gray-600 mb-6 space-y-1">
+              <li>Centralized business operations</li>
+              <li>Real-time inventory management</li>
+              <li>Seamless payment integration</li>
+            </ul>
+            <button
+              class="bg-red-600 text-white px-6 py-2 rounded-full hover:bg-red-700 transition"
+            >
+              Show Details
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 9 -->
+
+        <div
+          class="flex flex-col md:flex-row items-center bg-white rounded-2xl shadow-lg overflow-hidden"
+        >
+          <div class="md:w-1/2">
+            <div class="aspect-[16/8] w-full overflow-hidden rounded-xl">
+              <img
+                src="assets/background/10.jpg"
+                alt="Software Development"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+          <div class="md:w-1/2 p-8">
+            <h2 id="erp-solution" class="text-2xl font-bold text-gray-800 mb-3">
+              ERP Solutions
+            </h2>
+            <p class="text-gray-600 mb-4">
+              Integrate operations across sales, inventory, accounts, and
+              workflows.
+            </p>
+            <ul class="list-disc list-inside text-gray-600 mb-6 space-y-1">
+              <li>Centralized management</li>
+              <li>Real-time tracking</li>
+              <li>Enhanced efficiency</li>
+            </ul>
+            <button
+              class="bg-red-600 text-white px-6 py-2 rounded-full hover:bg-red-700 transition"
+            >
+              Show Details
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 10 -->
+        <div
+          class="flex flex-col md:flex-row-reverse items-center bg-white rounded-2xl shadow-lg overflow-hidden"
+        >
+          <div class="md:w-1/2">
+            <div class="aspect-[16/8] w-full overflow-hidden rounded-xl">
+              <img
+                src="assets/background/12.jpg"
+                alt="Software Development"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+          <div class="md:w-1/2 p-8">
+            <h2
+              id="hospital-management-software"
+              class="text-2xl font-bold text-gray-800 mb-3"
+            >
+              Hospital Management Software
+            </h2>
+            <p class="text-gray-600 mb-4">
+              Streamline hospital and clinic operations, including patient
+              management, billing, scheduling, and reporting.
+            </p>
+            <ul class="list-disc list-inside text-gray-600 mb-6 space-y-1">
+              <li>Efficient operations</li>
+              <li>Accurate patient records</li>
+              <li>Comprehensive reporting</li>
+            </ul>
+            <button
+              class="bg-red-600 text-white px-6 py-2 rounded-full hover:bg-red-700 transition"
+            >
+              Show Details
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 11 -->
+        <div
+          class="flex flex-col md:flex-row items-center bg-white rounded-2xl shadow-lg overflow-hidden"
+        >
+          <div class="md:w-1/2">
+            <div class="aspect-[16/8] w-full overflow-hidden rounded-xl">
+              <img
+                src="assets/background/10.jpg"
+                alt="Software Development"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+          <div class="md:w-1/2 p-8">
+            <h2
+              id="pharmacy-management-software"
+              class="text-2xl font-bold text-gray-800 mb-3"
+            >
+              Pharmacy Management Software
+            </h2>
+            <p class="text-gray-600 mb-4">
+              Manage inventory, sales, expiry tracking, and monthly reports
+              effectively.
+            </p>
+            <ul class="list-disc list-inside text-gray-600 mb-6 space-y-1">
+              <li>Inventory and stock expiry tracking</li>
+              <li>Simplified billing and sales</li>
+              <li>User-wise sales reporting</li>
+            </ul>
+            <button
+              class="bg-red-600 text-white px-6 py-2 rounded-full hover:bg-red-700 transition"
+            >
+              Show Details
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 12 -->
+        <div
+          class="flex flex-col md:flex-row-reverse items-center bg-white rounded-2xl shadow-lg overflow-hidden"
+        >
+          <div class="md:w-1/2">
+            <div class="aspect-[16/8] w-full overflow-hidden rounded-xl">
+              <img
+                src="assets/background/10.jpg"
+                alt="Software Development"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+          <div class="md:w-1/2 p-8">
+            <h2
+              id="restaurant-management-software"
+              class="text-2xl font-bold text-gray-800 mb-3"
+            >
+              Restaurant Management Software
+            </h2>
+            <p class="text-gray-600 mb-4">
+              Manage orders, billing, inventory, and staff seamlessly.
+            </p>
+            <ul class="list-disc list-inside text-gray-600 mb-6 space-y-1">
+              <li>Efficient order processing</li>
+              <li>Inventory management</li>
+              <li>Staff performance tracking</li>
+            </ul>
+            <button
+              class="bg-red-600 text-white px-6 py-2 rounded-full hover:bg-red-700 transition"
+            >
+              Show Details
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 13 -->
+        <div
+          class="flex flex-col md:flex-row items-center bg-white rounded-2xl shadow-lg overflow-hidden"
+        >
+          <div class="md:w-1/2">
+            <div class="aspect-[16/8] w-full overflow-hidden rounded-xl">
+              <img
+                src="assets/background/10.jpg"
+                alt="Software Development"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+          <div class="md:w-1/2 p-8">
+            <h2
+              id="real-estate-management-software"
+              class="text-2xl font-bold text-gray-800 mb-3"
+            >
+              Real Estate Management Software
+            </h2>
+            <p class="text-gray-600 mb-4">
+              Automate property listings, client management, and reporting.
+            </p>
+            <ul class="list-disc list-inside text-gray-600 mb-6 space-y-1">
+              <li>Streamlined property operations</li>
+              <li>Client-focused systems</li>
+              <li>Analytical reporting</li>
+            </ul>
+            <button
+              class="bg-red-600 text-white px-6 py-2 rounded-full hover:bg-red-700 transition"
+            >
+              Show Details
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 14 -->
+        <div
+          class="flex flex-col md:flex-row-reverse items-center bg-white rounded-2xl shadow-lg overflow-hidden"
+        >
+          <div class="md:w-1/2">
+            <div class="aspect-[16/8] w-full overflow-hidden rounded-xl">
+              <img
+                src="assets/background/12.jpg"
+                alt="Software Development"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+          <div class="md:w-1/2 p-8">
+            <h2
+              id="point-of-sale-(POS)-software"
+              class="text-2xl font-bold text-gray-800 mb-3"
+            >
+              Point of Sale (POS) Software
+            </h2>
+            <p class="text-gray-600 mb-4">
+              Simplify retail operations with an intuitive POS system.
+            </p>
+            <ul class="list-disc list-inside text-gray-600 mb-6 space-y-1">
+              <li>Quick, accurate billing</li>
+              <li>Inventory and stock control</li>
+              <li>Efficient shop management</li>
+            </ul>
+            <button
+              class="bg-red-600 text-white px-6 py-2 rounded-full hover:bg-red-700 transition"
+            >
+              Show Details
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 15 -->
+        <div
+          class="flex flex-col md:flex-row items-center bg-white rounded-2xl shadow-lg overflow-hidden"
+        >
+          <div class="md:w-1/2">
+            <div class="aspect-[16/8] w-full overflow-hidden rounded-xl">
+              <img
+                src="assets/background/2.jpg"
+                alt="Software Development"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+          <div class="md:w-1/2 p-8">
+            <h2
+              id="HRM-software-solutions"
+              class="text-2xl font-bold text-gray-800 mb-3"
+            >
+              HRM Software Solutions
+            </h2>
+            <p class="text-gray-600 mb-4">
+              Automate attendance, leave, payroll, and performance tracking.
+            </p>
+            <ul class="list-disc list-inside text-gray-600 mb-6 space-y-1">
+              <li>Reduced manual HR tasks</li>
+              <li>Centralized employee management</li>
+              <li>Performance tracking and reporting</li>
+            </ul>
+            <button
+              class="bg-red-600 text-white px-6 py-2 rounded-full hover:bg-red-700 transition"
+            >
+              Show Details
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 16 -->
+        <div
+          class="flex flex-col md:flex-row-reverse items-center bg-white rounded-2xl shadow-lg overflow-hidden"
+        >
+          <div class="md:w-1/2">
+            <div class="aspect-[16/8] w-full overflow-hidden rounded-xl">
+              <img
+                src="assets/background/12.jpg"
+                alt="Software Development"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+          <div class="md:w-1/2 p-8">
+            <h2
+              id="accounts-finance-software-solutions"
+              class="text-2xl font-bold text-gray-800 mb-3"
+            >
+              Accounts & Finance Software Solutions
+            </h2>
+            <p class="text-gray-600 mb-4">
+              Manage accounting, reporting, and compliance with secure software.
+            </p>
+            <ul class="list-disc list-inside text-gray-600 mb-6 space-y-1">
+              <li>Real-time financial insights</li>
+              <li>Accurate tax management</li>
+              <li>Reliable, secure operations</li>
+            </ul>
+            <button
+              class="bg-red-600 text-white px-6 py-2 rounded-full hover:bg-red-700 transition"
+            >
+              Show Details
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 17 -->
+
+        <div
+          class="flex flex-col md:flex-row items-center bg-white rounded-2xl shadow-lg overflow-hidden"
+        >
+          <div class="md:w-1/2">
+            <div class="aspect-[16/8] w-full overflow-hidden rounded-xl">
+              <img
+                src="assets/background/12.jpg"
+                alt="AI Solutions"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+          <div class="md:w-1/2 p-8">
+            <h2
+              id="ai-powered-solutions"
+              class="text-2xl font-bold text-gray-800 mb-3"
+            >
+              AI-Powered Solutions
+            </h2>
+            <p class="text-gray-600 mb-4">
+              Automate processes, analyze data, and gain actionable insights.
+            </p>
+            <ul class="list-disc list-inside text-gray-600 mb-6 space-y-1">
+              <li>Process automation</li>
+              <li>Predictive analytics</li>
+              <li>Enhanced customer experience</li>
+            </ul>
+            <button
+              class="bg-red-600 text-white px-6 py-2 rounded-full hover:bg-red-700 transition"
+            >
+              Show Details
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 18 -->
+
+        <div
+          class="flex flex-col md:flex-row-reverse items-center bg-white rounded-2xl shadow-lg overflow-hidden"
+        >
+          <div class="md:w-1/2">
+            <div class="aspect-[16/8] w-full overflow-hidden rounded-xl">
+              <img
+                src="assets/background/2.jpg"
+                alt="Software Development"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+          <div class="md:w-1/2 p-8">
+            <h2
+              id="CRM-solutions"
+              class="text-2xl font-bold text-gray-800 mb-3"
+            >
+              CRM Solutions
+            </h2>
+            <p class="text-gray-600 mb-4">
+              Track leads, sales, and customer interactions to strengthen client
+              relationships.
+            </p>
+            <ul class="list-disc list-inside text-gray-600 mb-6 space-y-1">
+              <li>Improved client management</li>
+              <li>Data-driven insights</li>
+              <li>Increased customer retention</li>
+            </ul>
+            <button
+              class="bg-red-600 text-white px-6 py-2 rounded-full hover:bg-red-700 transition"
+            >
+              Show Details
+            </button>
+          </div>
+        </div>
+
+        <!-- Card 19 -->
+
+        <div
+          class="flex flex-col md:flex-row items-center bg-white rounded-2xl shadow-lg overflow-hidden"
+        >
+          <div class="md:w-1/2">
+            <div class="aspect-[16/8] w-full overflow-hidden rounded-xl">
+              <img
+                src="assets/background/12.jpg"
+                alt="Software Development"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+          <div class="md:w-1/2 p-8">
+            <h2
+              id="classified-website-development"
+              class="text-2xl font-bold text-gray-800 mb-3"
+            >
+              Classified Website Development
+            </h2>
+            <p class="text-gray-600 mb-4">
+              Create user-friendly classified platforms for communities or
+              businesses.
+            </p>
+            <ul class="list-disc list-inside text-gray-600 mb-6 space-y-1">
+              <li>Easy listing and search functionality</li>
+              <li>Secure and responsive interface</li>
+              <li>Scalable platform for growth</li>
+            </ul>
+            <button
+              class="bg-red-600 text-white px-6 py-2 rounded-full hover:bg-red-700 transition"
+            >
+              Show Details
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- service detils page end  -->
+
+    <!-- Faq section start  -->
+    <section class="bg-gray-50 py-20 px-4 overflow-x-hidden">
+      <!-- Header -->
+      <div class="max-w-2xl mx-auto text-center mb-12 px-2 sm:px-4">
+        <h2
+          class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 break-words"
+        >
+          Frequently Asked <span class="text-red-600">Questions</span>
+        </h2>
+        <p class="text-gray-600 text-sm sm:text-base">
+          Find answers to the most common questions about our software
+          solutions, support, and development process.
+        </p>
+      </div>
+
+      <!-- FAQ List -->
+      <div class="max-w-3xl mx-auto space-y-4 px-2 sm:px-0">
+        <!-- FAQ ITEM 1 -->
+        <div
+          class="bg-white shadow-md rounded-2xl overflow-hidden border border-gray-100"
+        >
+          <button
+            class="w-full flex justify-between items-center px-4 sm:px-6 py-4 text-left text-gray-900 font-semibold hover:text-red-600 transition break-words"
+            onclick="toggleFAQ(1)"
+          >
+            <span>What types of software solutions do you offer?</span>
+            <svg
+              id="icon-1"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              class="w-6 h-6 transform transition-transform duration-300"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+          </button>
+          <div
+            id="faq-1"
+            class="hidden px-4 sm:px-6 pb-5 text-gray-600 text-left break-words"
+          >
+            We provide custom software, ERP systems, CRM, HRM, LMS, POS, and
+            mobile app solutions tailored to your business model.
+          </div>
+        </div>
+
+        <!-- FAQ ITEM 2 -->
+        <div
+          class="bg-white shadow-md rounded-2xl overflow-hidden border border-gray-100"
+        >
+          <button
+            class="w-full flex justify-between items-center px-4 sm:px-6 py-4 text-left text-gray-900 font-semibold hover:text-red-600 transition break-words"
+            onclick="toggleFAQ(2)"
+          >
+            <span>Do you provide ongoing maintenance and support?</span>
+            <svg
+              id="icon-2"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              class="w-6 h-6 transform transition-transform duration-300"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+          </button>
+          <div
+            id="faq-2"
+            class="hidden px-4 sm:px-6 pb-5 text-gray-600 text-left break-words"
+          >
+            Yes! Our team provides 24/7 technical support, system updates, and
+            data backup solutions to ensure smooth operations.
+          </div>
+        </div>
+
+        <!-- FAQ ITEM 3 -->
+        <div
+          class="bg-white shadow-md rounded-2xl overflow-hidden border border-gray-100"
+        >
+          <button
+            class="w-full flex justify-between items-center px-4 sm:px-6 py-4 text-left text-gray-900 font-semibold hover:text-red-600 transition break-words"
+            onclick="toggleFAQ(3)"
+          >
+            <span>Can you develop apps for both Android and iOS?</span>
+            <svg
+              id="icon-3"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              class="w-6 h-6 transform transition-transform duration-300"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+          </button>
+          <div
+            id="faq-3"
+            class="hidden px-4 sm:px-6 pb-5 text-gray-600 text-left break-words"
+          >
+            Absolutely! We build cross-platform apps for Android and iOS using
+            modern frameworks ensuring great performance and design consistency.
+          </div>
+        </div>
+
+        <!-- FAQ ITEM 4 -->
+        <div
+          class="bg-white shadow-md rounded-2xl overflow-hidden border border-gray-100"
+        >
+          <button
+            class="w-full flex justify-between items-center px-4 sm:px-6 py-4 text-left text-gray-900 font-semibold hover:text-red-600 transition break-words"
+            onclick="toggleFAQ(4)"
+          >
+            <span>How long does it take to complete a project?</span>
+            <svg
+              id="icon-4"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              class="w-6 h-6 transform transition-transform duration-300"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+          </button>
+          <div
+            id="faq-4"
+            class="hidden px-4 sm:px-6 pb-5 text-gray-600 text-left break-words"
+          >
+            Project timelines depend on scope and complexity, but we ensure
+            transparent planning, milestones, and timely delivery.
+          </div>
+        </div>
+
+        <!-- FAQ ITEM 5 -->
+        <div
+          class="bg-white shadow-md rounded-2xl overflow-hidden border border-gray-100"
+        >
+          <button
+            class="w-full flex justify-between items-center px-4 sm:px-6 py-4 text-left text-gray-900 font-semibold hover:text-red-600 transition break-words"
+            onclick="toggleFAQ(5)"
+          >
+            <span>Do you work with international clients?</span>
+            <svg
+              id="icon-5"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              class="w-6 h-6 transform transition-transform duration-300"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+          </button>
+          <div
+            id="faq-5"
+            class="hidden px-4 sm:px-6 pb-5 text-gray-600 text-left break-words"
+          >
+            Yes, Dtrix IT Hub works with clients worldwide, providing custom
+            digital solutions that align with their business goals.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Faq section  end   -->
+
+    <!-- scroll to top start  -->
+    <button
+      id="scrollToTopBtn"
+      class="fixed bottom-6 right-6 bg-red-600 hover:bg-black text-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg transition-all duration-300 z-50"
+      aria-label="Scroll to top"
+      style="
+        display: none;
+        opacity: 0;
+        transform: translateY(12px);
+        transition: opacity 250ms ease, transform 250ms ease,
+          background-color 150ms;
+      "
+    >
+      <i class="bi bi-caret-up-fill text-2xl"></i>
+    </button>
+
+    <!-- scroll to top end  -->
+
+    <!-- footer section start  -->
+    <footer class="bg-[#0d0d10] text-gray-300">
+      <div
+        class="border-b border-gray-700 flex flex-col md:flex-row justify-between items-center px-6 md:px-16 py-6 gap-4"
+      >
+        <div class="flex items-center gap-4">
+          <img
+            src="assets/ditrixitlogo.png"
+            alt="DitrixitHub Logo"
+            class="w-44"
+          />
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-6">
+          <div
+            class="flex items-center gap-3 bg-[#0d0d10] px-4 py-3 rounded-lg"
+          >
+            <div
+              class="bg-red-600 p-3 rounded-md flex items-center justify-center"
+            >
+              <i class="bi bi-telephone-fill"></i>
+            </div>
+
+            <div>
+              <p class="text-sm text-gray-300">Call Us On</p>
+              <p class="font-semibold text-white">
+                <a href="https://wa.me/8801730974804" target="_blank" class="">
+                  +8801730974804</a
+                >
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="flex items-center gap-3 bg-[#0d0d10] px-4 py-3 rounded-lg"
+          >
+            <div
+              class="bg-red-600 p-3 rounded-md flex items-center justify-center"
+            >
+              <i class="bi bi-envelope-fill text-white text-xl"></i>
+            </div>
+
+            <div>
+              <p class="text-sm text-gray-300">Mail to Us</p>
+              <p class="font-semibold text-white">fahimadiptywork@gmail.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Footer -->
+      <div
+        class="px-6 md:px-16 py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 relative"
+      >
+        <div>
+          <h3 class="text-lg font-semibold text-white mb-3">About Us</h3>
+          <p class="text-gray-400 text-sm leading-relaxed mb-4">
+            To get started with us, please go over all of our internet plans and
+            other plans to let our operators.
+          </p>
+          <div class="flex gap-3">
+            <a
+              href="#"
+              class="w-8 h-8 flex items-center justify-center bg-gray-800 hover:bg-red-600 rounded-full"
+            >
+              <i class="bi bi-facebook"></i>
+            </a>
+            <a
+              href="#"
+              class="w-8 h-8 flex items-center justify-center bg-gray-800 hover:bg-red-600 rounded-full"
+            >
+              <i class="bi bi-twitter-x"></i>
+            </a>
+            <a
+              href="#"
+              class="w-8 h-8 flex items-center justify-center bg-gray-800 hover:bg-red-600 rounded-full"
+            >
+              <i class="bi bi-linkedin"></i>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-semibold text-white mb-3">Useful Links</h3>
+          <ul class="space-y-2 text-sm">
+            <li>
+              <a href="aboutus.html" class="hover:text-red-500 transition"
+                >› About Us</a
+              >
+            </li>
+            <li>
+              <a
+                href="servicedetails.html"
+                class="hover:text-red-500 transition"
+                >› Our Services</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:text-red-500 transition"
+                >› Our Clients</a
+              >
+            </li>
+            <li>
+              <a href="teammembers.html" class="hover:text-red-500 transition"
+                >› Our Team</a
+              >
+            </li>
+            <li>
+              <a href="newsdetails.html" class="hover:text-red-500 transition"
+                >› News & Media</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Services  -->
+        <div>
+          <h3 class="text-lg font-semibold text-white mb-3">Services</h3>
+          <ul class="space-y-2 text-sm">
+            <li>
+              <a
+                href="#software-app-development"
+                class="hover:text-red-500 transition"
+                >› Software & App Development</a
+              >
+            </li>
+            <li>
+              <a
+                href="#consulting-software-projects"
+                class="hover:text-red-500 transition"
+                >› Consulting Software Projects</a
+              >
+            </li>
+            <li>
+              <a
+                href="#education-platform-development"
+                class="hover:text-red-500 transition"
+                >› Education Platform Development</a
+              >
+            </li>
+            <li>
+              <a
+                href="#ott-platform-development"
+                class="hover:text-red-500 transition"
+                >› OTT Platform Development</a
+              >
+            </li>
+            <li>
+              <a
+                href="#web-and-mobile-app-development"
+                class="hover:text-red-500 transition"
+                >› Web & Mobile App Development</a
+              >
+            </li>
+
+            <!--- hidden list --->
+            <div id="moreItems" class="hidden">
+              <li>
+                <a
+                  href="#android-iOS-app-development"
+                  class="hover:text-red-500 transition"
+                  >› Android & iOS App Development</a
+                >
+              </li>
+              <li class="mt-2">
+                <a
+                  href="#framework-application-development"
+                  class="hover:text-red-500 transition"
+                  >› Framework & Application Development</a
+                >
+              </li>
+              <li class="mt-2">
+                <a
+                  href="#ecommerce-solution"
+                  class="hover:text-red-500 transition"
+                  >› E-commerce Solutions</a
+                >
+              </li>
+              <li class="mt-2">
+                <a href="#erp-solution" class="hover:text-red-500 transition"
+                  >› ERP Solutions</a
+                >
+              </li>
+              <li class="mt-2">
+                <a
+                  href="#hospital-management-software"
+                  class="hover:text-red-500 transition"
+                  >› Hospital Management Software</a
+                >
+              </li>
+              <li class="mt-2">
+                <a
+                  href="#pharmacy-management-software"
+                  class="hover:text-red-500 transition"
+                  >› Pharmacy Management Software</a
+                >
+              </li>
+              <li class="mt-2">
+                <a
+                  href="#restaurant-management-software"
+                  class="hover:text-red-500 transition"
+                  >› Restaurant Management Software</a
+                >
+              </li>
+              <li class="mt-2">
+                <a
+                  href="#real-estate-management-software"
+                  class="hover:text-red-500 transition"
+                  >› Real Estate Management Software</a
+                >
+              </li>
+              <li class="mt-2">
+                <a
+                  href="#point-of-sale-(POS)-software"
+                  class="hover:text-red-500 transition"
+                  >› Point of Sale (POS) Software</a
+                >
+              </li>
+              <li class="mt-2">
+                <a
+                  href="#HRM-software-solutions"
+                  class="hover:text-red-500 transition"
+                  >› HRM Software Solutions</a
+                >
+              </li>
+              <li class="mt-2">
+                <a
+                  href="#accounts-finance-software-solutions"
+                  class="hover:text-red-500 transition"
+                  >› Accounts & Finance Software Solutions</a
+                >
+              </li>
+              <li class="mt-2">
+                <a
+                  href="#servicedetails.html"
+                  class="hover:text-red-500 transition"
+                  >› AI-Powered Solutions</a
+                >
+              </li>
+              <li class="mt-2">
+                <a href="#CRM-solutions" class="hover:text-red-500 transition"
+                  >› CRM Solutions</a
+                >
+              </li>
+              <li class="mt-2">
+                <a
+                  href="#classified-website-development"
+                  class="hover:text-red-500 transition"
+                  >› Classified Website Development</a
+                >
+              </li>
+            </div>
+          </ul>
+          <button
+            id="toggleBtn"
+            class="text-red-500 text-sm mt-2 hover:underline"
+          >
+            See More...
+          </button>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-semibold text-white mb-3">Newsletter</h3>
+          <p class="text-gray-400 text-sm mb-4">
+            Sign up for alerts, our latest blogs, thoughts, and insights.
+          </p>
+          <div class="flex">
+            <input
+              type="email"
+              placeholder="Your Email"
+              class="w-full px-3 py-2 text-gray-900 rounded-l-md focus:outline-none"
+            />
+            <button
+              class="bg-red-600 hover:bg-red-700 px-4 rounded-r-md text-white"
+            >
+              <i class="bi bi-send-fill"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="border-t border-gray-700 py-4 text-center text-sm text-gray-500"
+      >
+        © Copyrights reserved by <span class="text-red-500">Rafusoft</span>
+      </div>
+    </footer>
+
+    <!-- footer section end  -->
+
+    <!-- nav bar script start  -->
+    <script>
+      const navbar = document.getElementById("mainNav");
+      let lastScrollY = window.scrollY;
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 100) {
+          navbar.classList.add("fixed", "top-0", "shadow-md");
+        } else {
+          navbar.classList.remove("fixed", "top-0", "shadow-md");
+        }
+      });
+
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      const servicesToggle = document.getElementById("services-toggle");
+      const servicesList = document.getElementById("services-list");
+      servicesToggle.addEventListener("click", () => {
+        servicesList.classList.toggle("hidden");
+      });
+
+      // Mobile menu close
+      document
+        .getElementById("mobile-menu-close")
+        .addEventListener("click", () => {
+          document.getElementById("mobile-menu").classList.add("hidden");
+        });
+
+      //footer service see more
+      const moreItems = document.getElementById("moreItems");
+      const toggleBtn = document.getElementById("toggleBtn");
+
+      toggleBtn.addEventListener("click", () => {
+        if (moreItems.classList.contains("hidden")) {
+          moreItems.classList.remove("hidden");
+          toggleBtn.textContent = "See Less...";
+        } else {
+          moreItems.classList.add("hidden");
+          toggleBtn.textContent = "See More...";
+        }
+      });
+
+      // Select all anchor links that start with #
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          const targetId = this.getAttribute("href").substring(1);
+          const targetEl = document.getElementById(targetId);
+          if (targetEl) {
+            e.preventDefault();
+            const headerOffset = 320; // height of fixed header
+            const elementPosition = targetEl.getBoundingClientRect().top;
+            const offsetPosition =
+              elementPosition + window.pageYOffset - headerOffset;
+
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: "smooth",
+            });
+          }
+          mobileMenu.classList.toggle("hidden");
+        });
+      });
+    </script>
+
+    <!-- nav bar script end  -->
+
+    <!-- faq section script start  -->
+    <script>
+      function toggleFAQ(id) {
+        const content = document.getElementById(`faq-${id}`);
+        const icon = document.getElementById(`icon-${id}`);
+        const isOpen = !content.classList.contains("hidden");
+
+        // Close all FAQs
+        document
+          .querySelectorAll('[id^="faq-"]')
+          .forEach((el) => el.classList.add("hidden"));
+        document
+          .querySelectorAll('[id^="icon-"]')
+          .forEach((el) => el.classList.remove("rotate-180"));
+
+        // Toggle the clicked FAQ
+        if (!isOpen) {
+          content.classList.remove("hidden");
+          icon.classList.add("rotate-180");
+        }
+      }
+    </script>
+    <!-- faq section script  end  -->
+
+    <!-- scroll to top start  -->
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const btn = document.getElementById("scrollToTopBtn");
+
+        function toggleScrollBtn() {
+          if (window.scrollY > 200) {
+            btn.style.display = "block";
+
+            requestAnimationFrame(() => {
+              btn.style.opacity = "1";
+              btn.style.transform = "translateY(0)";
+              btn.style.pointerEvents = "auto";
+            });
+          } else {
+            btn.style.opacity = "0";
+            btn.style.transform = "translateY(12px)";
+            btn.style.pointerEvents = "none";
+
+            setTimeout(() => {
+              if (btn.style.opacity === "0") btn.style.display = "none";
+            }, 260);
+          }
+        }
+
+        toggleScrollBtn();
+
+        window.addEventListener("scroll", toggleScrollBtn, { passive: true });
+
+        btn.addEventListener("click", () => {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+      });
+    </script>
+    <!-- scroll to top end  -->
+  </body>
+</html>
