@@ -23,6 +23,11 @@
       --primary-color: #db2525;
       --secondary-color: #052278;
     }
+
+    .card-active {
+      width: 7rem;
+      height: 7rem;
+    }
     .shape {
       background: var(--primary-color);
       border-radius: 4px;
@@ -52,12 +57,111 @@
       border-radius: 8px 0 0 8px;
     }
 
-    .card:hover .shape::before {
+    .card.active .shape::before {
       clip-path: polygon(100% 0, 0 80%, 100% 100%);
     }
 
-    .card:hover .shape::after {
+    .card.active .shape::after {
       clip-path: polygon(100% 0, 0 20%, 100% 100%);
+    }
+
+    .fade-right {
+      opacity: 0;
+      transform: translateX(420px);
+      transition: all 0.7s ease;
+    }
+
+    .fade-bottom {
+      opacity: 0;
+      transform: translateY(120px);
+      transition: all 0.7s ease;
+    }
+
+    .fade-out {
+      opacity: 0;
+      transform: translateX(-120px);
+    }
+
+    .show {
+      opacity: 1;
+      transform: translateX(0) translateY(0);
+    }
+
+    @media (max-width: 1240px) {
+      .team-section {
+        height: auto !important;
+        padding-bottom: 10rem;
+      }
+
+      /* Member info section full width */
+      .team-info {
+        width: 100% !important;
+        text-align: center;
+        padding: 0 1rem;
+      }
+
+      /* Member image full width */
+      .team-image {
+        width: 100% !important;
+        margin-bottom: 1rem;
+      }
+
+      .team-image img {
+        width: 100%;
+        height: 12rem;
+        border-radius: 0.5rem;
+      }
+
+      /* Slider arrows reposition */
+      #slider-prev,
+      #slider-next {
+        top: 45%;
+        transform: translateY(-50%);
+        width: 40px;
+        height: 40px;
+      }
+
+      #slider-prev {
+        left: 10px;
+      }
+
+      #slider-next {
+        right: 10px;
+      }
+
+      /* Card slider wrapper */
+      .cards-wrapper {
+        display: flex;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        gap: 2rem;
+        padding: 1rem;
+        width: 100%;
+        bottom: 0;
+      }
+
+      .cards-wrapper::-webkit-scrollbar {
+        display: none;
+      }
+
+      /* Card size for mobile */
+      .card {
+        flex: 0 0 80%;
+        margin-right: 1rem;
+      }
+
+      .card .image-wrapper {
+        width: 5rem !important;
+        height: 5rem !important;
+      }
+
+      /* Make card text readable */
+      .card h2 {
+        font-size: 1rem;
+      }
+      .card p {
+        font-size: 0.75rem;
+      }
     }
   </style>
   <body>
@@ -595,8 +699,229 @@
           </p>
         </div>
 
+        <!--- team card view --->
+
+        <div
+          class="flex md:flex-row flex-col-reverse gap-6 relative md:h-[52rem] team-section"
+        >
+          <!--- member info --->
+          <div class="md:w-1/2 flex flex-col gap-y-6 md:pr-16 team-info">
+            <h2 class="text-2xl md:text-6xl font-bold member-name"></h2>
+            <h4 class="text-lg md:text-xl font-bold member-role"></h4>
+            <p class="text-sm md:text-base font-semibold member-desc"></p>
+          </div>
+          <!--- member image --->
+          <div class="md:w-1/2 team-image">
+            <img src="" alt="" class="object-cover w-full member-image" />
+          </div>
+
+          <!--- prev and next icons --->
+
+          <button
+            id="slider-prev"
+            class="absolute left-10 top-1/2 z-50 w-12 h-12 shadow-lg bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center shadow cursor-pointer"
+          >
+            <i
+              class="bi bi-chevron-compact-left text-[var(--primary-color)] text-xl"
+            ></i>
+          </button>
+          <button
+            id="slider-next"
+            class="absolute right-10 top-1/2 z-50 w-12 h-12 shadow-lg bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center shadow cursor-pointer"
+          >
+            <i
+              class="bi bi-chevron-compact-right text-[var(--primary-color)] text-xl"
+            ></i>
+          </button>
+
+          <div
+            class="cards-wrapper flex absolute -bottom-60 md:bottom-0 overflow-hidden"
+          >
+            <!--- card 1 --->
+            <div
+              data-name="Fahima Dipty"
+              data-role="COO"
+              data-desc="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum
+              cum facere autem consequatur id. Ullam ea porro nobis iure
+              expedita at consectetur recusandae accusamus ut quis, odio amet
+              quas aspernatur."
+              data-image="assets/fahimaMam.jpeg"
+              class="card group rounded-[0.5rem] transition-all duration-500 p-4 w-[10rem] md:w-[15rem] h-[20rem] flex flex-col items-center gap-y-4 shadow-xl hover:shadow-sm bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 hover:border-white/40 ease-out"
+            >
+              <div
+                class="rounded-[0.2rem] self-end mr-4 mt-1 text-xs font-semibold border border-white/30 bg-[var(--primary-color)]/20 group-hover:text-black group-hover:border-black/30 backdrop-blur-md shadow-sm px-1.5 py-0.5"
+              >
+                Active
+              </div>
+              <div
+                class="w-[6rem] h-[6rem] image-wrapper transition-all duration-200 ease-in rounded-full shadow-[0_0_25px_5px_var(--primary-color)] mt-2"
+              >
+                <div
+                  class="w-full h-full rounded-full bg-[var(--primary-color)] p-0.5"
+                >
+                  <img
+                    src="assets/fahimaMam.jpeg"
+                    alt=""
+                    class="w-full h-full rounded-full object-cover"
+                  />
+                </div>
+              </div>
+              <div
+                class="flex flex-col items-center shape relative py-2 px-4 mt-12 text-white"
+              >
+                <h2 class="text-base font-semibold">Fahima Dipty</h2>
+                <p class="text-xs font-semibold">COO</p>
+              </div>
+            </div>
+            <!--- card 2 --->
+            <div
+              data-name="Jhone Doe"
+              data-role="Chief Officer"
+              data-desc="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum
+              cum facere autem consequatur id. Ullam ea porro nobis iure
+              expedita at consectetur recusandae accusamus ut quis, odio amet
+              quas aspernatur."
+              data-image="assets/cardImage/testimonial-1.jpg"
+              class="card group rounded-[0.5rem] transition-all duration-500 p-4 w-[10rem] md:w-[15rem] h-[20rem] flex flex-col items-center gap-y-4 shadow-xl hover:shadow-sm bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 hover:border-white/40 ease-out"
+            >
+              <div
+                class="rounded-[0.2rem] self-end mr-4 mt-1 text-xs font-semibold border border-white/30 bg-[var(--primary-color)]/20 group-hover:text-black group-hover:border-black/30 backdrop-blur-md shadow-sm px-1.5 py-0.5"
+              >
+                Active
+              </div>
+              <div
+                class="w-[6rem] h-[6rem] image-wrapper transition-all duration-200 ease-in rounded-full shadow-[0_0_25px_5px_var(--primary-color)] mt-2"
+              >
+                <div
+                  class="w-full h-full rounded-full bg-[var(--primary-color)] p-0.5"
+                >
+                  <img
+                    src="assets/cardImage/testimonial-1.jpg"
+                    alt=""
+                    class="w-full h-full rounded-full object-cover"
+                  />
+                </div>
+              </div>
+              <div
+                class="flex flex-col items-center shape relative py-2 px-4 mt-12 text-white"
+              >
+                <h2 class="text-base font-semibold">Jhone Doe</h2>
+                <p class="text-xs font-semibold">Chief Officer</p>
+              </div>
+            </div>
+            <!--- card 3 --->
+            <div
+              data-name="Martin Mars"
+              data-role="Manager"
+              data-desc="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum
+              cum facere autem consequatur id. Ullam ea porro nobis iure
+              expedita at consectetur recusandae accusamus ut quis, odio amet
+              quas aspernatur."
+              data-image="assets/cardImage/testimonial-2.jpg"
+              class="card group rounded-[0.5rem] transition-all duration-500 p-4 w-[10rem] md:w-[15rem] h-[20rem] flex flex-col items-center gap-y-4 shadow-xl hover:shadow-sm bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 hover:border-white/40 ease-out"
+            >
+              <div
+                class="rounded-[0.2rem] self-end mr-4 mt-1 text-xs font-semibold border border-white/30 bg-[var(--primary-color)]/20 group-hover:text-black group-hover:border-black/30 backdrop-blur-md shadow-sm px-1.5 py-0.5"
+              >
+                Active
+              </div>
+              <div
+                class="w-[6rem] h-[6rem] image-wrapper transition-all duration-200 ease-in rounded-full shadow-[0_0_25px_5px_var(--primary-color)] mt-2"
+              >
+                <div
+                  class="w-full h-full rounded-full bg-[var(--primary-color)] p-0.5"
+                >
+                  <img
+                    src="assets/cardImage/testimonial-2.jpg"
+                    alt=""
+                    class="w-full h-full rounded-full object-cover"
+                  />
+                </div>
+              </div>
+              <div
+                class="flex flex-col items-center shape relative py-2 px-4 mt-12 text-white"
+              >
+                <h2 class="text-base font-semibold">Martin Mars</h2>
+                <p class="text-xs font-semibold">Manager</p>
+              </div>
+            </div>
+            <!--- card 4 --->
+            <div
+              data-name="Jhon Doe"
+              data-role="Analysis"
+              data-desc="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum
+              cum facere autem consequatur id. Ullam ea porro nobis iure
+              expedita at consectetur recusandae accusamus ut quis, odio amet
+              quas aspernatur."
+              data-image="assets/cardImage/testimonial-1.jpg"
+              class="card group rounded-[0.5rem] transition-all duration-500 p-4 w-[10rem] md:w-[15rem] h-[20rem] flex flex-col items-center gap-y-4 shadow-xl hover:shadow-sm bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 hover:border-white/40 ease-out"
+            >
+              <div
+                class="rounded-[0.2rem] self-end mr-4 mt-1 text-xs font-semibold border border-white/30 bg-[var(--primary-color)]/20 group-hover:text-black group-hover:border-black/30 backdrop-blur-md shadow-sm px-1.5 py-0.5"
+              >
+                Active
+              </div>
+              <div
+                class="w-[6rem] h-[6rem] image-wrapper transition-all duration-200 ease-in rounded-full shadow-[0_0_25px_5px_var(--primary-color)] mt-2"
+              >
+                <div
+                  class="w-full h-full rounded-full bg-[var(--primary-color)] p-0.5"
+                >
+                  <img
+                    src="assets/cardImage/testimonial-1.jpg"
+                    alt=""
+                    class="w-full h-full rounded-full object-cover"
+                  />
+                </div>
+              </div>
+              <div
+                class="flex flex-col items-center shape relative py-2 px-4 mt-12 text-white"
+              >
+                <h2 class="text-base font-semibold">Jhon Doe</h2>
+                <p class="text-xs font-semibold">Analysis</p>
+              </div>
+            </div>
+            <!--- card 5 --->
+            <div
+              data-name="Martin Mars"
+              data-role="Programer"
+              data-desc="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum
+              cum facere autem consequatur id. Ullam ea porro nobis iure
+              expedita at consectetur recusandae accusamus ut quis, odio amet
+              quas aspernatur."
+              data-image="assets/cardImage/testimonial-2.jpg"
+              class="card group rounded-[0.5rem] transition-all duration-500 p-4 w-[10rem] md:w-[15rem] h-[20rem] flex flex-col items-center gap-y-4 shadow-xl hover:shadow-sm bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 hover:border-white/40 ease-out"
+            >
+              <div
+                class="rounded-[0.2rem] self-end mr-4 mt-1 text-xs font-semibold border border-white/30 bg-[var(--primary-color)]/20 group-hover:text-black group-hover:border-black/30 backdrop-blur-md shadow-sm px-1.5 py-0.5"
+              >
+                Active
+              </div>
+              <div
+                class="w-[6rem] h-[6rem] image-wrapper transition-all duration-200 ease-in rounded-full shadow-[0_0_25px_5px_var(--primary-color)] mt-2"
+              >
+                <div
+                  class="w-full h-full rounded-full bg-[var(--primary-color)] p-0.5"
+                >
+                  <img
+                    src="assets/cardImage/testimonial-2.jpg"
+                    alt=""
+                    class="w-full h-full rounded-full object-cover"
+                  />
+                </div>
+              </div>
+              <div
+                class="flex flex-col items-center shape relative py-2 px-4 mt-12 text-white"
+              >
+                <h2 class="text-base font-semibold">Martin Mars</h2>
+                <p class="text-xs font-semibold">Programer</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <!-- team Cards -->
-        <div class="md:px-4 xl:px-8 text-white">
+        <!-- <div class="md:px-4 xl:px-8 text-white">
           <div
             class="flex flex-col items-center shape relative py-3 px-6 mb-12 mx-6 w-fit"
           >
@@ -605,7 +930,6 @@
           <div
             class="flex gap-x-4 items-center justify-center md:justify-start"
           >
-            <!--- card 1 --->
             <div
               class="card group rounded-[0.5rem] transition-all duration-500 2xl:place-self-start p-2 w-[22rem] h-[24rem] flex flex-col items-center gap-y-4 shadow-xl hover:shadow-sm bg-gradient-to-b from-[var(--primary-color)] to-white hover:bg-none hover:bg-white ease-out"
             >
@@ -641,8 +965,8 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="md:px-4 xl:px-8 text-white mt-16">
+        </div> -->
+        <!-- <div class="md:px-4 xl:px-8 text-white mt-16">
           <div
             class="flex flex-col items-center shape relative py-3 px-6 mb-12 mx-6 w-fit"
           >
@@ -651,7 +975,7 @@
           <div
             class="flex gap-6 items-center justify-center md:justify-start flex-wrap"
           >
-            <!--- card 1 --->
+           
             <div
               class="card group rounded-[0.5rem] transition-all duration-500 2xl:place-self-start p-2 w-[22rem] h-[24rem] flex flex-col items-center gap-y-4 shadow-xl hover:shadow-sm bg-gradient-to-b from-[var(--primary-color)] to-white hover:bg-none hover:bg-white ease-out"
             >
@@ -680,7 +1004,7 @@
                 <p class="text-sm font-semibold">CEO</p>
               </div>
             </div>
-            <!--- card 2 --->
+           
             <div
               class="card group rounded-[0.5rem] transition-all duration-500 2xl:place-self-start p-2 w-[22rem] h-[24rem] flex flex-col items-center gap-y-4 shadow-xl hover:shadow-sm bg-gradient-to-b from-[var(--primary-color)] to-white hover:bg-none hover:bg-white ease-out"
             >
@@ -710,7 +1034,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
     </section>
 
@@ -734,7 +1058,7 @@
 
     <!-- footer section  start -->
 
-    <footer class="bg-[#0d0d10] text-gray-300">
+    <footer class="bg-[#0d0d10] text-gray-300 mt-[12rem] md:mt-0">
       <div
         class="border-b border-gray-700 flex flex-col md:flex-row justify-between items-center px-6 md:px-16 py-6 gap-4"
       >
@@ -1066,6 +1390,134 @@
         .addEventListener("click", () => {
           document.getElementById("mobile-menu").classList.add("hidden");
         });
+
+      //card active
+      document.addEventListener("DOMContentLoaded", function () {
+        const cards = document.querySelectorAll(".card");
+        const memberName = document.querySelector(".member-name");
+        const memberRole = document.querySelector(".member-role");
+        const memberDesc = document.querySelector(".member-desc");
+        const memberImage = document.querySelector(".member-image");
+
+        const prevBtn = document.getElementById("slider-prev");
+        const nextBtn = document.getElementById("slider-next");
+
+        const wrapper = document.querySelector(".cards-wrapper");
+
+        let currentIndex = 0;
+        let sutoSlideInterval;
+
+        function updateMemberInfo(index) {
+          const card = cards[index];
+
+          const name = card.dataset.name;
+          const role = card.dataset.role;
+          const desc = card.dataset.desc;
+          const image = card.dataset.image;
+
+          const items = [memberName, memberRole, memberDesc];
+
+          //fade animation
+          memberImage.classList.add("fade-right");
+          memberName.classList.add("fade-right");
+          memberRole.classList.add("fade-bottom");
+          memberDesc.classList.add("fade-bottom");
+
+          //update content
+          setTimeout(() => {
+            memberImage.src = image;
+            memberName.textContent = name;
+            memberRole.textContent = role;
+            memberDesc.textContent = desc;
+
+            //show animation
+            memberImage.classList.add("show");
+
+            items.forEach((item, index) => {
+              setTimeout(() => {
+                item.classList.add("show");
+              }, 80 * index);
+            });
+          }, 150);
+
+          //reset animation
+          setTimeout(() => {
+            memberImage.classList.remove("fade-right", "show");
+
+            memberName.classList.remove("fade-right", "show");
+            memberRole.classList.remove("fade-bottom", "show");
+            memberDesc.classList.remove("fade-bottom", "show");
+          }, 800);
+
+          //remove active from all cards
+          cards.forEach((c) => {
+            c.classList.remove("active");
+            const imgWrapper = c.querySelector(".image-wrapper");
+            imgWrapper.classList.remove("card-active");
+            imgWrapper.classList.add("w-[6rem]", "h-[6rem]");
+          });
+
+          //add active to clicked cards
+          card.classList.add("active");
+          const imgWrapper = card.querySelector(".image-wrapper");
+          imgWrapper.classList.add("card-active");
+          imgWrapper.classList.remove("w-[6rem]", "h-[6rem]");
+
+          if (window.innerWidth <= 1260) {
+            const cardWidth = cards[0].offsetWidth + 32; // width + gap
+            wrapper.scrollTo({
+              left: currentIndex * cardWidth,
+              behavior: "smooth",
+            });
+          }
+        }
+
+        function nextSlide() {
+          currentIndex = (currentIndex + 1) % cards.length;
+          updateMemberInfo(currentIndex);
+        }
+
+        function prevSlide() {
+          currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+          updateMemberInfo(currentIndex);
+        }
+
+        //auto slide
+        function startSlide() {
+          autoSlideInterval = setInterval(() => {
+            nextSlide();
+          }, 3000);
+        }
+
+        function stopSlide() {
+          clearInterval(autoSlideInterval);
+        }
+
+        nextBtn.addEventListener("click", () => {
+          stopSlide();
+          nextSlide();
+          startSlide();
+        });
+
+        prevBtn.addEventListener("click", () => {
+          stopSlide();
+          prevSlide();
+          startSlide();
+        });
+
+        cards.forEach((card, index) => {
+          card.addEventListener("click", () => {
+            stopSlide();
+            currentIndex = index;
+            updateMemberInfo(currentIndex);
+            startSlide();
+          });
+        });
+
+        //init
+        updateMemberInfo(0);
+        startSlide();
+      });
 
       //footer service see more
       const moreItems = document.getElementById("moreItems");
