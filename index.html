@@ -1,2094 +1,2345 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Homepage</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- for feature section link -->
-  <!-- SwiperJS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- for feature section link -->
+     <!-- SwiperJS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+        
+
+    <style>
+      * {
+        scroll-behavior: smooth;
+      }
+         /* testimonial css section start  */
+        .section-bg {
+            background-image: url('assets/background/review background .png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.9;
+        }
+        .card-container {
+            width: 600px;
+            height: 250px;
+            position: relative;
+        }
+        .red-card {
+            position: absolute;
+            top: 35px;
+            left: 0;
+            width: 180px;
+            height: 180px;
+            background: #dc2626;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+        .card-container:hover .red-card {
+            background: #000;
+        }
+        .white-card {
+            position: absolute;
+            top: 0px;
+            left: 110px;
+            width: 460px;
+            height: 400px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 25px 25px 25px 60px;
+            z-index: 5;
+        }
+        .quote-badge {
+            position: absolute;
+            top: 50%;
+            right: -20px;
+            transform: translateY(-50%);
+            background: #facc15;
+            width: 40px;
+            height: 40px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: #d1d5db;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+            border: 4px solid white;
+        }
+        .swiper-pagination-bullet {
+         
+            width: 10px;
+            height: 10px;
+            opacity: 1;
+            background: rgba(255,255,255,0.7);
+            border-radius: 9999px;
+            /* margin: 20 6px !important; */
+            margin-top: 40px !important;
+
+        }
+        .swiper-pagination-bullet-active {
+            background: #dc2626 !important;
+        }
+
+
+        /* testimonial css end  */
+     
+
+        /* featured section css start  */
+       
+      .gradient-bg {
+        background: linear-gradient(135deg, #111827 0%, #1e293b 100%);
+      }
+
+      .swiper-slide {
+        transition: transform 0.3s ease;
+      }
+      .swiper-slide:hover {
+        transform: translateY(-8px);
+      }
+
+      .swiper-button-next,
+      .swiper-button-prev {
+        top: 50%;
+        transform: translateY(-50%);
+        width: 3rem;
+        height: 3rem;
+        border-radius: 9999px;
+        background-color: rgba(0, 0, 0, 0.3);
+        color: white;
+      }
+
+      .swiper-button-next:hover,
+      .swiper-button-prev:hover {
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+
+      .swiper-pagination-bullet {
+        background-color: #fff;
+        opacity: 0.7;
+      }
+
+      .swiper-pagination-bullet-active {
+        background-color: #ef4444;
+        opacity: 1;
+      }
+    
+        /* featured section css end  */
 
 
 
-  <style>
-    * {
-      scroll-behavior: smooth;
-    }
-
-    /* testimonial css section start  */
-    .section-bg {
-      background-image: url('assets/background/review background .png');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      opacity: 0.9;
-    }
-
-    .card-container {
-      width: 600px;
-      height: 250px;
-      position: relative;
-    }
-
-    .red-card {
-      position: absolute;
-      top: 35px;
-      left: 0;
-      width: 180px;
-      height: 180px;
-      background: #dc2626;
-      border-radius: 8px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-      transition: all 0.3s ease;
-      z-index: 10;
-    }
-
-    .card-container:hover .red-card {
-      background: #000;
-    }
-
-    .white-card {
-      position: absolute;
-      top: 0px;
-      left: 110px;
-      width: 460px;
-      height: 400px;
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      padding: 25px 25px 25px 60px;
-      z-index: 5;
-    }
-
-    .quote-badge {
-      position: absolute;
-      top: 50%;
-      right: -20px;
-      transform: translateY(-50%);
-      background: #facc15;
-      width: 40px;
-      height: 40px;
-      border-radius: 4px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-
-    .avatar {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      background: #d1d5db;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 15px;
-      border: 4px solid white;
-    }
-
-    .swiper-pagination-bullet {
-
-      width: 10px;
-      height: 10px;
-      opacity: 1;
-      background: rgba(255, 255, 255, 0.7);
-      border-radius: 9999px;
-      /* margin: 20 6px !important; */
-      margin-top: 40px !important;
-
-    }
-
-    .swiper-pagination-bullet-active {
-      background: #dc2626 !important;
-    }
-
-
-    /* testimonial css end  */
-
-
-    /* featured section css start  */
-
-    .gradient-bg {
-      background: linear-gradient(135deg, #111827 0%, #1e293b 100%);
-    }
-
-    .swiper-slide {
-      transition: transform 0.3s ease;
-    }
-
-    .swiper-slide:hover {
-      transform: translateY(-8px);
-    }
-
-    .swiper-button-next,
-    .swiper-button-prev {
-      top: 50%;
-      transform: translateY(-50%);
-      width: 3rem;
-      height: 3rem;
-      border-radius: 9999px;
-      background-color: rgba(0, 0, 0, 0.3);
-      color: white;
-    }
-
-    .swiper-button-next:hover,
-    .swiper-button-prev:hover {
-      background-color: rgba(0, 0, 0, 0.5);
-    }
-
-    .swiper-pagination-bullet {
-      background-color: #fff;
-      opacity: 0.7;
-    }
-
-    .swiper-pagination-bullet-active {
-      background-color: #ef4444;
-      opacity: 1;
-    }
-
-    /* featured section css end  */
-  </style>
+    </style>
 </head>
-
 <body>
-  <!-- Top Info Bar -->
-  <div class="hidden lg:block w-full bg-white border-b text-sm">
-    <div class="max-w-11/12 mx-auto flex justify-between items-center px-6 py-2">
-      <div class="flex flex-wrap items-center gap-6 text-gray-700">
-        <div class="flex items-center gap-2">
-          <i class="bi bi-geo-alt text-red-600"></i>
+<!-- Top Info Bar -->
+<div class="hidden lg:block w-full bg-white border-b text-sm">
+  <div class="max-w-11/12 mx-auto flex justify-between items-center px-6 py-2">
+    <div class="flex flex-wrap items-center gap-6 text-gray-700">
+      <div class="flex items-center gap-2">
+        <i class="bi bi-geo-alt text-red-600"></i>
+        
+        <span> Boshila, Mohammadpur, Dhaka</span> 
+        
+      </div>
+      <div class="flex items-center gap-2">
+        <i class="bi bi-clock text-red-600"></i>
+        <span>Sat - Thu: 09.00am - 10.00pm</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <i class="bi bi-envelope text-red-600"></i>
+        <span>fahimadiptywork@gmail.com</span>
+      </div>
+    </div>
 
-          <span> Boshila, Mohammadpur, Dhaka</span>
+    <div class="flex items-center gap-4">
+      <div class="flex items-center gap-1">
+        <a href="#" class="bg-red-600 text-white px-2 py-1 rounded-sm"><i class="bi bi-x"></i></a>
+        <a href="#" class="bg-red-600 text-white px-2 py-1 rounded-sm"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="bg-red-600 text-white px-2 py-1 rounded-sm"><i class="bi bi-pinterest"></i></a>
+        <a href="#" class="bg-red-600 text-white px-2 py-1 rounded-sm"><i class="bi bi-instagram"></i></a>
+      </div>
+      <a href="termsandcondition.html" class="text-gray-600 hover:text-red-600">Privacy & Policy</a>
+      <a href="#" class="text-gray-600 hover:text-red-600">FAQ’S</a>
+      <a href="login.html" class="text-gray-600 hover:text-red-600">Login</a>
+    </div>
+  </div>
+</div>
 
-        </div>
-        <div class="flex items-center gap-2">
-          <i class="bi bi-clock text-red-600"></i>
-          <span>Sat - Thu: 09.00am - 10.00pm</span>
-        </div>
-        <div class="flex items-center gap-2">
-          <i class="bi bi-envelope text-red-600"></i>
-          <span>fahimadiptywork@gmail.com</span>
+<!-- Main Navbar -->
+<nav id="mainNav" class="w-full bg-white shadow-sm transition-all duration-500 z-50">
+  <div class="max-w-11/12 mx-auto flex justify-between items-center px-6 md:px-6 h-20">
+
+    <!--  Logo -->
+    
+    <div class="bg-white flex items-center px-4 py-2 -ml-8">
+  <a href="index.html">
+    <img 
+      src="assets/ditrixitlogo.png"  
+      alt="StarNet company logo" 
+      class="h-16 object-contain cursor-pointer"
+    >
+  </a>
+</div>
+
+    <!-- Desktop Menu -->
+    <ul class="hidden md:flex items-center gap-8 font-medium ">
+      <li class="relative group">
+        <a href="aboutus.html" class="nav-link">About Us+</a>
+        <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-red-600 transition-all duration-300 group-hover:w-full"></span>
+      </li>
+
+<li class="relative group">
+  <a href="servicedetails.html" class="nav-link flex items-center gap-1">
+    Services +
+  </a>
+  <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-red-600 transition-all duration-300 group-hover:w-full"></span>
+
+  <ul
+              class="absolute left-0 top-full hidden group-hover:block bg-white shadow-lg rounded-lg py-2 w-64 h-[43rem] text-gray-700 z-50 overflow-y-scroll [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+            >
+              <li>
+                <a
+                  href="servicedetails.html"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                >
+                  Custom Software Development
+                </a>
+              </li>
+              <li>
+                <a
+                  href="servicedetails.html"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                >
+                  Consulting Software Projects
+                </a>
+              </li>
+              <li>
+                <a
+                  href="servicedetails.html"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                >
+                  Education Platform Development
+                </a>
+              </li>
+              <li>
+                <a
+                  href="servicedetails.html"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                >
+                  OTT Platform Development
+                </a>
+              </li>
+              <li>
+                <a
+                  href="servicedetails.html"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                >
+                  Web and Mobile App Development
+                </a>
+              </li>
+              <li>
+                <a
+                  href="servicedetails.html"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                >
+                  Android & iOS App Development
+                </a>
+              </li>
+              <li>
+                <a
+                  href="servicedetails.html"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                >
+                  Framework & Application Development
+                </a>
+              </li>
+              <li>
+                <a
+                  href="servicedetails.html"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                >
+                  E-commerce Solution
+                </a>
+              </li>
+<li>
+                <a
+                  href="servicedetails.html"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                >
+                  ERP Solution
+                </a>
+              </li>
+              <li>
+                <a
+                  href="servicedetails.html"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                >
+                  Hospital Management Software
+                </a>
+              </li>
+              <li>
+                <a
+                  href="servicedetails.html"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                >
+                  Pharmacy Management Software
+                </a>
+              </li>
+              <li>
+                <a
+                  href="servicedetails.html"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                >
+                  Restaurant Management Software
+                </a>
+              </li>
+              <li>
+                <a
+                  href="servicedetails.html"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                >
+                  Real Estate Management Software
+                </a>
+              </li>
+              <li>
+                <a
+                  href="servicedetails.html"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                >
+                  Point of Sale (POS) Software
+                </a>
+              </li>
+              <li>
+                <a
+                  href="servicedetails.html"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                >
+                  HRM Software Solutions
+                </a>
+              </li>
+              <li>
+                <a
+                  href="servicedetails.html"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                >
+                  Accounts & Finance Software Solutions
+                </a>
+              </li>
+              <li>
+                <a
+                  href="servicedetails.html"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                >
+                  AI-powered Solutions
+                </a>
+              </li>
+              <li>
+                <a
+                  href="servicedetails.html"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                >
+                  CRM Solutions
+                </a>
+              </li>
+              <li>
+                <a
+                  href="servicedetails.html"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                >
+                  Classified Website Development
+                </a>
+              </li>
+              <li>
+                <a
+                  href="servicedetails.html"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                >
+                  Student Counseling & Study Abroad Guidance
+                </a>
+              </li>
+              <li>
+                <a
+                  href="servicedetails.html"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                >
+                  Work Permit & Immigration Services
+                </a>
+              </li>
+              <li>
+                <a
+                  href="servicedetails.html"
+                  class="block px-4 py-2 hover:bg-gray-100"
+                >
+                  Wholesale Clothing & Import Services
+                </a>
+              </li>
+            </ul>
+</li>
+
+
+      <li class="relative group">
+        <a href="newsgrid.html" class="nav-link inline-block relative px-2 py-1">
+          Our Team
+          <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-red-600 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+      </li>
+
+      <li class="relative group">
+        <a href="contactus.html" class="nav-link inline-block relative px-2 py-1">
+          Contact +
+          <span class="absolute left-0 bottom-0 w-0 h-[2px] bg-red-600 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+      </li>
+    </ul>
+
+    <!-- Right Side Icons -->
+    <div class="flex items-center gap-4">
+      <div class="hidden md:flex items-center bg-gray-100 rounded-full px-4 py-1">
+        <i class="bi bi-headphones text-red-600 text-xl mr-2"></i>
+        <div>
+          <p class="text-xs text-gray-500 leading-none">Call Us Now</p>
+          <p class="text-sm font-semibold text-gray-800">+8801730974804</p>
         </div>
       </div>
 
-      <div class="flex items-center gap-4">
-        <div class="flex items-center gap-1">
-          <a href="#" class="bg-red-600 text-white px-2 py-1 rounded-sm"><i class="bi bi-x"></i></a>
-          <a href="#" class="bg-red-600 text-white px-2 py-1 rounded-sm"><i class="bi bi-facebook"></i></a>
-          <a href="#" class="bg-red-600 text-white px-2 py-1 rounded-sm"><i class="bi bi-pinterest"></i></a>
-          <a href="#" class="bg-red-600 text-white px-2 py-1 rounded-sm"><i class="bi bi-instagram"></i></a>
+      <i class="bi bi-search text-xl text-gray-700 hover:text-red-600 cursor-pointer"></i>
+
+      <div class="relative cursor-pointer">
+        <i class="bi bi-cart2 text-xl text-gray-700 hover:text-red-600"></i>
+        <span class="absolute -top-2 -right-2 bg-red-600 text-white text-xs px-1 rounded-full">0</span>
+      </div>
+
+      <!-- Hamburger -->
+      <button id="menu-btn" class="block md:hidden text-2xl text-gray-700 hover:text-red-600">
+        <i class="bi bi-list"></i>
+      </button>
+    </div>
+  </div>
+
+  
+
+
+ <!-- Mobile Menu -->
+<div
+        id="mobile-menu"
+        class="fixed inset-0 z-50 hidden md:hidden bg-black bg-opacity-95 overflow-y-auto"
+      >
+        <div class="flex flex-col text-white font-medium min-h-screen">
+          <!-- Top: Close Button and Logo -->
+          <div
+            class="flex items-center justify-between px-6 py-4 border-b border-gray-700"
+          >
+            <!-- Logo -->
+            <a href="index.html">
+              <img
+                src="assets/ditrixitlogo.png"
+                alt="Company Logo"
+                class="h-16 object-contain"
+              />
+            </a>
+            <!-- Close Button -->
+            <button
+              id="mobile-menu-close"
+              class="text-white text-3xl hover:text-red-500"
+            >
+              <i class="bi bi-x-lg"></i>
+            </button>
+          </div>
+
+          <!-- Navigation Links -->
+          <ul
+            class="flex flex-col w-full text-white font-medium border-b border-gray-700"
+          >
+            <li class="px-6 py-3 border-b border-gray-700">
+              <a href="aboutus.html">About Us</a>
+            </li>
+
+            <!-- Services Dropdown -->
+            <li class="px-6 py-3 border-b border-gray-700 relative">
+              <button
+                id="services-toggle"
+                class="w-full text-left flex items-center justify-between"
+              >
+                <a href="servicedetails.html">Services</a> <i class="bi bi-plus-lg"></i>
+              </button>
+              <ul id="services-list" class="hidden mt-2 ml-4 text-sm space-y-1">
+                <li class="px-6 py-3 border-b border-gray-700">
+                  <a
+                    href="servicedetails.html"
+                    class="hover:text-red-500"
+                    >Software & App Development</a
+                  >
+                </li>
+                <li class="px-6 py-3 border-b border-gray-700">
+                  <a
+                    href="servicedetails.html"
+                    class="hover:text-red-500"
+                    >Consulting Software Projects</a
+                  >
+                </li>
+                <li class="px-6 py-3 border-b border-gray-700">
+                  <a
+                    href="servicedetails.html"
+                    class="hover:text-red-500"
+                    >Education Platform Development</a
+                  >
+                </li>
+                <li class="px-6 py-3 border-b border-gray-700">
+                  <a
+                    href="servicedetails.html"
+                    class="hover:text-red-500"
+                    >OTT Platform Development
+                  </a>
+                </li>
+                <li class="px-6 py-3 border-b border-gray-700">
+                  <a
+                    href="servicedetails.html"
+                    class="hover:text-red-500"
+                    >Web and Mobile App Development</a
+                  >
+                </li>
+                <li class="px-6 py-3 border-b border-gray-700">
+                  <a
+                    href="servicedetails.html"
+                    class="hover:text-red-500"
+                    >Android & iOS App Development
+                  </a>
+                </li>
+                <li class="px-6 py-3 border-b border-gray-700">
+                  <a
+                    href="servicedetails.html"
+                    class="hover:text-red-500"
+                    >Framework & Application Development
+                  </a>
+                </li>
+                <li class="px-6 py-3 border-b border-gray-700">
+                  <a
+                    href="servicedetails.html"
+                    class="hover:text-red-500"
+                    >E-commerce Solution</a
+                  >
+                </li>
+                <li class="px-6 py-3 border-b border-gray-700">
+                  <a
+                    href="servicedetails.html"
+                    class="hover:text-red-500"
+                    >ERP Solution</a
+                  >
+                </li>
+                <li class="px-6 py-3 border-b border-gray-700">
+                  <a
+                    href="servicedetails.html"
+                    class="hover:text-red-500"
+                    >Hospital Management Software</a
+                  >
+                </li>
+                <li class="px-6 py-3 border-b border-gray-700">
+                  <a
+                    href="servicedetails.html"
+                    class="hover:text-red-500"
+                    >Pharmacy Management Software</a
+                  >
+                </li>
+                <li class="px-6 py-3 border-b border-gray-700">
+                  <a
+                    href="servicedetails.html"
+                    class="hover:text-red-500"
+                    >Restaurant Management Software</a
+                  >
+                </li>
+                <li class="px-6 py-3 border-b border-gray-700">
+                  <a
+                    href="servicedetails.html"
+                    class="hover:text-red-500"
+                    >Real Estate Management Software</a
+                  >
+                </li>
+                <li class="px-6 py-3 border-b border-gray-700">
+                  <a
+                    href="servicedetails.html"
+                    class="hover:text-red-500"
+                    >Point of Sale (POS) Software</a
+                  >
+                </li>
+                <li class="px-6 py-3 border-b border-gray-700">
+                  <a href="servicedetails.html" class="hover:text-red-500"
+                    >HRM Software Solutions</a
+                  >
+                </li>
+                <li class="px-6 py-3 border-b border-gray-700">
+                  <a
+                    href="servicedetails.html"
+                    class="hover:text-red-500"
+                    >Accounts & Finance Software Solutions</a
+                  >
+                </li>
+                <li class="px-6 py-3 border-b border-gray-700">
+                  <a href="servicedetails.html" class="hover:text-red-500"
+                    >AI-powered Solutions</a
+                  >
+                </li>
+                <li class="px-6 py-3 border-b border-gray-700">
+                  <a href="servicedetails.html" class="hover:text-red-500"
+                    >CRM Solutions</a
+                  >
+                </li>
+                <li class="px-6 py-3 border-b border-gray-700">
+                  <a
+                    href="servicedetails.html"
+                    class="hover:text-red-500"
+                    >Classified Website Development</a
+                  >
+                </li>
+                <li class="px-6 py-3 border-b border-gray-700">
+                  <a
+                    href="servicedetails.html"
+                    class="hover:text-red-500"
+                    >Student Counseling & Study Abroad Guidance</a
+                  >
+                </li>
+                <li class="px-6 py-3 border-b border-gray-700">
+                  <a
+                    href="servicedetails.html"
+                    class="hover:text-red-500"
+                    >Work Permit & Immigration Services</a
+                  >
+                </li>
+                <li class="px-6 py-3 border-b border-gray-700">
+                  <a
+                    href="servicedetails.html"
+                    class="hover:text-red-500"
+                    >Wholesale Clothing & Import Services</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li class="px-6 py-3 border-b border-gray-700">
+              <a href="newsgrid.html">Our Team</a>
+            </li>
+            <li class="px-6 py-3 border-b border-gray-700">
+              <a href="contactus.html">Contact</a>
+            </li>
+          </ul>
+
+          <!-- Contact Info -->
+          <div class="flex flex-col space-y-4 text-white px-6 py-4">
+            <!-- Phone -->
+            <div class="flex items-center gap-2">
+              <i class="bi bi-telephone-fill text-red-500"></i>
+              <span>+8801730974804</span>
+            </div>
+
+            <!-- Email -->
+            <div class="flex items-start gap-2">
+              <i class="bi bi-envelope-fill text-red-500 mt-1"></i>
+              <div class="flex flex-col leading-tight">
+                <span>Send Mail</span>
+                <span class="text-gray-400 text-sm">info@dtrixithub.com</span>
+              </div>
+            </div>
+
+            <!-- Timing -->
+            <div class="flex items-start gap-2">
+              <i class="bi bi-clock-fill text-red-500 mt-1"></i>
+              <div class="flex flex-col leading-tight">
+                <span>Timing</span>
+                <span class="text-gray-400 text-sm">Mon–Sat: 8:00 – 6:30</span>
+                <span class="text-gray-400 text-sm">Sunday – Closed</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social Icons -->
+          <div class="flex gap-4 text-xl px-6 py-4">
+            <a href="#" class="hover:text-red-500"
+              ><i class="bi bi-twitter"></i
+            ></a>
+            <a href="#" class="hover:text-red-500"
+              ><i class="bi bi-facebook"></i
+            ></a>
+            <a href="#" class="hover:text-red-500"
+              ><i class="bi bi-pinterest"></i
+            ></a>
+            <a href="#" class="hover:text-red-500"
+              ><i class="bi bi-instagram"></i
+            ></a>
+          </div>
         </div>
-        <a href="termsandcondition.html" class="text-gray-600 hover:text-red-600">Privacy & Policy</a>
-        <a href="#" class="text-gray-600 hover:text-red-600">FAQ’S</a>
-        <a href="login.html" class="text-gray-600 hover:text-red-600">Login</a>
+      </div>
+
+</nav>
+
+
+
+
+<!-- hero section  one start -->
+<section 
+  class="relative w-full mx-auto bg-cover bg-center h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px]" 
+  style="background-image: url('assets/background/BACKGROUND\ IMAGE\ 1440\ TO\ 600.jpg');">
+
+  <!-- Dark Overlay -->
+  <div class="absolute inset-0 bg-black/40"></div>
+
+  <!-- Hero Content -->
+  <div class="absolute top-4 left-4 md:top-10 md:left-10 text-left text-white z-10">
+    <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
+      Empowering businesses with <br>
+      <span class="text-white"> reliable and innovative IT solutions.</span>
+    </h1>
+    <p class="mt-3 sm:mt-4 text-sm sm:text-base md:text-gray-200 max-w-sm leading-relaxed">
+      We strongly support best practice sharing across our<br class="hidden sm:block">
+      operations around the world and across various
+    </p>
+    <button class="mt-4 bg-red-600 text-white px-5 py-2 sm:px-6 sm:py-3 rounded-md text-sm sm:text-base font-semibold hover:bg-orange-500 transition-all">
+      Get Connection Now →
+    </button>
+  </div>
+</section>
+
+<!-- Cards Section  -->
+<section class="w-full flex flex-col md:flex-row justify-center gap-6 px-4 sm:px-6 md:px-8 mt-8 md:-mt-20 lg:-mt-24 relative z-20">
+
+  <!-- Card 1 -->
+  <div class="relative w-full sm:w-72 md:w-80 h-48 sm:h-52 md:h-56 bg-cover bg-center rounded-lg overflow-hidden group shadow-lg mx-auto"
+    style="background-image: url('assets/cardImage/1.jpg');">
+    <div class="absolute inset-0 bg-black/50 group-hover:bg-black/40 transition-all"></div>
+    <div class="absolute -top-4 sm:-top-5 -right-1 sm:-right-2 bg-white rounded-b-full p-4 sm:p-5 md:p-6">
+      <i class="bi bi-compass text-red-600 text-xl sm:text-2xl group-hover:text-yellow-400 transition-colors"></i>
+    </div>
+    <div class="absolute bottom-3 sm:bottom-4 left-3 sm:left-4 text-white">
+      <h2 class="text-base sm:text-lg font-semibold mb-1 sm:mb-2">Helping You Find Your Path</h2>
+      <div class="flex flex-col gap-0.5 sm:gap-1 text-xs sm:text-sm">
+        <p>Whether you’re a student deciding on the next step or an entrepreneur looking to grow, DTRIX is here to guide you with practical advice and real-world solutions.</p>
+        
       </div>
     </div>
   </div>
 
-  <!-- Main Navbar -->
-  <nav id="mainNav" class="w-full bg-white shadow-sm transition-all duration-500 z-50">
-    <div class="max-w-11/12 mx-auto flex justify-between items-center px-6 md:px-6 h-20">
-
-      <!--  Logo -->
-
-      <div class="bg-white flex items-center px-4 py-2 -ml-8">
-        <a href="index.html">
-          <img src="assets/ditrixitlogo.png" alt="StarNet company logo" class="h-16 object-contain cursor-pointer">
-        </a>
-      </div>
-
-      <!-- Desktop Menu -->
-      <ul class="hidden md:flex items-center gap-8 font-medium ">
-        <li class="relative group">
-          <a href="aboutus.html" class="nav-link">About Us+</a>
-          <span
-            class="absolute left-0 bottom-0 w-0 h-[2px] bg-red-600 transition-all duration-300 group-hover:w-full"></span>
-        </li>
-
-        <li class="relative group">
-          <a href="servicedetails.html" class="nav-link flex items-center gap-1">
-            Services +
-          </a>
-          <span
-            class="absolute left-0 bottom-0 w-0 h-[2px] bg-red-600 transition-all duration-300 group-hover:w-full"></span>
-
-          <ul
-            class="absolute left-0 top-full hidden group-hover:block bg-white shadow-lg rounded-lg py-2 w-64 h-[43rem] text-gray-700 z-50 overflow-y-scroll [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-            <li>
-              <a href="servicedetails.html" class="block px-4 py-2 hover:bg-gray-100">
-                Custom Software Development
-              </a>
-            </li>
-            <li>
-              <a href="servicedetails.html" class="block px-4 py-2 hover:bg-gray-100">
-                Consulting Software Projects
-              </a>
-            </li>
-            <li>
-              <a href="servicedetails.html" class="block px-4 py-2 hover:bg-gray-100">
-                Education Platform Development
-              </a>
-            </li>
-            <li>
-              <a href="servicedetails.html" class="block px-4 py-2 hover:bg-gray-100">
-                OTT Platform Development
-              </a>
-            </li>
-            <li>
-              <a href="servicedetails.html" class="block px-4 py-2 hover:bg-gray-100">
-                Web and Mobile App Development
-              </a>
-            </li>
-            <li>
-              <a href="servicedetails.html" class="block px-4 py-2 hover:bg-gray-100">
-                Android & iOS App Development
-              </a>
-            </li>
-            <li>
-              <a href="servicedetails.html" class="block px-4 py-2 hover:bg-gray-100">
-                Framework & Application Development
-              </a>
-            </li>
-            <li>
-              <a href="servicedetails.html" class="block px-4 py-2 hover:bg-gray-100">
-                E-commerce Solution
-              </a>
-            </li>
-            <li>
-              <a href="servicedetails.html" class="block px-4 py-2 hover:bg-gray-100">
-                ERP Solution
-              </a>
-            </li>
-            <li>
-              <a href="servicedetails.html" class="block px-4 py-2 hover:bg-gray-100">
-                Hospital Management Software
-              </a>
-            </li>
-            <li>
-              <a href="servicedetails.html" class="block px-4 py-2 hover:bg-gray-100">
-                Pharmacy Management Software
-              </a>
-            </li>
-            <li>
-              <a href="servicedetails.html" class="block px-4 py-2 hover:bg-gray-100">
-                Restaurant Management Software
-              </a>
-            </li>
-            <li>
-              <a href="servicedetails.html" class="block px-4 py-2 hover:bg-gray-100">
-                Real Estate Management Software
-              </a>
-            </li>
-            <li>
-              <a href="servicedetails.html" class="block px-4 py-2 hover:bg-gray-100">
-                Point of Sale (POS) Software
-              </a>
-            </li>
-            <li>
-              <a href="servicedetails.html" class="block px-4 py-2 hover:bg-gray-100">
-                HRM Software Solutions
-              </a>
-            </li>
-            <li>
-              <a href="servicedetails.html" class="block px-4 py-2 hover:bg-gray-100">
-                Accounts & Finance Software Solutions
-              </a>
-            </li>
-            <li>
-              <a href="servicedetails.html" class="block px-4 py-2 hover:bg-gray-100">
-                AI-powered Solutions
-              </a>
-            </li>
-            <li>
-              <a href="servicedetails.html" class="block px-4 py-2 hover:bg-gray-100">
-                CRM Solutions
-              </a>
-            </li>
-            <li>
-              <a href="servicedetails.html" class="block px-4 py-2 hover:bg-gray-100">
-                Classified Website Development
-              </a>
-            </li>
-            <li>
-              <a href="servicedetails.html" class="block px-4 py-2 hover:bg-gray-100">
-                Student Counseling & Study Abroad Guidance
-              </a>
-            </li>
-            <li>
-              <a href="servicedetails.html" class="block px-4 py-2 hover:bg-gray-100">
-                Work Permit & Immigration Services
-              </a>
-            </li>
-            <li>
-              <a href="servicedetails.html" class="block px-4 py-2 hover:bg-gray-100">
-                Wholesale Clothing & Import Services
-              </a>
-            </li>
-          </ul>
-        </li>
-
-
-        <li class="relative group">
-          <a href="newsgrid.html" class="nav-link inline-block relative px-2 py-1">
-            Our Team
-            <span
-              class="absolute left-0 bottom-0 w-0 h-[2px] bg-red-600 transition-all duration-300 group-hover:w-full"></span>
-          </a>
-        </li>
-
-        <li class="relative group">
-          <a href="contactus.html" class="nav-link inline-block relative px-2 py-1">
-            Contact +
-            <span
-              class="absolute left-0 bottom-0 w-0 h-[2px] bg-red-600 transition-all duration-300 group-hover:w-full"></span>
-          </a>
-        </li>
-      </ul>
-
-      <!-- Right Side Icons -->
-      <div class="flex items-center gap-4">
-        <div class="hidden md:flex items-center bg-gray-100 rounded-full px-4 py-1">
-          <i class="bi bi-headphones text-red-600 text-xl mr-2"></i>
-          <div>
-            <p class="text-xs text-gray-500 leading-none">Call Us Now</p>
-            <p class="text-sm font-semibold text-gray-800">+8801730974804</p>
-          </div>
-        </div>
-
-        <i class="bi bi-search text-xl text-gray-700 hover:text-red-600 cursor-pointer"></i>
-
-        <div class="relative cursor-pointer">
-          <i class="bi bi-cart2 text-xl text-gray-700 hover:text-red-600"></i>
-          <span class="absolute -top-2 -right-2 bg-red-600 text-white text-xs px-1 rounded-full">0</span>
-        </div>
-
-        <!-- Hamburger -->
-        <button id="menu-btn" class="block md:hidden text-2xl text-gray-700 hover:text-red-600">
-          <i class="bi bi-list"></i>
-        </button>
+  <!-- Card 2 -->
+  <div class="relative w-full sm:w-72 md:w-80 h-48 sm:h-52 md:h-56 bg-cover bg-center rounded-lg overflow-hidden group shadow-lg mx-auto"
+    style="background-image: url('assets/cardImage/2.jpg');">
+    <div class="absolute inset-0 bg-black/50 group-hover:bg-black/40 transition-all"></div>
+    <div class="absolute -top-4 sm:-top-5 -right-1 sm:-right-2 bg-white rounded-b-full p-4 sm:p-5 md:p-6">
+      <i class="bi bi-lightbulb text-red-600 text-xl sm:text-2xl group-hover:text-yellow-400 transition-colors"></i>
+    </div>
+    <div class="absolute bottom-3 sm:bottom-4 left-3 sm:left-4 text-white">
+      <h2 class="text-base sm:text-lg font-semibold mb-1 sm:mb-2">Turning Ideas Into Reality</h2>
+      <div class="flex flex-col gap-0.5 sm:gap-1 text-xs sm:text-sm">
+        <p>Have a business idea but don’t know where to start? We help you plan, build, and grow your vision into something tangible and successful.</p>
+        
       </div>
     </div>
+  </div>
 
-
-
-
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="fixed inset-0 z-50 hidden md:hidden bg-black bg-opacity-95 overflow-y-auto">
-      <div class="flex flex-col text-white font-medium min-h-screen">
-        <!-- Top: Close Button and Logo -->
-        <div class="flex items-center justify-between px-6 py-4 border-b border-gray-700">
-          <!-- Logo -->
-          <a href="index.html">
-            <img src="assets/ditrixitlogo.png" alt="Company Logo" class="h-16 object-contain" />
-          </a>
-          <!-- Close Button -->
-          <button id="mobile-menu-close" class="text-white text-3xl hover:text-red-500">
-            <i class="bi bi-x-lg"></i>
-          </button>
-        </div>
-
-        <!-- Navigation Links -->
-        <ul class="flex flex-col w-full text-white font-medium border-b border-gray-700">
-          <li class="px-6 py-3 border-b border-gray-700">
-            <a href="aboutus.html">About Us</a>
-          </li>
-
-          <!-- Services Dropdown -->
-          <li class="px-6 py-3 border-b border-gray-700 relative">
-            <button id="services-toggle" class="w-full text-left flex items-center justify-between">
-              <a href="servicedetails.html">Services</a> <i class="bi bi-plus-lg"></i>
-            </button>
-            <ul id="services-list" class="hidden mt-2 ml-4 text-sm space-y-1">
-              <li class="px-6 py-3 border-b border-gray-700">
-                <a href="servicedetails.html" class="hover:text-red-500">Software & App Development</a>
-              </li>
-              <li class="px-6 py-3 border-b border-gray-700">
-                <a href="servicedetails.html" class="hover:text-red-500">Consulting Software Projects</a>
-              </li>
-              <li class="px-6 py-3 border-b border-gray-700">
-                <a href="servicedetails.html" class="hover:text-red-500">Education Platform Development</a>
-              </li>
-              <li class="px-6 py-3 border-b border-gray-700">
-                <a href="servicedetails.html" class="hover:text-red-500">OTT Platform Development
-                </a>
-              </li>
-              <li class="px-6 py-3 border-b border-gray-700">
-                <a href="servicedetails.html" class="hover:text-red-500">Web and Mobile App Development</a>
-              </li>
-              <li class="px-6 py-3 border-b border-gray-700">
-                <a href="servicedetails.html" class="hover:text-red-500">Android & iOS App Development
-                </a>
-              </li>
-              <li class="px-6 py-3 border-b border-gray-700">
-                <a href="servicedetails.html" class="hover:text-red-500">Framework & Application Development
-                </a>
-              </li>
-              <li class="px-6 py-3 border-b border-gray-700">
-                <a href="servicedetails.html" class="hover:text-red-500">E-commerce Solution</a>
-              </li>
-              <li class="px-6 py-3 border-b border-gray-700">
-                <a href="servicedetails.html" class="hover:text-red-500">ERP Solution</a>
-              </li>
-              <li class="px-6 py-3 border-b border-gray-700">
-                <a href="servicedetails.html" class="hover:text-red-500">Hospital Management Software</a>
-              </li>
-              <li class="px-6 py-3 border-b border-gray-700">
-                <a href="servicedetails.html" class="hover:text-red-500">Pharmacy Management Software</a>
-              </li>
-              <li class="px-6 py-3 border-b border-gray-700">
-                <a href="servicedetails.html" class="hover:text-red-500">Restaurant Management Software</a>
-              </li>
-              <li class="px-6 py-3 border-b border-gray-700">
-                <a href="servicedetails.html" class="hover:text-red-500">Real Estate Management Software</a>
-              </li>
-              <li class="px-6 py-3 border-b border-gray-700">
-                <a href="servicedetails.html" class="hover:text-red-500">Point of Sale (POS) Software</a>
-              </li>
-              <li class="px-6 py-3 border-b border-gray-700">
-                <a href="servicedetails.html" class="hover:text-red-500">HRM Software Solutions</a>
-              </li>
-              <li class="px-6 py-3 border-b border-gray-700">
-                <a href="servicedetails.html" class="hover:text-red-500">Accounts & Finance Software Solutions</a>
-              </li>
-              <li class="px-6 py-3 border-b border-gray-700">
-                <a href="servicedetails.html" class="hover:text-red-500">AI-powered Solutions</a>
-              </li>
-              <li class="px-6 py-3 border-b border-gray-700">
-                <a href="servicedetails.html" class="hover:text-red-500">CRM Solutions</a>
-              </li>
-              <li class="px-6 py-3 border-b border-gray-700">
-                <a href="servicedetails.html" class="hover:text-red-500">Classified Website Development</a>
-              </li>
-              <li class="px-6 py-3 border-b border-gray-700">
-                <a href="servicedetails.html" class="hover:text-red-500">Student Counseling & Study Abroad Guidance</a>
-              </li>
-              <li class="px-6 py-3 border-b border-gray-700">
-                <a href="servicedetails.html" class="hover:text-red-500">Work Permit & Immigration Services</a>
-              </li>
-              <li class="px-6 py-3 border-b border-gray-700">
-                <a href="servicedetails.html" class="hover:text-red-500">Wholesale Clothing & Import Services</a>
-              </li>
-            </ul>
-          </li>
-
-          <li class="px-6 py-3 border-b border-gray-700">
-            <a href="newsgrid.html">Our Team</a>
-          </li>
-          <li class="px-6 py-3 border-b border-gray-700">
-            <a href="contactus.html">Contact</a>
-          </li>
-        </ul>
-
-        <!-- Contact Info -->
-        <div class="flex flex-col space-y-4 text-white px-6 py-4">
-          <!-- Phone -->
-          <div class="flex items-center gap-2">
-            <i class="bi bi-telephone-fill text-red-500"></i>
-            <span>+8801730974804</span>
-          </div>
-
-          <!-- Email -->
-          <div class="flex items-start gap-2">
-            <i class="bi bi-envelope-fill text-red-500 mt-1"></i>
-            <div class="flex flex-col leading-tight">
-              <span>Send Mail</span>
-              <span class="text-gray-400 text-sm">info@dtrixithub.com</span>
-            </div>
-          </div>
-
-          <!-- Timing -->
-          <div class="flex items-start gap-2">
-            <i class="bi bi-clock-fill text-red-500 mt-1"></i>
-            <div class="flex flex-col leading-tight">
-              <span>Timing</span>
-              <span class="text-gray-400 text-sm">Mon–Sat: 8:00 – 6:30</span>
-              <span class="text-gray-400 text-sm">Sunday – Closed</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Social Icons -->
-        <div class="flex gap-4 text-xl px-6 py-4">
-          <a href="#" class="hover:text-red-500"><i class="bi bi-twitter"></i></a>
-          <a href="#" class="hover:text-red-500"><i class="bi bi-facebook"></i></a>
-          <a href="#" class="hover:text-red-500"><i class="bi bi-pinterest"></i></a>
-          <a href="#" class="hover:text-red-500"><i class="bi bi-instagram"></i></a>
-        </div>
+  <!-- Card 3 -->
+  <div class="relative w-full sm:w-72 md:w-80 h-48 sm:h-52 md:h-56 bg-cover bg-center rounded-lg overflow-hidden group shadow-lg mx-auto"
+    style="background-image: url('assets/cardImage/3.jpg');">
+    <div class="absolute inset-0 bg-black/50 group-hover:bg-black/40 transition-all"></div>
+    <div class="absolute -top-4 sm:-top-5 -right-1 sm:-right-2 bg-white rounded-b-full p-4 sm:p-5 md:p-6">
+      <i class="bi bi-graph-up-arrow text-red-600 text-xl sm:text-2xl group-hover:text-yellow-400 transition-colors"></i>
+    </div>
+    <div class="absolute bottom-3 sm:bottom-4 left-3 sm:left-4 text-white">
+      <h2 class="text-base sm:text-lg font-semibold mb-1 sm:mb-2">Your Partner in Growth</h2>
+      <div class="flex flex-col gap-0.5 sm:gap-1 text-xs sm:text-sm">
+        <p>From education counselling to business strategy, we work with you every step of the way, making sure you have the tools, support, and confidence to succeed.</p>
+        
       </div>
     </div>
+  </div>
+</section>
+<!-- hero section one  end -->
 
-  </nav>
 
 
 
+<!-- empty div start for design -->
+<!-- <div class="w-full md:w-11/12 mx-auto h-40 sm:h-48 md:h-60 bg-[#F5F5F7]"></div> -->
 
-  <!-- hero section  one start -->
-  <section class="relative w-full mx-auto bg-cover bg-center h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px]"
-    style="background-image: url('assets/background/BACKGROUND\ IMAGE\ 1440\ TO\ 600.jpg');">
+ <!-- emtpy div end for design  -->
 
-    <!-- Dark Overlay -->
-    <div class="absolute inset-0 bg-black/40"></div>
 
-    <!-- Hero Content -->
-    <div class="absolute top-4 left-4 md:top-10 md:left-10 text-left text-white z-10">
-      <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
-        Empowering businesses with <br>
-        <span class="text-white"> reliable and innovative IT solutions.</span>
-      </h1>
-      <p class="mt-3 sm:mt-4 text-sm sm:text-base md:text-gray-200 max-w-sm leading-relaxed">
-        We strongly support best practice sharing across our<br class="hidden sm:block">
-        operations around the world and across various
-      </p>
-      <button
-        class="mt-4 bg-red-600 text-white px-5 py-2 sm:px-6 sm:py-3 rounded-md text-sm sm:text-base font-semibold hover:bg-orange-500 transition-all">
-        Get Connection Now →
-      </button>
-    </div>
-  </section>
+<!-- hero section two start -->
+ 
+<section class="relative overflow-hidden w-11/12 mx-auto mt-2">
+  <p class="text-center text-sm text-gray-600 py-2">
+    Subscribe To DitrixitHubTV  For 1 Month
+    <span class="text-red-600 font-medium">From $89 month</span>
+  </p>
 
-  <!-- Cards Section  -->
-  <section
-    class="w-full flex flex-col md:flex-row justify-center gap-6 px-4 sm:px-6 md:px-8 mt-8 md:-mt-20 lg:-mt-24 relative z-20">
+  
+  <div
+    class="absolute top-0 right-0 bg-no-repeat bg-contain bg-right-top opacity-80 pointer-events-none"
+    style="background-image: url('assets/icons/dotted-map-2.png');">
+  </div>
 
-    <!-- Card 1 -->
-    <div
-      class="relative w-full sm:w-72 md:w-80 h-48 sm:h-52 md:h-56 bg-cover bg-center rounded-lg overflow-hidden group shadow-lg mx-auto"
-      style="background-image: url('assets/cardImage/1.jpg');">
-      <div class="absolute inset-0 bg-black/50 group-hover:bg-black/40 transition-all"></div>
-      <div class="absolute -top-4 sm:-top-5 -right-1 sm:-right-2 bg-white rounded-b-full p-4 sm:p-5 md:p-6">
-        <i class="bi bi-compass text-red-600 text-xl sm:text-2xl group-hover:text-yellow-400 transition-colors"></i>
+  <!-- Main Content -->
+  <div class="flex flex-col-reverse md:flex-row items-center justify-between px-6 py-20 gap-10 relative z-10">
+
+    <!-- Left Image Section -->
+    <div class="relative w-full md:w-1/2 flex justify-center items-center">
+      <div class="relative">
+        <img src="assets/who-we-are-section.png" alt="who we are" class="rounded-lg w-full max-w-md md:max-w-none">
       </div>
-      <div class="absolute bottom-3 sm:bottom-4 left-3 sm:left-4 text-white">
-        <h2 class="text-base sm:text-lg font-semibold mb-1 sm:mb-2">Helping You Find Your Path</h2>
-        <div class="flex flex-col gap-0.5 sm:gap-1 text-xs sm:text-sm">
-          <p>Whether you’re a student deciding on the next step or an entrepreneur looking to grow, DTRIX is here to
-            guide you with practical advice and real-world solutions.</p>
 
-        </div>
-      </div>
-    </div>
-
-    <!-- Card 2 -->
-    <div
-      class="relative w-full sm:w-72 md:w-80 h-48 sm:h-52 md:h-56 bg-cover bg-center rounded-lg overflow-hidden group shadow-lg mx-auto"
-      style="background-image: url('assets/cardImage/2.jpg');">
-      <div class="absolute inset-0 bg-black/50 group-hover:bg-black/40 transition-all"></div>
-      <div class="absolute -top-4 sm:-top-5 -right-1 sm:-right-2 bg-white rounded-b-full p-4 sm:p-5 md:p-6">
-        <i class="bi bi-lightbulb text-red-600 text-xl sm:text-2xl group-hover:text-yellow-400 transition-colors"></i>
-      </div>
-      <div class="absolute bottom-3 sm:bottom-4 left-3 sm:left-4 text-white">
-        <h2 class="text-base sm:text-lg font-semibold mb-1 sm:mb-2">Turning Ideas Into Reality</h2>
-        <div class="flex flex-col gap-0.5 sm:gap-1 text-xs sm:text-sm">
-          <p>Have a business idea but don’t know where to start? We help you plan, build, and grow your vision into
-            something tangible and successful.</p>
-
-        </div>
-      </div>
-    </div>
-
-    <!-- Card 3 -->
-    <div
-      class="relative w-full sm:w-72 md:w-80 h-48 sm:h-52 md:h-56 bg-cover bg-center rounded-lg overflow-hidden group shadow-lg mx-auto"
-      style="background-image: url('assets/cardImage/3.jpg');">
-      <div class="absolute inset-0 bg-black/50 group-hover:bg-black/40 transition-all"></div>
-      <div class="absolute -top-4 sm:-top-5 -right-1 sm:-right-2 bg-white rounded-b-full p-4 sm:p-5 md:p-6">
-        <i
-          class="bi bi-graph-up-arrow text-red-600 text-xl sm:text-2xl group-hover:text-yellow-400 transition-colors"></i>
-      </div>
-      <div class="absolute bottom-3 sm:bottom-4 left-3 sm:left-4 text-white">
-        <h2 class="text-base sm:text-lg font-semibold mb-1 sm:mb-2">Your Partner in Growth</h2>
-        <div class="flex flex-col gap-0.5 sm:gap-1 text-xs sm:text-sm">
-          <p>From education counselling to business strategy, we work with you every step of the way, making sure you
-            have the tools, support, and confidence to succeed.</p>
-
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- hero section one  end -->
-
-
-
-
-  <!-- empty div start for design -->
-  <div class="w-full md:w-11/12 mx-auto h-40 sm:h-48 md:h-60 bg-[#F5F5F7]"></div>
-
-  <!-- emtpy div end for design  -->
-
-
-  <!-- hero section two start -->
-
-  <section class="relative overflow-hidden w-11/12 mx-auto">
-    <p class="text-center text-sm text-gray-600 py-2">
-      Subscribe To DitrixitHubTV For 1 Month
-      <span class="text-red-600 font-medium">From $89 month</span>
-    </p>
-
-
-    <div class="absolute top-0 right-0 bg-no-repeat bg-contain bg-right-top opacity-80 pointer-events-none"
-      style="background-image: url('assets/icons/dotted-map-2.png');">
-    </div>
-
-    <!-- Main Content -->
-    <div class="flex flex-col-reverse md:flex-row items-center justify-between px-6 py-20 gap-10 relative z-10">
-
-      <!-- Left Image Section -->
-      <div class="relative w-full md:w-1/2 flex justify-center items-center">
-        <div class="relative">
-          <img src="assets/who-we-are-section.png" alt="who we are" class="rounded-lg w-full max-w-md md:max-w-none">
-        </div>
-
-        <!-- Red Circle Badge -->
-        <!-- <div
+      <!-- Red Circle Badge -->
+      <!-- <div
         class="absolute top-[11.85rem] -right-7 sm:-right-8 bg-red-600 text-white rounded-full 
         flex flex-col items-center justify-center text-center
         w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28">
         <span class="text-lg sm:text-xl md:text-2xl font-bold">25k+</span>
         <span class="text-xs sm:text-sm leading-tight">Clients</span>
       </div> -->
-        <div class="absolute top-[11.85rem] right-[-1.75rem] bg-red-600 text-white rounded-full 
+       <div
+  class="absolute top-[11.85rem] right-[-1.75rem] bg-red-600 text-white rounded-full 
   flex flex-col items-center justify-center text-center
   w-28 h-28">
-          <span class="text-2xl font-bold">25k+</span>
-          <span class="text-sm leading-tight">Clients</span>
-        </div>
+  <span class="text-2xl font-bold">25k+</span>
+  <span class="text-sm leading-tight">Clients</span>
+</div>
 
-
-      </div>
-
-      <!-- Right Text Section -->
-      <div class="w-full md:w-1/2 space-y-6 text-center md:text-left">
-        <p class="uppercase text-sm tracking-widest text-gray-500 font-semibold">
-          <span class="text-red-600">/</span> Who We Are
-        </p>
-
-        <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold leading-snug text-gray-900">
-          Your Trusted Partner in IT <br class="hidden sm:block"> & Digital Solutions
-        </h1>
-
-        <p class="text-gray-600">
-          Get connected with DitrixitHub that can provide your every technology need to connect the world.
-        </p>
-
-        <!-- Experience Box -->
-        <div class="flex items-start gap-4 bg-white shadow-sm border p-4 rounded-md text-left">
-          <div class="bg-red-100 p-3 rounded-full shrink-0">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="red"
-              class="w-6 h-6">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5M12 6a6 6 0 11-6 6h6z" />
-            </svg>
-          </div>
-          <div>
-            <h3 class="font-semibold text-gray-800 text-base sm:text-lg">25+ Years of Experience</h3>
-            <p class="text-gray-600 text-sm leading-relaxed">
-              DitrixitHub is providing one of the fastest broadband internet and network solutions throughout Dhaka,
-              reliable for all.
-            </p>
-          </div>
-        </div>
-
-        <!-- Bullet Points -->
-        <ul class="space-y-2 text-gray-700">
-          <li class="flex items-center gap-2 justify-center md:justify-start">
-            <i class="bi bi-check-circle-fill text-red-600"></i>
-            <span>DitrixitHub — empowering innovation through smart and scalable digital solutions.</span>
-          </li>
-          <li class="flex items-center gap-2 justify-center md:justify-start">
-            <i class="bi bi-check-circle-fill text-red-600"></i>
-            <span>Reliable for both gamers and regular users.</span>
-          </li>
-          <li class="flex items-center gap-2 justify-center md:justify-start">
-            <i class="bi bi-check-circle-fill text-red-600"></i>
-            <span>Get a dedicated server hosted on your end.</span>
-          </li>
-        </ul>
-      </div>
 
     </div>
-  </section>
-  <!-- hero section two end -->
 
+    <!-- Right Text Section -->
+    <div class="w-full md:w-1/2 space-y-6 text-center md:text-left">
+      <p class="uppercase text-sm tracking-widest text-gray-500 font-semibold">
+        <span class="text-red-600">/</span> Who We Are
+      </p>
 
+      <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold leading-snug text-gray-900">
+        Your Trusted Partner in IT <br class="hidden sm:block">  & Digital Solutions
+      </h1>
 
-  <!-- who we are section start -->
-  <section class="w-11/12 md:w-10/12 lg:w-10/12 mx-auto py-12">
-    <div>
+      <p class="text-gray-600">
+        Get connected with DitrixitHub  that can provide your every technology need to connect the world.
+      </p>
 
-      <div class="text-center mb-12 md:mb-16">
-        <p class="text-sm font-semibold text-red-600 tracking-widest mb-4">/ WHY SELECT US /</p>
-        <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
-          Experienced experts with
-          <br />industry accreditation
-        </h1>
-      </div>
-
-      <!-- Features Grid -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-
-
-        <!-- card 1 -->
-        <div
-          class="group bg-gray-50 rounded-xl p-8 flex flex-col items-center text-center hover:bg-red-500 transition-all duration-300">
-          <div class="w-16 h-16 flex items-center justify-center mb-4">
-            <i class="bi bi-wifi text-red-600 text-4xl group-hover:text-white transition-colors duration-300"></i>
-          </div>
-          <h3
-            class="text-lg font-semibold text-gray-900 leading-snug group-hover:text-white transition-colors duration-300">
-            Expertise<br />
-          </h3>
+      <!-- Experience Box -->
+      <div class="flex items-start gap-4 bg-white shadow-sm border p-4 rounded-md text-left">
+        <div class="bg-red-100 p-3 rounded-full shrink-0">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+            stroke-width="1.5" stroke="red" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M12 6v6h4.5M12 6a6 6 0 11-6 6h6z" />
+          </svg>
         </div>
-
-
-        <!-- card 2 -->
-        <div
-          class="group bg-gray-50 rounded-xl p-8 flex flex-col items-center text-center hover:bg-red-500 transition-all duration-300">
-          <div class="w-16 h-16 flex items-center justify-center mb-4">
-            <i class="bi bi-telephone text-red-600 text-4xl group-hover:text-white transition-colors duration-300"></i>
-          </div>
-          <h3
-            class="text-lg font-semibold text-gray-900 leading-snug group-hover:text-white transition-colors duration-300">
-            Software & IT Solutions
-          </h3>
-        </div>
-
-
-        <!-- card 3 -->
-        <div
-          class="group bg-gray-50 rounded-xl p-8 flex flex-col items-center text-center hover:bg-red-500 transition-all duration-300">
-          <div class="w-16 h-16 flex items-center justify-center mb-4">
-            <i class="bi bi-globe text-red-600 text-4xl group-hover:text-white transition-colors duration-300"></i>
-          </div>
-          <h3
-            class="text-lg font-semibold text-gray-900 leading-snug group-hover:text-white transition-colors duration-300">
-            Industry Recognition<br />
-          </h3>
-        </div>
-
-
-        <!-- card 4 -->
-        <div
-          class="group bg-gray-50 rounded-xl p-8 flex flex-col items-center text-center hover:bg-red-500 transition-all duration-300">
-          <div class="w-16 h-16 flex items-center justify-center mb-4">
-            <i
-              class="bi bi-shield-check text-red-600 text-4xl group-hover:text-white transition-colors duration-300"></i>
-          </div>
-          <h3
-            class="text-lg font-semibold text-gray-900 leading-snug group-hover:text-white transition-colors duration-300">
-            Expert Student <br />Abroad Counselling
-          </h3>
-        </div>
-
-
-        <!-- card 5 -->
-        <div
-          class="group bg-gray-50 rounded-xl p-8 flex flex-col items-center text-center hover:bg-red-500 transition-all duration-300">
-          <div class="w-16 h-16 flex items-center justify-center mb-4">
-            <i
-              class="bi bi-speedometer text-red-600 text-4xl group-hover:text-white transition-colors duration-300"></i>
-          </div>
-          <h3
-            class="text-lg font-semibold text-gray-900 leading-snug group-hover:text-white transition-colors duration-300">
-            Innovative <br />Solutions
-          </h3>
-        </div>
-
-
-        <!-- card 6 -->
-
-
-        <div
-          class="group bg-gray-50 rounded-xl p-8 flex flex-col items-center text-center hover:bg-red-500 transition-all duration-300">
-          <div class="w-16 h-16 flex items-center justify-center mb-4">
-            <i class="bi bi-router text-red-600 text-4xl group-hover:text-white transition-colors duration-300"></i>
-          </div>
-          <h3
-            class="text-lg font-semibold text-gray-900 leading-snug group-hover:text-white transition-colors duration-300">
-            Dedicated <br />Support
-          </h3>
-        </div>
-
-        <!-- card 7 -->
-        <div
-          class="lg:col-span-2 rounded-xl overflow-hidden hover:shadow-2xl transition-all relative h-64 bg-cover bg-center"
-          style="background-image:url('assets/resource/image-1.jpg');">
-          <div class="absolute inset-0 bg-black/50"></div>
-          <div class="relative z-10 flex flex-col justify-center items-center h-full p-8 text-center">
-            <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-3">DitrixitHub</h1>
-
-            <button
-              class="bg-red-600 hover:bg-orange-500 text-white font-semibold py-3 px-5 rounded-lg transition-colors flex items-center gap-2">
-              Get Started Now <i class="bi bi-arrow-right"></i>
-            </button>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-  <!-- who we are section end -->
-
-
-  <!-- empty div start  -->
-  <div class="w-full h-48"></div>
-
-  <!-- empty div end  -->
-
-  <!-- featured section start -->
-
-  <section class="relative gradient-bg py-32 md:py-40 overflow-visible bg-cover bg-center"
-    style="background-image:url('assets/background/2.jpg');">
-    <!-- Red Banner  -->
-
-    <div
-      class="absolute -top-[7.5rem] left-1/2 transform -translate-x-1/2 w-11/12 md:w-2/3 lg:w-1/2 rounded-lg shadow-2xl z-20 bg-cover bg-center"
-      style="background-image:url('assets/background/Untitled\ design.png');">
-      <!-- Red overlay -->
-      <div class="absolute inset-0 bg-red-600/50 rounded-lg"></div>
-
-      <!-- Content on top -->
-      <div class="relative z-10 flex flex-col md:flex-row items-center justify-between p-6">
         <div>
-          <h2 class="text-2xl md:text-3xl font-bold text-white">
-            Visit DitrixitHub
-          </h2>
-          <p class="text-lg text-gray-200">Server packages</p>
-          <p class="text-sm text-gray-300 mt-2">
-            Get connected with DitrixitHub Limited that can provide your every
-            technology need to connect the world.
+          <h3 class="font-semibold text-gray-800 text-base sm:text-lg">25+ Years of Experience</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+         DitrixitHub  is providing one of the fastest broadband internet and network solutions throughout Dhaka, reliable for all.
           </p>
-          <div class="flex items-center gap-4 mt-4">
-
-            <button class="bg-black text-white px-4 py-2 rounded-md font-medium hover:bg-orange-500">
-              Get Now
-            </button>
-          </div>
         </div>
-        <!-- <div class="mt-4 md:mt-0">
+      </div>
+
+      <!-- Bullet Points -->
+      <ul class="space-y-2 text-gray-700">
+        <li class="flex items-center gap-2 justify-center md:justify-start">
+          <i class="bi bi-check-circle-fill text-red-600"></i>
+          <span>DitrixitHub — empowering innovation through smart and scalable digital solutions.</span>
+        </li>
+        <li class="flex items-center gap-2 justify-center md:justify-start">
+          <i class="bi bi-check-circle-fill text-red-600"></i>
+          <span>Reliable for both gamers and regular users.</span>
+        </li>
+        <li class="flex items-center gap-2 justify-center md:justify-start">
+          <i class="bi bi-check-circle-fill text-red-600"></i>
+          <span>Get a dedicated server hosted on your end.</span>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+<!-- hero section two end -->
+
+
+
+<!-- who we are section start -->
+<section class="w-11/12 md:w-10/12 lg:w-10/12 mx-auto py-12">
+  <div>
+  
+    <div class="text-center mb-12 md:mb-16">
+      <p class="text-sm font-semibold text-red-600 tracking-widest mb-4">/ WHY SELECT US /</p>
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+        Experienced experts with 
+<br />industry accreditation
+      </h1>
+    </div>
+
+    <!-- Features Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+      
+      
+      <!-- card 1 -->
+<div class="group bg-gray-50 rounded-xl p-8 flex flex-col items-center text-center hover:bg-red-500 transition-all duration-300">
+  <div class="w-16 h-16 flex items-center justify-center mb-4">
+    <i class="bi bi-wifi text-red-600 text-4xl group-hover:text-white transition-colors duration-300"></i>
+  </div>
+  <h3 class="text-lg font-semibold text-gray-900 leading-snug group-hover:text-white transition-colors duration-300">
+   Expertise<br />
+  </h3>
+</div>
+
+
+      <!-- card 2 -->    
+             <div class="group bg-gray-50 rounded-xl p-8 flex flex-col items-center text-center hover:bg-red-500 transition-all duration-300">
+  <div class="w-16 h-16 flex items-center justify-center mb-4">
+    <i class="bi bi-telephone text-red-600 text-4xl group-hover:text-white transition-colors duration-300"></i>
+  </div>
+  <h3 class="text-lg font-semibold text-gray-900 leading-snug group-hover:text-white transition-colors duration-300">
+      Software & IT Solutions
+  </h3>
+</div>
+
+
+      <!-- card 3 -->
+   <div class="group bg-gray-50 rounded-xl p-8 flex flex-col items-center text-center hover:bg-red-500 transition-all duration-300">
+  <div class="w-16 h-16 flex items-center justify-center mb-4">
+    <i class="bi bi-globe text-red-600 text-4xl group-hover:text-white transition-colors duration-300"></i>
+  </div>
+  <h3 class="text-lg font-semibold text-gray-900 leading-snug group-hover:text-white transition-colors duration-300">
+     Industry Recognition<br />
+  </h3>
+</div>
+         
+
+      <!-- card 4 -->
+       <div class="group bg-gray-50 rounded-xl p-8 flex flex-col items-center text-center hover:bg-red-500 transition-all duration-300">
+  <div class="w-16 h-16 flex items-center justify-center mb-4">
+    <i class="bi bi-shield-check text-red-600 text-4xl group-hover:text-white transition-colors duration-300"></i>
+  </div>
+  <h3 class="text-lg font-semibold text-gray-900 leading-snug group-hover:text-white transition-colors duration-300">
+      Expert Student <br />Abroad Counselling
+  </h3>
+</div>
+
+
+      <!-- card 5 -->
+            <div class="group bg-gray-50 rounded-xl p-8 flex flex-col items-center text-center hover:bg-red-500 transition-all duration-300">
+  <div class="w-16 h-16 flex items-center justify-center mb-4">
+    <i class="bi bi-speedometer text-red-600 text-4xl group-hover:text-white transition-colors duration-300"></i>
+  </div>
+  <h3 class="text-lg font-semibold text-gray-900 leading-snug group-hover:text-white transition-colors duration-300">
+      Innovative <br />Solutions
+  </h3>
+</div>
+
+
+      <!-- card 6 -->
+      
+
+           <div class="group bg-gray-50 rounded-xl p-8 flex flex-col items-center text-center hover:bg-red-500 transition-all duration-300">
+  <div class="w-16 h-16 flex items-center justify-center mb-4">
+    <i class="bi bi-router text-red-600 text-4xl group-hover:text-white transition-colors duration-300"></i>
+  </div>
+  <h3 class="text-lg font-semibold text-gray-900 leading-snug group-hover:text-white transition-colors duration-300">
+      Dedicated <br />Support
+  </h3>
+</div>
+
+      <!-- card 7 -->
+      <div class="lg:col-span-2 rounded-xl overflow-hidden hover:shadow-2xl transition-all relative h-64 bg-cover bg-center"
+           style="background-image:url('assets/resource/image-1.jpg');">
+        <div class="absolute inset-0 bg-black/50"></div>
+        <div class="relative z-10 flex flex-col justify-center items-center h-full p-8 text-center">
+          <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-3">DitrixitHub</h1>
+          
+          <button class="bg-red-600 hover:bg-orange-500 text-white font-semibold py-3 px-5 rounded-lg transition-colors flex items-center gap-2">
+            Get Started Now <i class="bi bi-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- who we are section end -->
+
+
+<!-- empty div start  -->
+ <div class="w-full h-48"></div>
+
+<!-- empty div end  -->
+
+<!-- featured section start -->
+
+<section
+      class="relative gradient-bg py-32 md:py-40 overflow-visible bg-cover bg-center"
+      style="background-image:url('assets/background/2.jpg');"
+    >
+      <!-- Red Banner  -->
+      
+       <div
+  class="absolute -top-[7.5rem] left-1/2 transform -translate-x-1/2 w-11/12 md:w-2/3 lg:w-1/2 rounded-lg shadow-2xl z-20 bg-cover bg-center"
+  style="background-image:url('assets/background/Untitled\ design.png');"
+>
+  <!-- Red overlay -->
+  <div class="absolute inset-0 bg-red-600/50 rounded-lg"></div>
+
+  <!-- Content on top -->
+  <div class="relative z-10 flex flex-col md:flex-row items-center justify-between p-6">
+    <div>
+      <h2 class="text-2xl md:text-3xl font-bold text-white">
+       Visit DitrixitHub
+      </h2>
+      <p class="text-lg text-gray-200">Server packages</p>
+      <p class="text-sm text-gray-300 mt-2">
+        Get connected with DitrixitHub Limited that can provide your every
+        technology need to connect the world.
+      </p>
+      <div class="flex items-center gap-4 mt-4">
+        
+        <button class="bg-black text-white px-4 py-2 rounded-md font-medium hover:bg-orange-500">
+          Get Now
+        </button>
+      </div>
+    </div>
+    <!-- <div class="mt-4 md:mt-0">
       <img
         src="assets/background/1.jpg"
         alt="TV"
         class="w-64 md:w-72 object-contain"
       />
     </div> -->
-      </div>
-    </div>
+  </div>
+</div>
 
 
-    <!-- Section Title -->
-    <div class="text-center mt-24 md:mt-28 mb-10">
-      <h3 class="text-red-400 uppercase tracking-widest text-sm mb-2">
-        Featured Movies
-      </h3>
-      <h2 class="text-white text-2xl md:text-3xl font-semibold leading-snug">
-        Featured shows & movies <br />
-        without buffering
-      </h2>
-    </div>
-
-    <!-- Swiper Slider -->
-    <div class="swiper featuredSwiper max-w-6xl mx-auto px-4 relative z-10">
-      <div class="swiper-wrapper pb-12">
-        <!-- Slide Item -->
-        <div class="swiper-slide">
-          <div class="relative rounded-xl overflow-hidden shadow-lg border border-slate-700 h-80">
-            <img src="assets/resource/1.jpg" alt="Movie" class="absolute inset-0 w-full h-full object-cover" />
-            <div class="absolute inset-0 bg-black/50"></div>
-
-          </div>
-        </div>
-
-        <div class="swiper-slide">
-          <div class="relative rounded-xl overflow-hidden shadow-lg border border-slate-700 h-80">
-            <img src="assets/resource/2.jpg" alt="Movie" class="absolute inset-0 w-full h-full object-cover" />
-            <div class="absolute inset-0 bg-black/50"></div>
-
-          </div>
-        </div>
-
-        <div class="swiper-slide">
-          <div class="relative rounded-xl overflow-hidden shadow-lg border border-slate-700 h-80">
-            <img src="assets/resource/3.jpg" alt="Movie" class="absolute inset-0 w-full h-full object-cover" />
-            <div class="absolute inset-0 bg-black/50"></div>
-
-          </div>
-        </div>
-
-        <div class="swiper-slide">
-          <div class="relative rounded-xl overflow-hidden shadow-lg border border-slate-700 h-80">
-            <img src="assets/resource/4.jpg" alt="Movie" class="absolute inset-0 w-full h-full object-cover" />
-            <div class="absolute inset-0 bg-black/50"></div>
-
-          </div>
-        </div>
-
-        <div class="swiper-slide">
-          <div class="relative rounded-xl overflow-hidden shadow-lg border border-slate-700 h-80">
-            <img src="assets/resource/5.jpg" alt="Movie" class="absolute inset-0 w-full h-full object-cover" />
-            <div class="absolute inset-0 bg-black/50"></div>
-
-          </div>
-        </div>
+      <!-- Section Title -->
+      <div class="text-center mt-24 md:mt-28 mb-10">
+        <h3 class="text-red-400 uppercase tracking-widest text-sm mb-2">
+          Featured Movies
+        </h3>
+        <h2
+          class="text-white text-2xl md:text-3xl font-semibold leading-snug"
+        >
+          Featured shows & movies <br />
+          without buffering
+        </h2>
       </div>
 
-      <!-- Navigation -->
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
+      <!-- Swiper Slider -->
+      <div class="swiper featuredSwiper max-w-6xl mx-auto px-4 relative z-10">
+        <div class="swiper-wrapper pb-12">
+          <!-- Slide Item -->
+          <div class="swiper-slide">
+            <div
+              class="relative rounded-xl overflow-hidden shadow-lg border border-slate-700 h-80"
+            >
+              <img
+                src="assets/resource/1.jpg"
+                alt="Movie"
+                class="absolute inset-0 w-full h-full object-cover"
+              />
+              <div class="absolute inset-0 bg-black/50"></div>
+              
+            </div>
+          </div>
 
-      <!-- Pagination -->
-      <div class="swiper-pagination mt-6"></div>
-    </div>
+          <div class="swiper-slide">
+            <div
+              class="relative rounded-xl overflow-hidden shadow-lg border border-slate-700 h-80"
+            >
+              <img
+                src="assets/resource/2.jpg"
+                alt="Movie"
+                class="absolute inset-0 w-full h-full object-cover"
+              />
+              <div class="absolute inset-0 bg-black/50"></div>
+              
+            </div>
+          </div>
 
-    <!-- Bottom White Info Box -->
-    <section
-      class="bg-white w-4/5 h-[30vh] mx-auto my-10 rounded-2xl shadow-md flex flex-col md:flex-row items-center justify-between px-6 md:px-10">
-      <!-- LEFT SIDE -->
-      <div class="flex items-center gap-4">
-        <div class="bg-red-600 text-white px-4 py-3 rounded-full"> <i class="bi bi-whatsapp text-3xl"></i> </div>
-        <div>
-          <p class="text-gray-700 text-lg font-semibold">Call us Now for Coverage Area</p>
-          <p class="text-2xl font-bold text-black">+8801730974804</p>
+          <div class="swiper-slide">
+            <div
+              class="relative rounded-xl overflow-hidden shadow-lg border border-slate-700 h-80"
+            >
+              <img
+                src="assets/resource/3.jpg"
+                alt="Movie"
+                class="absolute inset-0 w-full h-full object-cover"
+              />
+              <div class="absolute inset-0 bg-black/50"></div>
+              
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div
+              class="relative rounded-xl overflow-hidden shadow-lg border border-slate-700 h-80"
+            >
+              <img
+                src="assets/resource/4.jpg"
+                alt="Movie"
+                class="absolute inset-0 w-full h-full object-cover"
+              />
+              <div class="absolute inset-0 bg-black/50"></div>
+              
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div
+              class="relative rounded-xl overflow-hidden shadow-lg border border-slate-700 h-80"
+            >
+              <img
+                src="assets/resource/5.jpg"
+                alt="Movie"
+                class="absolute inset-0 w-full h-full object-cover"
+              />
+              <div class="absolute inset-0 bg-black/50"></div>
+              
+            </div>
+          </div>
         </div>
-      </div> <!-- RIGHT SIDE -->
-      <div class="mt-6 md:mt-0"> <img src="assets/icons/dotted-map.png" alt="Coverage Image"
-          class="w-56 md:w-[600px] rounded-lg object-cover shadow mt-2" /> </div>
+
+        <!-- Navigation -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+
+        <!-- Pagination -->
+        <div class="swiper-pagination mt-6"></div>
+      </div>
+
+      <!-- Bottom White Info Box -->
+     <section class="bg-white w-4/5 h-[30vh] mx-auto my-10 rounded-2xl shadow-md flex flex-col md:flex-row items-center justify-between px-6 md:px-10"> 
+      <!-- LEFT SIDE --> 
+       <div class="flex items-center gap-4">
+         <div class="bg-red-600 text-white px-4 py-3 rounded-full"> <i class="bi bi-whatsapp text-3xl"></i> </div>
+          <div>
+             <p class="text-gray-700 text-lg font-semibold">Call us Now for Coverage Area</p>
+              <p class="text-2xl font-bold text-black">+8801730974804</p>
+             </div> 
+            </div> <!-- RIGHT SIDE -->
+             <div class="mt-6 md:mt-0"> <img src="assets/icons/dotted-map.png" alt="Coverage Image" class="w-56 md:w-[600px] rounded-lg object-cover shadow mt-2" /> </div>
+             </section>
     </section>
-  </section>
 
-  <!-- featured section end -->
-
+<!-- featured section end -->
 
 
-  <!-- our values section start  -->
-  <section class="w-11/12 mx-auto bg-gray-50  min-h-[400px]
+
+<!-- our values section start  -->
+<section class="w-11/12 mx-auto bg-gray-50  min-h-[400px]
  ">
-    <div class=" bg-white rounded-2xl shadow-md flex flex-col md:flex-row items-center overflow-hidden">
+  <div class=" bg-white rounded-2xl shadow-md flex flex-col md:flex-row items-center overflow-hidden">
+   
 
+    <!-- LEFT: Image -->
+    <div class="md:w-1/2 w-full flex justify-center items-center relative p-6  ">
+      
+      <img 
+  src="assets/main-slider/men.png" 
+  alt="Person with laptop"
+  class="w-full h-[250px] md:h-[280px] object-contain drop-shadow-lg"
+  style="height: 400px;"
+/>
 
-      <!-- LEFT: Image -->
-      <div class="md:w-1/2 w-full flex justify-center items-center relative p-6  ">
-
-        <img src="assets/main-slider/men.png" alt="Person with laptop"
-          class="w-full h-[250px] md:h-[280px] object-contain drop-shadow-lg" style="height: 400px;" />
-
-        <!--    
+<!--    
       <img 
         src="../assets/icons/badge.png" 
         alt="Badge" 
         class="absolute top-6 right-6 w-16 md:w-20"
       > -->
-      </div>
+    </div>
+    
 
+    <!-- RIGHT: Text Content -->
+    <div class="md:w-1/2 w-full  md:p-10 ">
+      <p class="text-red-600 uppercase tracking-wide font-semibold text-sm">
+       Our Values
+      </p>
 
-      <!-- RIGHT: Text Content -->
-      <div class="md:w-1/2 w-full  md:p-10 ">
-        <p class="text-red-600 uppercase tracking-wide font-semibold text-sm">
-          Our Values
-        </p>
+      <h2 class="text-2xl md:text-4xl font-bold text-gray-900 leading-snug">
+      Building lasting value
+      </h2>
 
-        <h2 class="text-2xl md:text-4xl font-bold text-gray-900 leading-snug">
-          Building lasting value
-        </h2>
+      
 
+      <!-- Divider -->
+      <!-- <div class="border-t border-gray-200 my-4"></div> -->
 
+      <!-- Features -->
+      <div class="space-y-6 px-5 py-5">
+        <!-- Feature 1 -->
+        <div class="flex items-start gap-4">
+          <div class="bg-red-100 py-3 px-4 rounded-lg flex items-center justify-center shrink-0">
+            <i class="bi bi-shield-check text-red-500"></i>
 
-        <!-- Divider -->
-        <!-- <div class="border-t border-gray-200 my-4"></div> -->
-
-        <!-- Features -->
-        <div class="space-y-6 px-5 py-5">
-          <!-- Feature 1 -->
-          <div class="flex items-start gap-4">
-            <div class="bg-red-100 py-3 px-4 rounded-lg flex items-center justify-center shrink-0">
-              <i class="bi bi-shield-check text-red-500"></i>
-
-            </div>
-            <div>
-              <h3 class="text-lg font-semibold text-gray-900">We Do What’s Right</h3>
-              <p class="text-sm text-gray-700">
-                Honesty and trust matter to us. We keep our promises and stay transparent in everything we do.
-              </p>
-            </div>
           </div>
-
-          <!-- Feature 2 -->
-          <div class="flex items-start gap-4">
-            <div class="bg-red-100 py-3 px-4 rounded-lg flex items-center justify-center shrink-0">
-              <i class="bi bi-trophy text-red-500"></i>
-
-
-            </div>
-            <div>
-              <h3 class="text-lg font-semibold text-gray-900">We Always Aim for the Best</h3>
-              <p class="text-sm text-gray-700">
-                Whether it’s student support or business solutions, we work hard to deliver quality you can rely on.
-              </p>
-            </div>
+          <div>
+            <h3 class="text-lg font-semibold text-gray-900">We Do What’s Right</h3>
+            <p class="text-sm text-gray-700">
+              Honesty and trust matter to us. We keep our promises and stay transparent in everything we do.
+            </p>
           </div>
-          <!-- Feature 3 -->
-          <div class="flex items-start gap-4">
-            <div class="bg-red-100 py-3 px-4 rounded-lg flex items-center justify-center shrink-0">
-              <i class="bi bi-people text-red-500"></i>
-
-            </div>
-            <div>
-              <h3 class="text-lg font-semibold text-gray-900">We Put You First</h3>
-              <p class="text-sm text-gray-700">
-                Your needs, goals, and challenges guide our work. We listen, understand, and support you the way you
-                need.
-              </p>
-            </div>
-          </div>
-          <!-- Feature 4 -->
-          <div class="flex items-start gap-4">
-            <div class="bg-red-100 py-3 px-4 rounded-lg flex items-center justify-center shrink-0">
-              <i class="bi bi-graph-up-arrow text-red-500"></i>
-
-            </div>
-            <div>
-              <h3 class="text-lg font-semibold text-gray-900">We Believe in Growth</h3>
-              <p class="text-sm text-gray-700">
-                We welcome new ideas, new technology, and better ways to help you move forward confidently.
-              </p>
-            </div>
-          </div>
-          <!-- Feature 5 -->
-          <div class="flex items-start gap-4">
-            <div class="bg-red-100 py-3 px-4 rounded-lg flex items-center justify-center shrink-0">
-              <i class="bi bi-people text-red-500"></i>
-
-            </div>
-            <div>
-              <h3 class="text-lg font-semibold text-gray-900">We Build Relationships, Not Just Services</h3>
-              <p class="text-sm text-gray-700">
-                We value long-term connections and want to grow with you, creating real value that lasts.
-              </p>
-            </div>
-          </div>
-
         </div>
+
+        <!-- Feature 2 -->
+        <div class="flex items-start gap-4">
+          <div class="bg-red-100 py-3 px-4 rounded-lg flex items-center justify-center shrink-0">
+           <i class="bi bi-trophy text-red-500"></i>
+
+
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-gray-900">We Always Aim for the Best</h3>
+            <p class="text-sm text-gray-700">
+              Whether it’s student support or business solutions, we work hard to deliver quality you can rely on.
+            </p>
+          </div>
+        </div>
+        <!-- Feature 3 -->
+        <div class="flex items-start gap-4">
+          <div class="bg-red-100 py-3 px-4 rounded-lg flex items-center justify-center shrink-0">
+            <i class="bi bi-people text-red-500"></i>
+
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-gray-900">We Put You First</h3>
+            <p class="text-sm text-gray-700">
+              Your needs, goals, and challenges guide our work. We listen, understand, and support you the way you need.
+            </p>
+          </div>
+        </div>
+        <!-- Feature 4 -->
+        <div class="flex items-start gap-4">
+          <div class="bg-red-100 py-3 px-4 rounded-lg flex items-center justify-center shrink-0">
+           <i class="bi bi-graph-up-arrow text-red-500"></i>
+
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-gray-900">We Believe in Growth</h3>
+            <p class="text-sm text-gray-700">
+              We welcome new ideas, new technology, and better ways to help you move forward confidently.
+            </p>
+          </div>
+        </div>
+        <!-- Feature 5 -->
+        <div class="flex items-start gap-4">
+          <div class="bg-red-100 py-3 px-4 rounded-lg flex items-center justify-center shrink-0">
+            <i class="bi bi-people text-red-500"></i>
+
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-gray-900">We Build Relationships, Not Just Services</h3>
+            <p class="text-sm text-gray-700">
+               We value long-term connections and want to grow with you, creating real value that lasts.
+            </p>
+          </div>
+        </div>
+       
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
 
-  <!-- our values section end  -->
+<!-- our values section end  -->
 
 
-  <!-- Watch section start  -->
-  <section class="flex flex-col md:flex-row w-11/12 mx-auto py-6">
-    <!-- Left Div -->
+<!-- Watch section start  -->
+<section class="flex flex-col md:flex-row w-11/12 mx-auto py-6">
+  <!-- Left Div -->
+  
 
-
-    <div class="md:w-1/2 w-full flex flex-col items-center justify-center bg-gray-100 p-6 gap-6">
-      <!-- Row 1 -->
-      <div class="flex justify-center gap-5 w-full max-w-lg">
-        <div class="bg-white p-4 rounded-lg shadow-md flex flex-col items-center justify-center w-1/3">
-          <img src="assets/brandLogo/1.png" alt="Diptyquest" class="w-14 h-14 object-contain mb-2">
-          <!-- <i class="bi bi-graph-up-arrow text-4xl text-red-600 mb-2 w-14 h-14 object-contain mb-2"></i> -->
-          <span class="text-sm font-medium text-gray-700">Diptyquest</span>
-        </div>
-
-        <div class="bg-white p-4 rounded-lg shadow-md flex flex-col items-center justify-center w-1/3">
-          <img src="assets/brandLogo/2.png" alt="Nirambd" class="w-14 h-14 object-contain mb-2">
-          <span class="text-sm font-medium text-gray-700">Nirambd</span>
-        </div>
-
-        <div class="bg-white p-4 rounded-lg shadow-md flex flex-col items-center justify-center w-1/3">
-          <img src="assets/brandLogo/3.png" alt="Rafusoft" class="w-14 h-14 object-contain mb-2">
-          <span class="text-sm font-medium text-gray-700">Rafusoft</span>
-        </div>
+  <div class="md:w-1/2 w-full flex flex-col items-center justify-center bg-gray-100 p-6 gap-6">
+    <!-- Row 1 -->
+    <div class="flex justify-center gap-5 w-full max-w-lg">
+      <div class="bg-white p-4 rounded-lg shadow-md flex flex-col items-center justify-center w-1/3">
+        <img src="assets/brandLogo/1.png" alt="Diptyquest" class="w-14 h-14 object-contain mb-2">
+         <!-- <i class="bi bi-graph-up-arrow text-4xl text-red-600 mb-2 w-14 h-14 object-contain mb-2"></i> -->
+        <span class="text-sm font-medium text-gray-700">Diptyquest</span>
       </div>
 
-      <!-- Row 2 -->
-      <div class="flex justify-center gap-5 w-full max-w-lg">
-        <div class="bg-white p-4 rounded-lg shadow-md flex flex-col items-center justify-center w-1/3">
-          <img src="assets/brandLogo/dazzle.png" alt="Dazzle & Glare" class="w-17 h-14 object-contain mb-2">
-          <span class="text-sm font-medium text-gray-700">Dazzle & Glare</span>
-        </div>
+      <div class="bg-white p-4 rounded-lg shadow-md flex flex-col items-center justify-center w-1/3">
+        <img src="assets/brandLogo/2.png" alt="Nirambd" class="w-14 h-14 object-contain mb-2">
+        <span class="text-sm font-medium text-gray-700">Nirambd</span>
+      </div>
 
-        <div class="bg-white p-4 rounded-lg shadow-md flex flex-col items-center justify-center w-1/3">
-          <img src="assets/brandLogo/belle.png" alt="Belo Bella" class="w-17 h-14 object-contain mb-2">
-          <span class="text-sm font-medium text-gray-700">Belo Bella</span>
-        </div>
-
-        <div class="bg-white p-4 rounded-lg shadow-md flex flex-col items-center justify-center w-1/3">
-          <img src="assets/brandLogo/6.png" alt="Zatra" class="w-14 h-14 object-contain mb-2">
-          <span class="text-sm font-medium text-gray-700">Zatra</span>
-        </div>
+      <div class="bg-white p-4 rounded-lg shadow-md flex flex-col items-center justify-center w-1/3">
+        <img src="assets/brandLogo/3.png" alt="Rafusoft" class="w-14 h-14 object-contain mb-2">
+        <span class="text-sm font-medium text-gray-700">Rafusoft</span>
       </div>
     </div>
 
-    <!-- Right Div -->
-    <div class="md:w-1/2 w-full bg-red-600 flex items-center justify-center p-8">
-      <div class="text-white text-center max-w-md">
-        <h1 class="text-4xl font-bold leading-tight mb-4">
-          Welcome to DTRIX IT Hub & Consultancy <br>
-          <span class="text-yellow-400 text-lg">Empowering Students, Entrepreneurs & Businesses to Succeed</span>
-        </h1>
+    <!-- Row 2 -->
+    <div class="flex justify-center gap-5 w-full max-w-lg">
+      <div class="bg-white p-4 rounded-lg shadow-md flex flex-col items-center justify-center w-1/3">
+        <img src="assets/brandLogo/dazzle.png" alt="Dazzle & Glare" class="w-17 h-14 object-contain mb-2">
+        <span class="text-sm font-medium text-gray-700">Dazzle & Glare</span>
+      </div>
 
-        <p class="text-base mb-6 leading-relaxed">
-          At DTRIX, we connect people, ideas, and technology, helping students achieve their educational goals,
-          entrepreneurs grow their businesses, and brands expand globally. Our expertise spans student counselling,
-          business consultancy, IT solutions, import/export services, and bulk clothing supply.
-        </p>
+      <div class="bg-white p-4 rounded-lg shadow-md flex flex-col items-center justify-center w-1/3">
+        <img src="assets/brandLogo/belle.png" alt="Belo Bella" class="w-17 h-14 object-contain mb-2">
+        <span class="text-sm font-medium text-gray-700">Belo Bella</span>
+      </div>
 
+      <div class="bg-white p-4 rounded-lg shadow-md flex flex-col items-center justify-center w-1/3">
+        <img src="assets/brandLogo/6.png" alt="Zatra" class="w-14 h-14 object-contain mb-2">
+        <span class="text-sm font-medium text-gray-700">Zatra</span>
       </div>
     </div>
-  </section>
+  </div>
 
-  <!-- Watch section end  -->
+  <!-- Right Div -->
+  <div class="md:w-1/2 w-full bg-red-600 flex items-center justify-center p-8">
+    <div class="text-white text-center max-w-md">
+      <h1 class="text-4xl font-bold leading-tight mb-4">
+        Welcome to DTRIX IT Hub & Consultancy <br>
+        <span class="text-yellow-400 text-lg">Empowering Students, Entrepreneurs & Businesses to Succeed</span>
+      </h1>
+
+      <p class="text-base mb-6 leading-relaxed">
+       At DTRIX, we connect people, ideas, and technology, helping students achieve their educational goals, entrepreneurs grow their businesses, and brands expand globally. Our expertise spans student counselling, business consultancy, IT solutions, import/export services, and bulk clothing supply.
+      </p>
+
+    </div>
+  </div>
+</section>
+
+<!-- Watch section end  -->
 
 
-  <!-- value section start  -->
-  <!-- <section class="py-16 bg-gray-50"> -->
+<!-- value section start  -->
+ <!-- <section class="py-16 bg-gray-50"> -->
   <section class="py-16 bg-cover bg-center bg-no-repeat" style="background-image: url('assets/icons/pattern-6.jpg');">
 
 
-    <div class="text-center mb-12">
-      <p class="text-red-500 tracking-wide font-medium">/ OUR PACKAGES /</p>
-      <h2 class="text-3xl font-bold text-gray-800">Best value added packages</h2>
-    </div>
+  <div class="text-center mb-12">
+    <p class="text-red-500 tracking-wide font-medium">/ OUR PACKAGES /</p>
+    <h2 class="text-3xl font-bold text-gray-800">Best value added packages</h2>
+  </div>
 
-    <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-6 px-4">
-      <!-- Card 1 -->
-      <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-500 group">
-        <div class="relative overflow-hidden">
-          <img src="assets/pacageImage/1.png" alt="Bronze"
-            class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-110">
-
-        </div>
-
-        <div class="p-6">
-
-
-          <h3 class="font-bold text-lg mb-4">Custom Software Development</h3>
-
-          <p> We design and develop software tailored to your business needs, from automation tools to management
-            systems.</p>
-
-          <ul class="space-y-2 text-gray-600 my-6">
-            <li><i class="bi bi-check text-green-500 mr-2"></i>Streamline business operations</li>
-            <li><i class="bi bi-check text-green-500 mr-2"></i>Increase efficiency and productivity</li>
-            <li><i class="bi bi-check text-green-500 mr-2"></i>Scalable solutions for growth</li>
-            <li><i class="bi bi-check text-green-500 mr-2"></i>Tailored to your unique requirements</li>
-          </ul>
-
-
-
-          <button
-            class="border border-gray-300 px-5 py-2 text-sm rounded transition-all duration-500 group-hover:bg-red-600 group-hover:text-white">
-            Get Started Now →
-          </button>
-        </div>
+  <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-6 px-4">
+    <!-- Card 1 -->
+    <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-500 group">
+      <div class="relative overflow-hidden">
+        <img src="assets/pacageImage/1.png" alt="Bronze" class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-110">
+        
       </div>
 
-      <!-- Card 2 -->
-      <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-500 group">
-        <div class="relative overflow-hidden">
-          <img src="assets/pacageImage/2.png" alt="Silver"
-            class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-110">
+      <div class="p-6">
+        
 
-        </div>
+        <h3 class="font-bold text-lg mb-4">Custom Software Development</h3>
 
-        <div class="p-6">
+        <p> We design and develop software tailored to your business needs, from automation tools to management systems.</p>
 
+        <ul class="space-y-2 text-gray-600 my-6">
+          <li><i class="bi bi-check text-green-500 mr-2"></i>Streamline business operations</li>
+          <li><i class="bi bi-check text-green-500 mr-2"></i>Increase efficiency and productivity</li>
+          <li><i class="bi bi-check text-green-500 mr-2"></i>Scalable solutions for growth</li>
+          <li><i class="bi bi-check text-green-500 mr-2"></i>Tailored to your unique requirements</li>
+        </ul>
 
-          <h3 class="font-bold text-lg mb-4">AI Bot Solutions</h3>
+        
 
-          <p>Our AI-powered chatbots and automation systems improve customer engagement and reduce manual work.</p>
-
-          <ul class="space-y-2 text-gray-600 my-6">
-            <li><i class="bi bi-check text-green-500 mr-2"></i>24/7 customer support automation</li>
-            <li><i class="bi bi-check text-green-500 mr-2"></i>Smart workflow optimization</li>
-            <li><i class="bi bi-check text-green-500 mr-2"></i>Personalized user interactions</li>
-            <li><i class="bi bi-check text-green-500 mr-2"></i>Time and cost-saving solutions</li>
-          </ul>
-
-
-
-          <button
-            class="border border-gray-300 px-5 py-2 text-sm rounded transition-all duration-500 group-hover:bg-red-600 group-hover:text-white">
-            Get Started Now →
-          </button>
-        </div>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-500 group">
-        <div class="relative overflow-hidden">
-          <img src="assets/pacageImage/3.png" alt="Gold"
-            class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-110">
-
-        </div>
-
-        <div class="p-6">
-
-
-          <h3 class="font-bold text-lg mb-4">SEO & Digital Growth</h3>
-
-          <p> Enhance your online visibility, attract the right audience, and grow your business.</p>
-
-          <ul class="space-y-2 text-gray-600 my-6">
-            <li><i class="bi bi-check text-green-500 mr-2"></i>Search engine optimization (SEO)</li>
-            <li><i class="bi bi-check text-green-500 mr-2"></i>Content creation & optimization</li>
-            <li><i class="bi bi-check text-green-500 mr-2"></i>Digital marketing campaigns</li>
-            <li><i class="bi bi-check text-green-500 mr-2"></i>Boost website traffic and leads</li>
-          </ul>
-
-
-
-          <button
-            class="border border-gray-300 px-5 py-2 text-sm rounded transition-all duration-500 group-hover:bg-red-600 group-hover:text-white mt-6">
-            Get Started Now →
-          </button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-
-  <!-- value section end  -->
-
-
-
-
-  <!-- Company Statistics Section -->
-  <section id="stats-section" class="py-16 px-6 bg-white">
-    <div class="max-w-6xl mx-auto text-center">
-      <!-- Heading -->
-      <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
-        Company statistics unveiled
-      </h2>
-      <p class="text-gray-600 mt-2 text-lg mb-12">
-        Achievements, growth, and milestones
-      </p>
-
-      <!-- Stats Row -->
-      <div
-        class="flex flex-wrap justify-center items-center divide-x divide-gray-300 border-t border-b border-gray-200 py-8">
-        <!-- Stat 1 -->
-        <div class="w-1/2 sm:w-1/4 py-4">
-          <h3 class="text-4xl font-extrabold text-red-600 counter" data-target="50000">0</h3>
-          <p class="text-gray-500 mt-2 text-sm uppercase tracking-wide">
-            Worldwide Clients
-          </p>
-        </div>
-
-        <!-- Stat 2 -->
-        <div class="w-1/2 sm:w-1/4 py-4">
-          <h3 class="text-4xl font-extrabold text-red-600 counter" data-target="201">0</h3>
-          <p class="text-gray-500 mt-2 text-sm uppercase tracking-wide">
-            Project Completed
-          </p>
-        </div>
-
-        <!-- Stat 3 -->
-        <div class="w-1/2 sm:w-1/4 py-4">
-          <h3 class="text-4xl font-extrabold text-red-600 counter" data-target="2200000">0</h3>
-          <p class="text-gray-500 mt-2 text-sm uppercase tracking-wide">
-            Profit Earning
-          </p>
-        </div>
-
-        <!-- Stat 4 -->
-        <div class="w-1/2 sm:w-1/4 py-4">
-          <h3 class="text-4xl font-extrabold text-red-600 counter" data-target="5">0</h3>
-          <p class="text-gray-500 mt-2 text-sm uppercase tracking-wide">
-            Got Awards
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- company statistic  end   -->
-
-
-
-
-  <!-- Testimonial section start -->
-
-  <!-- <section class="relative bg-cover bg-center bg-no-repeat h-[700px] section-bg"> -->
-  <section class="hidden lg:block relative bg-cover bg-center bg-no-repeat h-[700px] section-bg">
-    <!-- it will be hidden on  small devices. and for large devices it will show content. -->
-
-
-
-
-    <!-- Overlay -->
-
-
-    <div class="relative z-10 max-w-7xl mx-auto px-6 text-center text-white py-16">
-      <!-- Section Header -->
-      <p class="text-sm tracking-widest mb-2 uppercase">/TESTIMONIAL /</p>
-      <h1 class="text-[30px] md:text-[70px] font-bold leading-tight mb-12">
-        Why people love us <br> over others
-      </h1>
-
-      <!-- Swiper Container -->
-      <div class="swiper testimonialSwiper">
-        <div class="swiper-wrapper">
-          <!-- Slide 1 -->
-          <div class="swiper-slide">
-            <div class="flex flex-col md:flex-row gap-8 justify-center items-stretch">
-              <!-- Card 1 -->
-              <div class="card-container">
-                <!-- Red Card (Top) -->
-                <div class="red-card">
-
-
-                  <div class="avatar">
-                    <img src="assets/background/1.jpg" alt="Mark Wood" class="w-full h-full rounded-full object-cover">
-                  </div>
-                  <h4 class="text-white text-sm font-semibold mt-2">Mark Wood</h4>
-                  <p class="text-white/90 text-xs mt-1">CEO, Buzicon</p>
-
-                  <!-- Yellow Quote Badge -->
-                  <div class="quote-badge">
-                    <span class="text-black text-2xl font-bold">"</span>
-                  </div>
-                </div>
-
-                <!-- White Card (Bottom) -->
-                <div class="white-card">
-                  <!-- <div class="white-card w-full max-w-[320px] mx-auto mt-4 p-4"> -->
-
-                  <h5 class="text-gray-900 font-semibold text-lg mb-2">Great Service</h5>
-
-                  <!-- Stars -->
-                  <div class="mb-1 text-yellow-500 z-10">
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-
-                  </div>
-
-                  <p class="text-gray-600 text-sm leading-relaxed px-4 sm:px-6 md:px-8 ">
-                    To get started with us, please go over all of our internet plans and other plans to let our
-                    operators know which one works for you
-                  </p>
-                </div>
-              </div>
-
-              <!-- Card 2 -->
-              <div class="card-container">
-                <!-- Red Card (Top) -->
-                <div class="red-card">
-                  <div class="avatar">
-                    <img src="assets/background/1.jpg" alt="Mark Wood" class="w-full h-full rounded-full object-cover">
-                  </div>
-                  <h4 class="text-white text-sm font-semibold mt-2">Mark Wood</h4>
-                  <p class="text-white/90 text-xs mt-1">CEO, Buzicon</p>
-
-                  <!-- Yellow Quote Badge -->
-                  <div class="quote-badge">
-                    <span class="text-black text-2xl font-bold">"</span>
-                  </div>
-                </div>
-
-                <!-- White Card (Bottom) -->
-                <div class="white-card">
-                  <h5 class="text-gray-900 font-semibold text-lg mb-2">Great Service</h5>
-
-                  <!-- Stars -->
-                  <div class="mb-3 text-yellow-400">
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                  </div>
-
-                  <p class="text-gray-600 text-sm leading-relaxed px-4 sm:px-6 md:px-8">
-                    To get started with us, please go over all of our internet plans and other plans to let our
-                    operators know which one works for you
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide 2 -->
-          <div class="swiper-slide">
-            <div class="flex flex-col md:flex-row gap-8 justify-center items-stretch">
-              <!-- Card 3 -->
-              <div class="card-container">
-                <!-- Red Card (Top) -->
-                <div class="red-card">
-                  <div class="avatar">
-                    <img src="assets/background/1.jpg" alt="Mark Wood" class="w-full h-full rounded-full object-cover">
-                  </div>
-                  <h4 class="text-white text-sm font-semibold mt-2">Mark Wood</h4>
-                  <p class="text-white/90 text-xs mt-1">CEO, Buzicon</p>
-
-                  <!-- Yellow Quote Badge -->
-                  <div class="quote-badge">
-                    <span class="text-black text-2xl font-bold">"</span>
-                  </div>
-                </div>
-
-                <!-- White Card (Bottom) -->
-                <div class="white-card">
-                  <h5 class="text-gray-900 font-semibold text-lg mb-2">Great Service</h5>
-
-                  <!-- Stars -->
-                  <div class="mb-3 text-yellow-400">
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                  </div>
-
-                  <p class="text-gray-600 text-sm leading-relaxed px-4 sm:px-6 md:px-8">
-                    To get started with us, please go over all of our internet plans and other plans to let our
-                    operators know which one works for you
-                  </p>
-                </div>
-              </div>
-
-              <!-- Card 4 -->
-              <div class="card-container">
-
-                <div class="red-card">
-                  <div class="avatar">
-                    <img src="assets/background/1.jpg" alt="Mark Wood" class="w-full h-full rounded-full  object-cover">
-                  </div>
-                  <h4 class="text-white text-sm font-semibold mt-2">Mark Wood</h4>
-                  <p class="text-white/90 text-xs mt-1">CEO, Buzicon</p>
-
-
-                  <div class="quote-badge">
-                    <span class="text-black text-2xl font-bold">"</span>
-                  </div>
-                </div>
-
-
-                <div class="white-card">
-                  <h5 class="text-gray-900 font-semibold text-lg mb-2">Great Service</h5>
-
-
-                  <div class="mb-3 text-yellow-400">
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                    <i class="bi bi-star-fill"></i>
-                  </div>
-
-                  <p class="text-gray-600 text-sm leading-relaxed px-4 sm:px-6 md:px-8">
-                    To get started with us, please go over all of our internet plans and other plans to let our
-                    operators know which one works for you
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Pagination -->
-        <div class="swiper-pagination mt-20 py-6"></div>
-      </div>
-    </div>
-  </section>
-
-
-
-
-
-
-  <!-- Testimonial section end -->
-
-
-
-
-  <!-- blog section start  -->
-  <section class="py-16 md:py-6 bg-white">
-    <div class="max-w-7xl mx-auto px-6">
-
-
-      <div class="flex justify-between items-center mb-12">
-        <div>
-          <p class="text-sm uppercase tracking-wider text-red-500 font-semibold mb-2">Latest Blog</p>
-          <h2 class="text-4xl font-bold text-gray-900 leading-tight">
-            Digital Commerce & Payment Solutions
-          </h2>
-          <p>Empowering every business with seamless global transactions.</p>
-        </div>
-        <button onclick="window.location.href='newsGrid.html'"
-          class="bg-red-500 text-white px-5 py-2 rounded-md font-medium hover:bg-red-600 transition">
-          All Latest Blog →
+        <button class="border border-gray-300 px-5 py-2 text-sm rounded transition-all duration-500 group-hover:bg-red-600 group-hover:text-white">
+          Get Started Now →
         </button>
+      </div>
+    </div>
 
+    <!-- Card 2 -->
+    <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-500 group">
+      <div class="relative overflow-hidden">
+        <img src="assets/pacageImage/2.png" alt="Silver" class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-110">
+        
       </div>
 
-      <!-- Blog Cards -->
-      <div class="grid md:grid-cols-3 gap-8">
+      <div class="p-6">
+       
+
+        <h3 class="font-bold text-lg mb-4">AI Bot Solutions</h3>
+
+        <p>Our AI-powered chatbots and automation systems improve customer engagement and reduce manual work.</p>
+
+        <ul class="space-y-2 text-gray-600 my-6">
+          <li><i class="bi bi-check text-green-500 mr-2"></i>24/7 customer support automation</li>
+          <li><i class="bi bi-check text-green-500 mr-2"></i>Smart workflow optimization</li>
+          <li><i class="bi bi-check text-green-500 mr-2"></i>Personalized user interactions</li>
+          <li><i class="bi bi-check text-green-500 mr-2"></i>Time and cost-saving solutions</li>
+        </ul>
+
+       
+
+        <button class="border border-gray-300 px-5 py-2 text-sm rounded transition-all duration-500 group-hover:bg-red-600 group-hover:text-white">
+          Get Started Now →
+        </button>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-500 group">
+      <div class="relative overflow-hidden">
+        <img src="assets/pacageImage/3.png" alt="Gold" class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-110">
+        
+      </div>
+
+      <div class="p-6">
+        
+
+        <h3 class="font-bold text-lg mb-4">SEO & Digital Growth</h3>
+
+        <p> Enhance your online visibility, attract the right audience, and grow your business.</p>
+
+        <ul class="space-y-2 text-gray-600 my-6">
+          <li><i class="bi bi-check text-green-500 mr-2"></i>Search engine optimization (SEO)</li>
+          <li><i class="bi bi-check text-green-500 mr-2"></i>Content creation & optimization</li>
+          <li><i class="bi bi-check text-green-500 mr-2"></i>Digital marketing campaigns</li>
+          <li><i class="bi bi-check text-green-500 mr-2"></i>Boost website traffic and leads</li>
+        </ul>
+
+        
+
+        <button class="border border-gray-300 px-5 py-2 text-sm rounded transition-all duration-500 group-hover:bg-red-600 group-hover:text-white mt-6">
+          Get Started Now →
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
 
 
-        <!-- Card1 -->
 
-        <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition max-w-sm">
+<!-- value section end  -->
 
-          <div class="relative">
+
+
+
+<!-- Company Statistics Section -->
+<section id="stats-section" class="py-16 px-6 bg-white">
+      <div class="max-w-6xl mx-auto text-center">
+        <!-- Heading -->
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
+          Company statistics unveiled
+        </h2>
+        <p class="text-gray-600 mt-2 text-lg mb-12">
+          Achievements, growth, and milestones
+        </p>
+
+        <!-- Stats Row -->
+        <div
+          class="flex flex-wrap justify-center items-center divide-x divide-gray-300 border-t border-b border-gray-200 py-8"
+        >
+          <!-- Stat 1 -->
+          <div class="w-1/2 sm:w-1/4 py-4">
+            <h3 class="text-4xl font-extrabold text-red-600 counter" data-target="50000">0</h3>
+            <p class="text-gray-500 mt-2 text-sm uppercase tracking-wide">
+              Worldwide Clients
+            </p>
+          </div>
+
+          <!-- Stat 2 -->
+          <div class="w-1/2 sm:w-1/4 py-4">
+            <h3 class="text-4xl font-extrabold text-red-600 counter" data-target="201">0</h3>
+            <p class="text-gray-500 mt-2 text-sm uppercase tracking-wide">
+              Project Completed
+            </p>
+          </div>
+
+          <!-- Stat 3 -->
+          <div class="w-1/2 sm:w-1/4 py-4">
+            <h3 class="text-4xl font-extrabold text-red-600 counter" data-target="2200000">0</h3>
+            <p class="text-gray-500 mt-2 text-sm uppercase tracking-wide">
+              Profit Earning
+            </p>
+          </div>
+
+          <!-- Stat 4 -->
+          <div class="w-1/2 sm:w-1/4 py-4">
+            <h3 class="text-4xl font-extrabold text-red-600 counter" data-target="5">0</h3>
+            <p class="text-gray-500 mt-2 text-sm uppercase tracking-wide">
+              Got Awards
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- company statistic  end   -->
+
+
+
+
+<!-- Testimonial section start -->
+
+<!-- <section class="relative bg-cover bg-center bg-no-repeat h-[700px] section-bg"> -->
+  <section class="hidden lg:block relative bg-cover bg-center bg-no-repeat h-[700px] section-bg">
+  <!-- it will be hidden on  small devices. and for large devices it will show content. -->
+
+
+  
+
+        <!-- Overlay -->
+        
+
+        <div class="relative z-10 max-w-7xl mx-auto px-6 text-center text-white py-16">
+            <!-- Section Header -->
+            <p class="text-sm tracking-widest mb-2 uppercase">/TESTIMONIAL /</p>
+            <h1 class="text-[30px] md:text-[70px] font-bold leading-tight mb-12">
+            Why people love us <br> over others
+          </h1>
+
+            <!-- Swiper Container -->
+            <div class="swiper testimonialSwiper">
+                <div class="swiper-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide">
+                        <div class="flex flex-col md:flex-row gap-8 justify-center items-stretch">
+                            <!-- Card 1 -->
+                            <div class="card-container">
+                                <!-- Red Card (Top) -->
+                                <div class="red-card">
+                                  
+
+                                    <div class="avatar">
+                      <img src="assets/background/1.jpg" alt="Mark Wood" class="w-full h-full rounded-full object-cover">
+                       </div>
+                                    <h4 class="text-white text-sm font-semibold mt-2">Mark Wood</h4>
+                                    <p class="text-white/90 text-xs mt-1">CEO, Buzicon</p>
+                                    
+                                    <!-- Yellow Quote Badge -->
+                                    <div class="quote-badge">
+                                        <span class="text-black text-2xl font-bold">"</span>
+                                    </div>
+                                </div>
+                                
+                                <!-- White Card (Bottom) -->
+                                <div class="white-card">
+                                  <!-- <div class="white-card w-full max-w-[320px] mx-auto mt-4 p-4"> -->
+
+                                    <h5 class="text-gray-900 font-semibold text-lg mb-2">Great Service</h5>
+                                    
+                                    <!-- Stars -->
+                                    <div class="mb-1 text-yellow-500 z-10">
+                                      <i class="bi bi-star-fill"></i>
+                                      <i class="bi bi-star-fill"></i>
+                                      <i class="bi bi-star-fill"></i>
+                                      <i class="bi bi-star-fill"></i>
+                                      <i class="bi bi-star-fill"></i>
+                                    
+                                      </div>
+                                    
+                                    <p class="text-gray-600 text-sm leading-relaxed px-4 sm:px-6 md:px-8 ">
+                                        To get started with us, please go over all of our internet plans and other plans to let our operators know which one works for you
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <!-- Card 2 -->
+                            <div class="card-container">
+                                <!-- Red Card (Top) -->
+                                <div class="red-card">
+                                            <div class="avatar">
+                      <img src="assets/background/1.jpg" alt="Mark Wood" class="w-full h-full rounded-full object-cover">
+                       </div>
+                                    <h4 class="text-white text-sm font-semibold mt-2">Mark Wood</h4>
+                                    <p class="text-white/90 text-xs mt-1">CEO, Buzicon</p>
+                                    
+                                    <!-- Yellow Quote Badge -->
+                                    <div class="quote-badge">
+                                        <span class="text-black text-2xl font-bold">"</span>
+                                    </div>
+                                </div>
+                                
+                                <!-- White Card (Bottom) -->
+                                <div class="white-card">
+                                    <h5 class="text-gray-900 font-semibold text-lg mb-2">Great Service</h5>
+                                    
+                                    <!-- Stars -->
+                                     <div class="mb-3 text-yellow-400">
+                                      <i class="bi bi-star-fill"></i>
+                                      <i class="bi bi-star-fill"></i>
+                                      <i class="bi bi-star-fill"></i>
+                                      <i class="bi bi-star-fill"></i>
+                                      <i class="bi bi-star-fill"></i>
+                                      </div>
+                                    
+                                    <p class="text-gray-600 text-sm leading-relaxed px-4 sm:px-6 md:px-8">
+                                        To get started with us, please go over all of our internet plans and other plans to let our operators know which one works for you
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide">
+                        <div class="flex flex-col md:flex-row gap-8 justify-center items-stretch">
+                            <!-- Card 3 -->
+                            <div class="card-container">
+                                <!-- Red Card (Top) -->
+                                <div class="red-card">
+                                          <div class="avatar">
+                      <img src="assets/background/1.jpg" alt="Mark Wood" class="w-full h-full rounded-full object-cover">
+                       </div>
+                                    <h4 class="text-white text-sm font-semibold mt-2">Mark Wood</h4>
+                                    <p class="text-white/90 text-xs mt-1">CEO, Buzicon</p>
+                                    
+                                    <!-- Yellow Quote Badge -->
+                                    <div class="quote-badge">
+                                        <span class="text-black text-2xl font-bold">"</span>
+                                    </div>
+                                </div>
+                                
+                                <!-- White Card (Bottom) -->
+                                <div class="white-card">
+                                    <h5 class="text-gray-900 font-semibold text-lg mb-2">Great Service</h5>
+                                    
+                                    <!-- Stars -->
+                                     <div class="mb-3 text-yellow-400">
+                                      <i class="bi bi-star-fill"></i>
+                                      <i class="bi bi-star-fill"></i>
+                                      <i class="bi bi-star-fill"></i>
+                                      <i class="bi bi-star-fill"></i>
+                                      <i class="bi bi-star-fill"></i>
+                                      </div>
+                                    
+                                    <p class="text-gray-600 text-sm leading-relaxed px-4 sm:px-6 md:px-8">
+                                        To get started with us, please go over all of our internet plans and other plans to let our operators know which one works for you
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Card 4 -->
+                            <div class="card-container">
+                              
+                                <div class="red-card">
+                                            <div class="avatar">
+                             <img src="assets/background/1.jpg" alt="Mark Wood" class="w-full h-full rounded-full  object-cover">
+                              </div>
+                                    <h4 class="text-white text-sm font-semibold mt-2">Mark Wood</h4>
+                                    <p class="text-white/90 text-xs mt-1">CEO, Buzicon</p>
+                                    
+                             
+                                    <div class="quote-badge">
+                                        <span class="text-black text-2xl font-bold">"</span>
+                                    </div>
+                                </div>
+                                
+                        
+                                <div class="white-card">
+                                    <h5 class="text-gray-900 font-semibold text-lg mb-2">Great Service</h5>
+                                    
+                                    
+                                  <div class="mb-3 text-yellow-400">
+                                      <i class="bi bi-star-fill"></i>
+                                      <i class="bi bi-star-fill"></i>
+                                      <i class="bi bi-star-fill"></i>
+                                      <i class="bi bi-star-fill"></i>
+                                      <i class="bi bi-star-fill"></i>
+                                      </div>
+                                    
+                                    <p class="text-gray-600 text-sm leading-relaxed px-4 sm:px-6 md:px-8">
+                                        To get started with us, please go over all of our internet plans and other plans to let our operators know which one works for you
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pagination -->
+                <div class="swiper-pagination mt-20 py-6"></div>
+            </div>
+        </div>
+    </section>
+
+
+  
+
+
+
+<!-- Testimonial section end -->
+
+
+
+
+<!-- blog section start  -->
+ <section class="py-16 md:py-6 bg-white">
+  <div class="max-w-7xl mx-auto px-6">
+
+   
+    <div class="flex justify-between items-center mb-12">
+      <div>
+        <p class="text-sm uppercase tracking-wider text-red-500 font-semibold mb-2">Latest Blog</p>
+        <h2 class="text-4xl font-bold text-gray-900 leading-tight">
+          Digital Commerce & Payment Solutions
+        </h2>
+        <p>Empowering every business with seamless global transactions.</p>
+      </div>
+      <button onclick="window.location.href='newsGrid.html'" class="bg-red-500 text-white px-5 py-2 rounded-md font-medium hover:bg-red-600 transition">
+  All Latest Blog →
+</button>
+
+    </div>
+
+    <!-- Blog Cards -->
+    <div class="grid md:grid-cols-3 gap-8">
+
+       
+<!-- Card1 -->
+    
+    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition max-w-sm">
+        
+        <div class="relative">
             <img src="assets/1dc (1).jpg" alt="Blog 1" class="w-full h-60 object-contain rounded-t-lg">
 
             <!-- Date Box (positioned on image top-left) -->
             <div class="absolute bottom-0 left-4 flex items-stretch z-20">
+                
+                <div class="bg-red-500 text-white text-center px-3 py-2  flex items-center justify-center">
+                    <p class="text-lg font-bold leading-none m-0">25</p>
+                </div>
 
-              <div class="bg-red-500 text-white text-center px-3 py-2  flex items-center justify-center">
-                <p class="text-lg font-bold leading-none m-0">25</p>
-              </div>
-
-
-              <div class="bg-black text-white text-center px-4 py-2  flex items-center justify-center">
-                <p class="text-xs font-medium m-0">March, 2023</p>
-              </div>
+                
+                <div class="bg-black text-white text-center px-4 py-2  flex items-center justify-center">
+                    <p class="text-xs font-medium m-0">March, 2023</p>
+                </div>
             </div>
-          </div>
+        </div>
 
-          <!-- Card Content -->
-          <div class="p-6">
-            <div class="flex items-center text-sm text-gray-500 gap-4 mb-3">
-              <span class="flex items-center gap-1">
-                <i class="bi bi-person-fill text-red-500"></i>
-                <span>Admin</span>
-              </span>
-              <span class="flex items-center gap-1">
-                <i class="bi bi-chat-dots text-red-500"></i>
-                <span>0 Comments</span>
-              </span>
+        <!-- Card Content -->
+        <div class="px-6 py-2">
+            <div class="flex items-center text-sm text-gray-500 gap-2 mb-2">
+                <span class="flex items-center gap-1">
+                    <i class="bi bi-person-fill text-red-500"></i>
+                    <span>Admin</span>
+                </span>
+                <span class="flex items-center gap-1">
+                    <i class="bi bi-chat-dots text-red-500"></i>
+                    <span>0 Comments</span>
+                </span>
             </div>
 
-            <h3 class="text-xl font-semibold text-gray-800 mb-4">
-              Providing live TV services with fast internet
+            <h3 class="text-xl font-semibold text-gray-800 mb-2">
+                Providing live TV services with fast internet
             </h3>
 
             <a href="newsdetails.html" class="text-red-500 font-medium flex items-center gap-2 hover:underline">
-              Read Full Article <i class="bi bi-arrow-right"></i>
+                Read Full Article <i class="bi bi-arrow-right"></i>
             </a>
-          </div>
         </div>
+    </div>
 
 
 
+<!-- Card2 -->
 
-
-
-        <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition max-w-sm">
-
-          <div class="relative">
+      
+      <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition max-w-sm">
+        
+        <div class="relative">
             <img src="assets/1dc (2).jpg" alt="Blog 1" class="w-full h-60 object-contain rounded-t-lg">
 
-
+            
             <div class="absolute bottom-0 left-4 flex items-stretch z-20">
+                
+                <div class="bg-red-500 text-white text-center px-3 py-2  flex items-center justify-center">
+                    <p class="text-lg font-bold leading-none m-0">25</p>
+                </div>
 
-              <div class="bg-red-500 text-white text-center px-3 py-2  flex items-center justify-center">
-                <p class="text-lg font-bold leading-none m-0">25</p>
-              </div>
-
-
-              <div class="bg-black text-white text-center px-4 py-2  flex items-center justify-center">
-                <p class="text-xs font-medium m-0">March, 2023</p>
-              </div>
+                
+                <div class="bg-black text-white text-center px-4 py-2  flex items-center justify-center">
+                    <p class="text-xs font-medium m-0">March, 2023</p>
+                </div>
             </div>
-          </div>
+        </div>
 
-
-          <div class="p-6">
-            <div class="flex items-center text-sm text-gray-500 gap-4 mb-3">
-              <span class="flex items-center gap-1">
-                <i class="bi bi-person-fill text-red-500"></i>
-                <span>Admin</span>
-              </span>
-              <span class="flex items-center gap-1">
-                <i class="bi bi-chat-dots text-red-500"></i>
-                <span>0 Comments</span>
-              </span>
+        
+        <div class="px-6 py-2">
+            <div class="flex items-center text-sm text-gray-500 gap-2 mb-2">
+                <span class="flex items-center gap-1">
+                    <i class="bi bi-person-fill text-red-500"></i>
+                    <span>Admin</span>
+                </span>
+                <span class="flex items-center gap-1">
+                    <i class="bi bi-chat-dots text-red-500"></i>
+                    <span>0 Comments</span>
+                </span>
             </div>
 
-            <h3 class="text-xl font-semibold text-gray-800 mb-4">
-              Providing live TV services with fast internet
+            <h3 class="text-xl font-semibold text-gray-800 mb-2">
+                Providing live TV services with fast internet
             </h3>
 
             <a href="newsdetails.html" class="text-red-500 font-medium flex items-center gap-2 hover:underline">
-              Read Full Article <i class="bi bi-arrow-right"></i>
+                Read Full Article <i class="bi bi-arrow-right"></i>
             </a>
-          </div>
         </div>
+    </div>
 
 
 
 
-        <!-- Card3 -->
-        <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition max-w-sm">
-
-          <div class="relative">
+      <!-- Card3 -->
+      <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition max-w-sm">
+        
+        <div class="relative">
             <img src="assets/1dc (3).jpg" alt="Blog 1" class="w-full h-60 object-contain rounded-t-lg">
 
-
+            
             <div class="absolute bottom-0 left-4 flex items-stretch z-20">
+                
+                <div class="bg-red-500 text-white text-center px-3 py-2  flex items-center justify-center">
+                    <p class="text-lg font-bold leading-none m-0">25</p>
+                </div>
 
-              <div class="bg-red-500 text-white text-center px-3 py-2  flex items-center justify-center">
-                <p class="text-lg font-bold leading-none m-0">25</p>
-              </div>
-
-
-              <div class="bg-black text-white text-center px-4 py-2  flex items-center justify-center">
-                <p class="text-xs font-medium m-0">March, 2023</p>
-              </div>
+                
+                <div class="bg-black text-white text-center px-4 py-2  flex items-center justify-center">
+                    <p class="text-xs font-medium m-0">March, 2023</p>
+                </div>
             </div>
-          </div>
+        </div>
 
-
-          <div class="p-6">
-            <div class="flex items-center text-sm text-gray-500 gap-4 mb-3">
-              <span class="flex items-center gap-1">
-                <i class="bi bi-person-fill text-red-500"></i>
-                <span>Admin</span>
-              </span>
-              <span class="flex items-center gap-1">
-                <i class="bi bi-chat-dots text-red-500"></i>
-                <span>0 Comments</span>
-              </span>
+        
+        <div class="px-6 py-2">
+            <div class="flex items-center text-sm text-gray-500 gap-2 mb-2">
+                <span class="flex items-center gap-1">
+                    <i class="bi bi-person-fill text-red-500"></i>
+                    <span>Admin</span>
+                </span>
+                <span class="flex items-center gap-1">
+                    <i class="bi bi-chat-dots text-red-500"></i>
+                    <span>0 Comments</span>
+                </span>
             </div>
 
-            <h3 class="text-xl font-semibold text-gray-800 mb-4">
-              Providing live TV services with fast internet
+            <h3 class="text-xl font-semibold text-gray-800 mb-2">
+                Providing live TV services with fast internet
             </h3>
 
             <a href="newsdetails.html" class="text-red-500 font-medium flex items-center gap-2 hover:underline">
-              Read Full Article <i class="bi bi-arrow-right"></i>
+                Read Full Article <i class="bi bi-arrow-right"></i>
             </a>
-          </div>
         </div>
-
-
-
-  </section>
-
-
-
-  <!-- blog section end  -->
-
-
-  <!-- scroll to top start  -->
-  <button id="scrollToTopBtn"
-    class="fixed bottom-6 right-6 bg-red-600 hover:bg-black text-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg transition-all duration-300 z-50"
-    aria-label="Scroll to top"
-    style="display:none; opacity:0; transform: translateY(12px); transition: opacity 250ms ease, transform 250ms ease, background-color 150ms;">
-    <i class="bi bi-caret-up-fill text-2xl"></i>
-  </button>
-
-  <!-- scroll to top end  -->
-
-
-
-
-
-  <!-- footer section start  -->
-  <footer class="bg-[#0d0d10] text-gray-300">
-
-    <div
-      class="border-b border-gray-700 flex flex-col md:flex-row justify-between items-center px-6 md:px-16 py-6 gap-4">
-
-      <div class="flex items-center gap-2">
-        <img src="assets/ditrixitlogo.png" alt="dtrixithub Logo" class="w-44 " />
-      </div>
-
-      <div class="flex flex-col sm:flex-row gap-6">
-
-        <div class="flex items-center gap-3 bg-[#0d0d10] px-4 py-3 rounded-lg">
-
-          <div class="bg-red-600 p-3 rounded-md flex items-center justify-center">
-            <i class="bi bi-telephone-fill"></i>
-          </div>
-
-
-          <div>
-            <p class="text-sm text-gray-300">Call Us On</p>
-            <p class="font-semibold text-white"><a href="https://wa.me/8801730974804" target="_blank" class="">
-                +8801730974804</a></p>
-          </div>
-        </div>
-
-
-        <div class="flex items-center gap-3 bg-[#0d0d10] px-4 py-3 rounded-lg">
-
-          <div class="bg-red-600 p-3 rounded-md flex items-center justify-center">
-            <i class="bi bi-envelope-fill text-white text-xl"></i>
-          </div>
-
-
-          <div>
-            <p class="text-sm text-gray-300">Mail to Us</p>
-            <p class="font-semibold text-white">info@dtrixithub.com</p>
-          </div>
-        </div>
-
-      </div>
     </div>
 
 
 
+</section>
 
 
-    <!-- Main Footer -->
-    <div class="px-6 md:px-16 py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 relative">
 
-      <div>
-        <h3 class="text-lg font-semibold text-white mb-3">About Us</h3>
-        <p class="text-gray-400 text-sm leading-relaxed mb-4">
-          To get started with us, please go over all of our internet plans and other plans to let our operators.
-        </p>
-        <div class="flex gap-3">
-          <a href="#" class="w-8 h-8 flex items-center justify-center bg-gray-800 hover:bg-red-600 rounded-full">
+<!-- blog section end  -->
 
-            <i class="bi bi-facebook"></i>
-          </a>
-          <a href="#" class="w-8 h-8 flex items-center justify-center bg-gray-800 hover:bg-red-600 rounded-full">
 
-            <i class="bi bi-twitter-x"></i>
-          </a>
-          <a href="#" class="w-8 h-8 flex items-center justify-center bg-gray-800 hover:bg-red-600 rounded-full">
+<!-- scroll to top start  -->
+<button id="scrollToTopBtn"
+  class="fixed bottom-6 right-6 bg-red-600 hover:bg-black text-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg transition-all duration-300 z-50"
+  aria-label="Scroll to top"
+  style="display:none; opacity:0; transform: translateY(12px); transition: opacity 250ms ease, transform 250ms ease, background-color 150ms;">
+  <i class="bi bi-caret-up-fill text-2xl"></i>
+</button>
 
-            <i class="bi bi-linkedin"></i>
-          </a>
-        </div>
+<!-- scroll to top end  -->
+
+
+
+
+
+<!-- footer section start  -->
+ <footer class="bg-[#0d0d10] text-gray-300">
+  
+  <div class="border-b border-gray-700 flex flex-col md:flex-row justify-between items-center px-6 md:px-16 py-6 gap-4">
+    
+    <div class="flex items-center gap-2">
+      <img src="assets/ditrixitlogo.png" alt="dtrixithub Logo" class="w-44 " />
+    </div>
+
+    <div class="flex flex-col sm:flex-row gap-6">
+    
+      <div class="flex items-center gap-3 bg-[#0d0d10] px-4 py-3 rounded-lg">
+
+  <div class="bg-red-600 p-3 rounded-md flex items-center justify-center">
+        <i class="bi bi-telephone-fill"></i>
+  </div>
+
+ 
+  <div>
+    <p class="text-sm text-gray-300">Call Us On</p>
+    <p class="font-semibold text-white"><a href="https://wa.me/8801730974804" target="_blank" class="">
+      +8801730974804</a></p>
+  </div>
+</div>
+
+
+      <div class="flex items-center gap-3 bg-[#0d0d10] px-4 py-3 rounded-lg">
+  
+  <div class="bg-red-600 p-3 rounded-md flex items-center justify-center">
+    <i class="bi bi-envelope-fill text-white text-xl"></i>
+  </div>
+
+  
+  <div>
+    <p class="text-sm text-gray-300">Mail to Us</p>
+    <p class="font-semibold text-white">info@dtrixithub.com</p>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+
+
+
+
+  <!-- Main Footer -->
+  <div class="px-6 md:px-16 py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 relative">
+    
+    <div>
+      <h3 class="text-lg font-semibold text-white mb-3">About Us</h3>
+      <p class="text-gray-400 text-sm leading-relaxed mb-4">
+        To get started with us, please go over all of our internet plans and other plans to let our operators.
+      </p>
+      <div class="flex gap-3">
+        <a href="#" class="w-8 h-8 flex items-center justify-center bg-gray-800 hover:bg-red-600 rounded-full">
+          
+           <i class="bi bi-facebook"></i>
+        </a>
+        <a href="#" class="w-8 h-8 flex items-center justify-center bg-gray-800 hover:bg-red-600 rounded-full">
+          
+           <i class="bi bi-twitter-x"></i>
+        </a>
+        <a href="#" class="w-8 h-8 flex items-center justify-center bg-gray-800 hover:bg-red-600 rounded-full">
+          
+           <i class="bi bi-linkedin"></i>
+        </a>
       </div>
+    </div>
 
 
-      <div>
-        <h3 class="text-lg font-semibold text-white mb-3">Useful Links</h3>
-        <ul class="space-y-2 text-sm">
-          <li><a href="aboutus.html" class="hover:text-red-500 transition">› About Us</a></li>
-          <li><a href="servicedetails.html" class="hover:text-red-500 transition">› Our Services</a></li>
-          <li><a href="#" class="hover:text-red-500 transition">› Our Clients</a></li>
-          <li><a href="teammembers.html" class="hover:text-red-500 transition">› Our Team</a></li>
-          <li><a href="newsdetails.html" class="hover:text-red-500 transition">› News & Media</a></li>
-        </ul>
-      </div>
+    <div>
+      <h3 class="text-lg font-semibold text-white mb-3">Useful Links</h3>
+      <ul class="space-y-2 text-sm">
+        <li><a href="aboutus.html" class="hover:text-red-500 transition">› About Us</a></li>
+        <li><a href="servicedetails.html" class="hover:text-red-500 transition">› Our Services</a></li>
+        <li><a href="#" class="hover:text-red-500 transition">› Our Clients</a></li>
+        <li><a href="teammembers.html" class="hover:text-red-500 transition">› Our Team</a></li>
+        <li><a href="newsdetails.html" class="hover:text-red-500 transition">› News & Media</a></li>
+      </ul>
+    </div>
 
-      <!-- Services -->
-      <div>
-        <h3 class="text-lg font-semibold text-white mb-3">Services</h3>
-        <ul class="space-y-2 text-sm">
-          <li>
-            <a href="servicedetails.html" class="hover:text-red-500 transition">› Software & App Development</a>
-          </li>
-          <li>
-            <a href="servicedetails.html" class="hover:text-red-500 transition">› Consulting Software Projects</a>
-          </li>
-          <li>
-            <a href="servicedetails.html" class="hover:text-red-500 transition">› Education Platform Development</a>
-          </li>
-          <li>
-            <a href="servicedetails.html" class="hover:text-red-500 transition">› OTT Platform Development</a>
-          </li>
-          <li>
-            <a href="servicedetails.html" class="hover:text-red-500 transition">› Web & Mobile App Development</a>
-          </li>
-
-          <!--- hidden list --->
-          <div id="moreItems" class="hidden">
+    <!-- Services -->
+    <div>
+          <h3 class="text-lg font-semibold text-white mb-3">Services</h3>
+          <ul class="space-y-2 text-sm">
             <li>
-              <a href="servicedetails.html" class="hover:text-red-500 transition">› Android & iOS App Development</a>
+              <a
+                href="servicedetails.html"
+                class="hover:text-red-500 transition"
+                >› Software & App Development</a
+              >
             </li>
-            <li class="mt-2">
-              <a href="servicedetails.html" class="hover:text-red-500 transition">› Framework & Application
-                Development</a>
+            <li>
+              <a
+                href="servicedetails.html"
+                class="hover:text-red-500 transition"
+                >› Consulting Software Projects</a
+              >
             </li>
-            <li class="mt-2">
-              <a href="servicedetails.html" class="hover:text-red-500 transition">› E-commerce Solutions</a>
+            <li>
+              <a
+                href="servicedetails.html"
+                class="hover:text-red-500 transition"
+                >› Education Platform Development</a
+              >
             </li>
-            <li class="mt-2">
-              <a href="servicedetails.html" class="hover:text-red-500 transition">› ERP Solutions</a>
+            <li>
+              <a
+                href="servicedetails.html"
+                class="hover:text-red-500 transition"
+                >› OTT Platform Development</a
+              >
             </li>
-            <li class="mt-2">
-              <a href="servicedetails.html" class="hover:text-red-500 transition">› Hospital Management Software</a>
+            <li>
+              <a
+                href="servicedetails.html"
+                class="hover:text-red-500 transition"
+                >› Web & Mobile App Development</a
+              >
             </li>
-            <li class="mt-2">
-              <a href="servicedetails.html" class="hover:text-red-500 transition">› Pharmacy Management Software</a>
-            </li>
-            <li class="mt-2">
-              <a href="servicedetails.html" class="hover:text-red-500 transition">› Restaurant Management Software</a>
-            </li>
-            <li class="mt-2">
-              <a href="servicedetails.html" class="hover:text-red-500 transition">› Real Estate Management Software</a>
-            </li>
-            <li class="mt-2">
-              <a href="servicedetails.html" class="hover:text-red-500 transition">› Point of Sale (POS) Software</a>
-            </li>
-            <li class="mt-2">
-              <a href="servicedetails.html" class="hover:text-red-500 transition">› HRM Software Solutions</a>
-            </li>
-            <li class="mt-2">
-              <a href="servicedetails.html" class="hover:text-red-500 transition">› Accounts & Finance Software
-                Solutions</a>
-            </li>
-            <li class="mt-2">
-              <a href="servicedetails.html" class="hover:text-red-500 transition">› AI-Powered Solutions</a>
-            </li>
-            <li class="mt-2">
-              <a href="servicedetails.html" class="hover:text-red-500 transition">› CRM Solutions</a>
-            </li>
-            <li class="mt-2">
-              <a href="servicedetails.html" class="hover:text-red-500 transition">› Classified Website Development</a>
-            </li>
-            <li class="mt-2">
-              <a href="servicedetails.html" class="hover:text-red-500 transition">› Student Counseling & Study Abroad
-                Guidance</a>
-            </li>
-            <li class="mt-2">
-              <a href="servicedetails.html" class="hover:text-red-500 transition">› Work Permit & Immigration
-                Services</a>
-            </li>
-            <li class="mt-2">
-              <a href="servicedetails.html" class="hover:text-red-500 transition">› Wholesale Clothing & Import
-                Services</a>
-            </li>
-          </div>
-        </ul>
-        <button id="toggleBtn" class="text-red-500 text-sm mt-2 hover:underline">
-          See More...
-        </button>
-      </div>
 
-
-      <div>
-        <h3 class="text-lg font-semibold text-white mb-3">Newsletter</h3>
-        <p class="text-gray-400 text-sm mb-4">Sign up for alerts, our latest blogs, thoughts, and insights.</p>
-        <div class="flex">
-          <input type="email" placeholder="Your Email"
-            class="w-full px-3 py-2 text-gray-900 rounded-l-md focus:outline-none" />
-          <button class="bg-red-600 hover:bg-red-700 px-4 rounded-r-md text-white">
-
-            <i class="bi bi-send-fill"></i>
-
+            <!--- hidden list --->
+            <div id="moreItems" class="hidden">
+              <li>
+                <a
+                  href="servicedetails.html"
+                  class="hover:text-red-500 transition"
+                  >› Android & iOS App Development</a
+                >
+              </li>
+              <li class="mt-2">
+                <a
+                  href="servicedetails.html"
+                  class="hover:text-red-500 transition"
+                  >› Framework & Application Development</a
+                >
+              </li>
+              <li class="mt-2">
+                <a
+                  href="servicedetails.html"
+                  class="hover:text-red-500 transition"
+                  >› E-commerce Solutions</a
+                >
+              </li>
+              <li class="mt-2">
+                <a
+                  href="servicedetails.html"
+                  class="hover:text-red-500 transition"
+                  >› ERP Solutions</a
+                >
+              </li>
+              <li class="mt-2">
+                <a
+                  href="servicedetails.html"
+                  class="hover:text-red-500 transition"
+                  >› Hospital Management Software</a
+                >
+              </li>
+              <li class="mt-2">
+                <a
+                  href="servicedetails.html"
+                  class="hover:text-red-500 transition"
+                  >› Pharmacy Management Software</a
+                >
+              </li>
+              <li class="mt-2">
+                <a
+                  href="servicedetails.html"
+                  class="hover:text-red-500 transition"
+                  >› Restaurant Management Software</a
+                >
+              </li>
+              <li class="mt-2">
+                <a
+                  href="servicedetails.html"
+                  class="hover:text-red-500 transition"
+                  >› Real Estate Management Software</a
+                >
+              </li>
+              <li class="mt-2">
+                <a
+                  href="servicedetails.html"
+                  class="hover:text-red-500 transition"
+                  >› Point of Sale (POS) Software</a
+                >
+              </li>
+              <li class="mt-2">
+                <a
+                  href="servicedetails.html"
+                  class="hover:text-red-500 transition"
+                  >› HRM Software Solutions</a
+                >
+              </li>
+              <li class="mt-2">
+                <a
+                  href="servicedetails.html"
+                  class="hover:text-red-500 transition"
+                  >› Accounts & Finance Software Solutions</a
+                >
+              </li>
+              <li class="mt-2">
+                <a
+                  href="servicedetails.html"
+                  class="hover:text-red-500 transition"
+                  >› AI-Powered Solutions</a
+                >
+              </li>
+              <li class="mt-2">
+                <a
+                  href="servicedetails.html"
+                  class="hover:text-red-500 transition"
+                  >› CRM Solutions</a
+                >
+              </li>
+              <li class="mt-2">
+                <a
+                  href="servicedetails.html"
+                  class="hover:text-red-500 transition"
+                  >› Classified Website Development</a
+                >
+              </li>
+              <li class="mt-2">
+                <a
+                  href="servicedetails.html"
+                  class="hover:text-red-500 transition flex md:flex-row flex-col gap-1"
+                  >› Student Counseling & Study Abroad
+                  <p class="ml-2 md:ml-0">Guidance</p></a
+                >
+              </li>
+              <li class="mt-2">
+                <a
+                  href="servicedetails.html"
+                  class="hover:text-red-500 transition"
+                  >› Work Permit & Immigration Services</a
+                >
+              </li>
+              <li class="mt-2">
+                <a
+                  href="servicedetails.html"
+                  class="hover:text-red-500 transition"
+                  >› Wholesale Clothing & Import Services</a
+                >
+              </li>
+            </div>
+          </ul>
+          <button
+            id="toggleBtn"
+            class="text-red-500 text-sm mt-2 hover:underline"
+          >
+            See More...
           </button>
         </div>
+
+   
+    <div>
+      <h3 class="text-lg font-semibold text-white mb-3">Newsletter</h3>
+      <p class="text-gray-400 text-sm mb-4">Sign up for alerts, our latest blogs, thoughts, and insights.</p>
+      <div class="flex">
+        <input type="email" placeholder="Your Email"
+               class="w-full px-3 py-2 text-gray-900 rounded-l-md focus:outline-none" />
+        <button class="bg-red-600 hover:bg-red-700 px-4 rounded-r-md text-white">
+          
+           <i class="bi bi-send-fill"></i>
+          
+        </button>
       </div>
     </div>
+  </div>
 
 
-    <div class="border-t border-gray-700 py-4 text-center text-sm text-gray-500">
-      © Copyrights reserved by <span class="text-red-500">Rafusoft</span>
-    </div>
+  <div class="border-t border-gray-700 py-4 text-center text-sm text-gray-500">
+    © Copyrights reserved by <span class="text-red-500">Rafusoft</span>
+  </div>
 
-  </footer>
-
-
-
-
-
-
-  <!-- footer section end  -->
+</footer>
 
 
 
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.js"></script>
-
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script>
-    var swiper = new Swiper(".testimonialSwiper", {
-      slidesPerView: 1,
-      spaceBetween: 30,
-      loop: true,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      autoplay: {
-        delay: 5000,
-      },
-    });
-  </script>
 
 
-  <!-- scroll to top start  -->
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const btn = document.getElementById('scrollToTopBtn');
+<!-- footer section end  -->
 
 
-      function toggleScrollBtn() {
-        if (window.scrollY > 200) {
-
-          btn.style.display = 'block';
-
-          requestAnimationFrame(() => {
-            btn.style.opacity = '1';
-            btn.style.transform = 'translateY(0)';
-            btn.style.pointerEvents = 'auto';
-          });
-        } else {
-
-          btn.style.opacity = '0';
-          btn.style.transform = 'translateY(12px)';
-          btn.style.pointerEvents = 'none';
-
-          setTimeout(() => {
-            if (btn.style.opacity === '0') btn.style.display = 'none';
-          }, 260);
-        }
-      }
 
 
-      toggleScrollBtn();
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.js"></script>
 
+ <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".testimonialSwiper", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            autoplay: {
+                delay: 5000,
+            },
+        });
+    </script>
 
-      window.addEventListener('scroll', toggleScrollBtn, { passive: true });
+    
+   <!-- scroll to top start  -->
 
+   <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const btn = document.getElementById('scrollToTopBtn');
 
-      btn.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      });
-    });
-  </script>
-  <!-- scroll to top end  -->
-
-
-  <!-- nav bar script start  -->
-  <script>
-
-    const navbar = document.getElementById("mainNav");
-    let lastScrollY = window.scrollY;
-
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 100) {
-        navbar.classList.add("fixed", "top-0", "shadow-md");
+    
+    function toggleScrollBtn() {
+      if (window.scrollY > 200) {
+      
+        btn.style.display = 'block';            
+        
+        requestAnimationFrame(() => {
+          btn.style.opacity = '1';
+          btn.style.transform = 'translateY(0)';
+          btn.style.pointerEvents = 'auto';
+        });
       } else {
-        navbar.classList.remove("fixed", "top-0", "shadow-md");
+     
+        btn.style.opacity = '0';
+        btn.style.transform = 'translateY(12px)';
+        btn.style.pointerEvents = 'none';
+       
+        setTimeout(() => {
+          if (btn.style.opacity === '0') btn.style.display = 'none';
+        }, 260); 
       }
-    });
-
-
-    const menuBtn = document.getElementById("menu-btn");
-    const mobileMenu = document.getElementById("mobile-menu");
-    menuBtn.addEventListener("click", () => {
-      mobileMenu.classList.toggle("hidden");
-    });
-
-
-    const servicesToggle = document.getElementById("services-toggle");
-    const servicesList = document.getElementById("services-list");
-    servicesToggle.addEventListener("click", () => {
-      servicesList.classList.toggle("hidden");
-    });
-
-
-    // Mobile menu close
-    document.getElementById("mobile-menu-close").addEventListener("click", () => {
-      document.getElementById("mobile-menu").classList.add("hidden");
-    });
-
-    // Mobile menu close
-    document
-      .getElementById("mobile-menu-close")
-      .addEventListener("click", () => {
-        document.getElementById("mobile-menu").classList.add("hidden");
-      });
-
-    //footer service see more
-    const moreItems = document.getElementById("moreItems");
-    const toggleBtn = document.getElementById("toggleBtn");
-
-    toggleBtn.addEventListener("click", () => {
-      if (moreItems.classList.contains("hidden")) {
-        moreItems.classList.remove("hidden");
-        toggleBtn.textContent = "See Less...";
-      } else {
-        moreItems.classList.add("hidden");
-        toggleBtn.textContent = "See More...";
-      }
-    });
-  </script>
-
-
-  <!-- nav bar script end  -->
-
-  <!-- feature section js start -->
-  <script>
-    var swiper = new Swiper(".featuredSwiper", {
-      slidesPerView: 1,
-      spaceBetween: 20,
-      loop: true,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      breakpoints: {
-        640: {
-          slidesPerView: 2,
-        },
-        1024: {
-          slidesPerView: 4,
-        },
-      },
-    });
-  </script>
-  <!-- feature section js end -->
-
-
-
-  <!-- company statistic script  start  -->
-
-  <script>
-    const counters = document.querySelectorAll('.counter');
-    const speed = 100;
-
-    function animateCounters() {
-      counters.forEach(counter => {
-        const target = +counter.dataset.target;
-        const increment = target / speed;
-        const update = () => {
-          const value = +counter.innerText.replace(/,/g, '');
-          if (value < target) {
-            counter.innerText = Math.ceil(value + increment).toLocaleString();
-            requestAnimationFrame(update);
-          } else {
-            counter.innerText = target.toLocaleString();
-          }
-        };
-        update();
-      });
     }
 
-    const section = document.getElementById('stats-section');
-    const observer = new IntersectionObserver(entries => {
-      if (entries[0].isIntersecting) {
-        animateCounters();
-        observer.unobserve(section);
+    
+    toggleScrollBtn();
+
+    
+    window.addEventListener('scroll', toggleScrollBtn, { passive: true });
+
+    
+    btn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+</script>
+<!-- scroll to top end  -->
+
+
+<!-- nav bar script start  -->
+<script>
+
+  const navbar = document.getElementById("mainNav");
+  let lastScrollY = window.scrollY;
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 100) {
+      navbar.classList.add("fixed", "top-0", "shadow-md");
+    } else {
+      navbar.classList.remove("fixed", "top-0", "shadow-md");
+    }
+  });
+
+
+  const menuBtn = document.getElementById("menu-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+
+ 
+  const servicesToggle = document.getElementById("services-toggle");
+  const servicesList = document.getElementById("services-list");
+  servicesToggle.addEventListener("click", () => {
+    servicesList.classList.toggle("hidden");
+  });
+
+
+   // Mobile menu close
+  document.getElementById("mobile-menu-close").addEventListener("click", () => {
+    document.getElementById("mobile-menu").classList.add("hidden");
+  });
+
+   // Mobile menu close
+      document
+        .getElementById("mobile-menu-close")
+        .addEventListener("click", () => {
+          document.getElementById("mobile-menu").classList.add("hidden");
+        });
+
+      //footer service see more
+      const moreItems = document.getElementById("moreItems");
+      const toggleBtn = document.getElementById("toggleBtn");
+
+      toggleBtn.addEventListener("click", () => {
+        if (moreItems.classList.contains("hidden")) {
+          moreItems.classList.remove("hidden");
+          toggleBtn.textContent = "See Less...";
+        } else {
+          moreItems.classList.add("hidden");
+          toggleBtn.textContent = "See More...";
+        }
+      });
+</script>
+
+
+<!-- nav bar script end  -->
+
+<!-- feature section js start -->
+  <script>
+      var swiper = new Swiper(".featuredSwiper", {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          640: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 4,
+          },
+        },
+      });
+    </script>
+<!-- feature section js end -->
+
+
+
+<!-- company statistic script  start  -->
+
+  <script>
+      const counters = document.querySelectorAll('.counter');
+      const speed = 100; 
+
+      function animateCounters() {
+        counters.forEach(counter => {
+          const target = +counter.dataset.target;
+          const increment = target / speed;
+          const update = () => {
+            const value = +counter.innerText.replace(/,/g, '');
+            if (value < target) {
+              counter.innerText = Math.ceil(value + increment).toLocaleString();
+              requestAnimationFrame(update);
+            } else {
+              counter.innerText = target.toLocaleString();
+            }
+          };
+          update();
+        });
       }
-    }, { threshold: 0.3 });
 
-    observer.observe(section);
-  </script>
+      const section = document.getElementById('stats-section');
+      const observer = new IntersectionObserver(entries => {
+        if (entries[0].isIntersecting) {
+          animateCounters();
+          observer.unobserve(section);
+        }
+      }, { threshold: 0.3 });
 
-  <!-- company satistic  script section end   -->
+      observer.observe(section);
+    </script>
+
+<!-- company satistic  script section end   -->
 
 
 
 </body>
-
 </html>
