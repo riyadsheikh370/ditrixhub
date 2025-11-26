@@ -27,42 +27,6 @@
     .card-active {
       scale: 1.1;
     }
-    .shape {
-      background: var(--primary-color);
-      border-radius: 4px;
-    }
-
-    .shape::before,
-    .shape::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      width: 30px;
-      height: 100%;
-      background: var(--primary-color);
-
-      transition: clip-path 0.3s;
-      clip-path: polygon(100% 0, 0 50%, 100% 100%);
-    }
-
-    .shape::before {
-      right: -28px;
-      transform: scaleX(-1);
-      border-radius: 8px 0 0 8px;
-    }
-
-    .shape::after {
-      left: -28px;
-      border-radius: 8px 0 0 8px;
-    }
-
-    .card.active .shape::before {
-      clip-path: polygon(100% 0, 0 80%, 100% 100%);
-    }
-
-    .card.active .shape::after {
-      clip-path: polygon(100% 0, 0 20%, 100% 100%);
-    }
 
     .fade-right {
       opacity: 0;
@@ -664,11 +628,11 @@
 
         <div class="flex flex-col gap-4 relative team-section overflow-hidden">
           <div
-            class="flex md:flex-row flex-col-reverse gap-2 md:gap-6 md:h-[23rem]"
+            class="flex md:flex-row flex-col-reverse gap-2 md:gap-4 md:h-[23rem]"
           >
             <!--- member info --->
             <div
-              class="md:w-1/2 flex flex-col gap-y-0.5 md:gap-y-4 md:pr-16 team-info"
+              class="md:w-1/2 flex flex-col gap-y-0.5 md:gap-y-4 md:px-16 team-info"
             >
               <h2
                 class="text-xl sm:text-2xl md:text-4xl font-bold member-name"
@@ -690,7 +654,7 @@
 
           <button
             id="slider-prev"
-            class="absolute left-0 md:left-5 lg:left-10 top-[15%] md:top-[75%] z-50 w-12 h-12 shadow-lg bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center shadow cursor-pointer"
+            class="absolute left-0 top-[15%] md:top-[25%] z-50 w-12 h-12 shadow-lg bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center shadow cursor-pointer"
           >
             <i
               class="bi bi-chevron-compact-left text-[var(--primary-color)] text-xl"
@@ -698,7 +662,7 @@
           </button>
           <button
             id="slider-next"
-            class="absolute right-0 md:right-5 lg:right-10 top-[15%] md:top-[75%] z-50 w-12 h-12 shadow-lg bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center shadow cursor-pointer"
+            class="absolute right-0 top-[15%] md:top-[25%] z-50 w-12 h-12 shadow-lg bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center shadow cursor-pointer"
           >
             <i
               class="bi bi-chevron-compact-right text-[var(--primary-color)] text-xl"
@@ -716,19 +680,12 @@
               expedita at consectetur recusandae accusamus ut quis, odio amet
               quas aspernatur."
                 data-image="assets/fahimaMam.jpeg"
-                class="card group rounded-[0.5rem] transition-all duration-500 p-4 h-[14rem] md:h-[16rem] flex flex-col items-center md:gap-y-2 shadow-xl hover:shadow-sm bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 hover:border-white/40 ease-out"
+                class="card group rounded-[0.5rem] transition-all duration-500 p-4 h-[14rem] flex flex-col items-center md:gap-y-2 shadow-xl hover:shadow-sm bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 hover:border-white/40 ease-out"
               >
                 <div
-                  class="rounded-[0.2rem] self-end mr-4 mt-1 text-xs font-semibold border border-white/30 bg-[var(--primary-color)]/20 group-hover:text-black group-hover:border-black/30 backdrop-blur-md shadow-sm px-1.5 py-0.5"
+                  class="w-[4rem] md:w-[6rem] h-[4rem] md:h-[6rem] image-wrapper transition-all duration-200 ease-in rounded-full"
                 >
-                  Active
-                </div>
-                <div
-                  class="w-[4rem] md:w-[6rem] h-[4rem] md:h-[6rem] image-wrapper transition-all duration-200 ease-in rounded-full shadow-[0_0_25px_5px_var(--primary-color)]"
-                >
-                  <div
-                    class="w-full h-full rounded-full bg-[var(--primary-color)] p-0.5"
-                  >
+                  <div class="w-full h-full rounded-full p-0.5">
                     <img
                       src="assets/fahimaMam.jpeg"
                       alt=""
@@ -737,7 +694,7 @@
                   </div>
                 </div>
                 <div
-                  class="flex flex-col items-center shape relative py-2 px-4 mt-4 text-white"
+                  class="flex flex-col items-center py-2 px-4 mt-4 text-black"
                 >
                   <h2 class="text-base font-semibold">Fahima Dipty</h2>
                   <p class="text-xs font-semibold">COO</p>
@@ -752,19 +709,12 @@
               expedita at consectetur recusandae accusamus ut quis, odio amet
               quas aspernatur."
                 data-image="assets/cardImage/testimonial-1.jpg"
-                class="card group rounded-[0.5rem] transition-all duration-500 p-4 h-[14rem] md:h-[16rem] flex flex-col items-center md:gap-y-2 shadow-xl hover:shadow-sm bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 hover:border-white/40 ease-out"
+                class="card group rounded-[0.5rem] transition-all duration-500 p-4 h-[14rem] flex flex-col items-center md:gap-y-2 shadow-xl hover:shadow-sm bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 hover:border-white/40 ease-out"
               >
                 <div
-                  class="rounded-[0.2rem] self-end mr-4 mt-1 text-xs font-semibold border border-white/30 bg-[var(--primary-color)]/20 group-hover:text-black group-hover:border-black/30 backdrop-blur-md shadow-sm px-1.5 py-0.5"
+                  class="w-[4rem] md:w-[6rem] h-[4rem] md:h-[6rem] image-wrapper transition-all duration-200 ease-in rounded-full"
                 >
-                  Active
-                </div>
-                <div
-                  class="w-[4rem] md:w-[6rem] h-[4rem] md:h-[6rem] image-wrapper transition-all duration-200 ease-in rounded-full shadow-[0_0_25px_5px_var(--primary-color)]"
-                >
-                  <div
-                    class="w-full h-full rounded-full bg-[var(--primary-color)] p-0.5"
-                  >
+                  <div class="w-full h-full rounded-full p-0.5">
                     <img
                       src="assets/cardImage/testimonial-1.jpg"
                       alt=""
@@ -773,7 +723,7 @@
                   </div>
                 </div>
                 <div
-                  class="flex flex-col items-center shape relative py-2 px-4 mt-4 text-white"
+                  class="flex flex-col items-center py-2 px-4 mt-4 text-black"
                 >
                   <h2 class="text-base font-semibold">Jhone Doe</h2>
                   <p class="text-xs font-semibold">Chief Officer</p>
@@ -788,19 +738,12 @@
               expedita at consectetur recusandae accusamus ut quis, odio amet
               quas aspernatur."
                 data-image="assets/cardImage/testimonial-2.jpg"
-                class="card group rounded-[0.5rem] transition-all duration-500 p-4 h-[14rem] md:h-[16rem] flex flex-col items-center md:gap-y-2 shadow-xl hover:shadow-sm bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 hover:border-white/40 ease-out"
+                class="card group rounded-[0.5rem] transition-all duration-500 p-4 h-[14rem] flex flex-col items-center md:gap-y-2 shadow-xl hover:shadow-sm bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 hover:border-white/40 ease-out"
               >
                 <div
-                  class="rounded-[0.2rem] self-end mr-4 mt-1 text-xs font-semibold border border-white/30 bg-[var(--primary-color)]/20 group-hover:text-black group-hover:border-black/30 backdrop-blur-md shadow-sm px-1.5 py-0.5"
+                  class="w-[4rem] md:w-[6rem] h-[4rem] md:h-[6rem] image-wrapper transition-all duration-200 ease-in rounded-full"
                 >
-                  Active
-                </div>
-                <div
-                  class="w-[4rem] md:w-[6rem] h-[4rem] md:h-[6rem] image-wrapper transition-all duration-200 ease-in rounded-full shadow-[0_0_25px_5px_var(--primary-color)]"
-                >
-                  <div
-                    class="w-full h-full rounded-full bg-[var(--primary-color)] p-0.5"
-                  >
+                  <div class="w-full h-full rounded-full p-0.5">
                     <img
                       src="assets/cardImage/testimonial-2.jpg"
                       alt=""
@@ -809,7 +752,7 @@
                   </div>
                 </div>
                 <div
-                  class="flex flex-col items-center shape relative py-2 px-4 mt-4 text-white"
+                  class="flex flex-col items-center py-2 px-4 mt-4 text-black"
                 >
                   <h2 class="text-base font-semibold">Martin Mars</h2>
                   <p class="text-xs font-semibold">Manager</p>
@@ -824,19 +767,12 @@
               expedita at consectetur recusandae accusamus ut quis, odio amet
               quas aspernatur."
                 data-image="assets/cardImage/testimonial-1.jpg"
-                class="card group rounded-[0.5rem] transition-all duration-500 p-4 h-[14rem] md:h-[16rem] flex flex-col items-center md:gap-y-2 shadow-xl hover:shadow-sm bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 hover:border-white/40 ease-out"
+                class="card group rounded-[0.5rem] transition-all duration-500 p-4 h-[14rem] flex flex-col items-center md:gap-y-2 shadow-xl hover:shadow-sm bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 hover:border-white/40 ease-out"
               >
                 <div
-                  class="rounded-[0.2rem] self-end mr-4 mt-1 text-xs font-semibold border border-white/30 bg-[var(--primary-color)]/20 group-hover:text-black group-hover:border-black/30 backdrop-blur-md shadow-sm px-1.5 py-0.5"
+                  class="w-[4rem] md:w-[6rem] h-[4rem] md:h-[6rem] image-wrapper transition-all duration-200 ease-in rounded-full"
                 >
-                  Active
-                </div>
-                <div
-                  class="w-[4rem] md:w-[6rem] h-[4rem] md:h-[6rem] image-wrapper transition-all duration-200 ease-in rounded-full shadow-[0_0_25px_5px_var(--primary-color)]"
-                >
-                  <div
-                    class="w-full h-full rounded-full bg-[var(--primary-color)] p-0.5"
-                  >
+                  <div class="w-full h-full rounded-full p-0.5">
                     <img
                       src="assets/cardImage/testimonial-1.jpg"
                       alt=""
@@ -845,7 +781,7 @@
                   </div>
                 </div>
                 <div
-                  class="flex flex-col items-center shape relative py-2 px-4 mt-4 text-white"
+                  class="flex flex-col items-center py-2 px-4 mt-4 text-black"
                 >
                   <h2 class="text-base font-semibold">Jhon Doe</h2>
                   <p class="text-xs font-semibold">Analysis</p>
@@ -860,19 +796,12 @@
               expedita at consectetur recusandae accusamus ut quis, odio amet
               quas aspernatur."
                 data-image="assets/cardImage/testimonial-2.jpg"
-                class="card group rounded-[0.5rem] transition-all duration-500 p-4 h-[14rem] md:h-[16rem] flex flex-col items-center md:gap-y-2 shadow-xl hover:shadow-sm bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 hover:border-white/40 ease-out"
+                class="card group rounded-[0.5rem] transition-all duration-500 p-4 h-[14rem] flex flex-col items-center md:gap-y-2 shadow-xl hover:shadow-sm bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 hover:border-white/40 ease-out"
               >
                 <div
-                  class="rounded-[0.2rem] self-end mr-4 mt-1 text-xs font-semibold border border-white/30 bg-[var(--primary-color)]/20 group-hover:text-black group-hover:border-black/30 backdrop-blur-md shadow-sm px-1.5 py-0.5"
+                  class="w-[4rem] md:w-[6rem] h-[4rem] md:h-[6rem] image-wrapper transition-all duration-200 ease-in rounded-full"
                 >
-                  Active
-                </div>
-                <div
-                  class="w-[4rem] md:w-[6rem] h-[4rem] md:h-[6rem] image-wrapper transition-all duration-200 ease-in rounded-full shadow-[0_0_25px_5px_var(--primary-color)]"
-                >
-                  <div
-                    class="w-full h-full rounded-full bg-[var(--primary-color)] p-0.5"
-                  >
+                  <div class="w-full h-full rounded-full p-0.5">
                     <img
                       src="assets/cardImage/testimonial-2.jpg"
                       alt=""
@@ -881,7 +810,7 @@
                   </div>
                 </div>
                 <div
-                  class="flex flex-col items-center shape relative py-2 px-4 mt-4 text-white"
+                  class="flex flex-col items-center py-2 px-4 mt-4 text-black"
                 >
                   <h2 class="text-base font-semibold">Martin Mars</h2>
                   <p class="text-xs font-semibold">Programer</p>
@@ -1442,7 +1371,7 @@
         }
 
         function scrollToCard() {
-          const cardWidth = cards[0].offsetWidth + 16; // real width + gap
+          const cardWidth = cards[0].offsetWidth + 21; // real width + gap
           const scrollPosition = currentIndex * cardWidth;
 
           wrapper.scrollTo({
