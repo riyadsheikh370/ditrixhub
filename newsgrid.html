@@ -25,8 +25,7 @@
     }
 
     .card-active {
-      width: 7rem;
-      height: 7rem;
+      scale: 1.1;
     }
     .shape {
       background: var(--primary-color);
@@ -68,13 +67,13 @@
     .fade-right {
       opacity: 0;
       transform: translateX(420px);
-      transition: all 0.7s ease;
+      transition: all 0.5s ease;
     }
 
     .fade-bottom {
       opacity: 0;
       transform: translateY(120px);
-      transition: all 0.7s ease;
+      transition: all 0.5s ease;
     }
 
     .fade-out {
@@ -650,27 +649,32 @@
     </section>
     <!-- background section start -->
 
-    <section class="py-5 bg-gray-50">
+    <section class="py-4 md:py-16 bg-gray-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12">
-          <h2 class="text-3xl font-bold text-gray-800">
+        <div class="text-center mb-4 md:mb-12">
+          <h2 class="text-xl md:text-3xl font-bold text-gray-800">
             The People Behind Our Success
           </h2>
-          <p class="text-gray-500">
+          <p class="text-gray-500 mt-2">
             A talent group of individuals to excellence and innovation
           </p>
         </div>
 
-        
         <!--- team card view --->
 
         <div class="flex flex-col gap-4 relative team-section overflow-hidden">
-          <div class="flex md:flex-row flex-col-reverse gap-6 md:h-[23rem]">
+          <div
+            class="flex md:flex-row flex-col-reverse gap-2 md:gap-6 md:h-[23rem]"
+          >
             <!--- member info --->
-            <div class="md:w-1/2 flex flex-col gap-y-2 md:pr-16 team-info">
-              <h2 class="text-2xl md:text-3xl font-bold member-name"></h2>
-              <h4 class="text-lg md:text-xl font-bold member-role"></h4>
-              <p class="text-sm md:text-base font-semibold member-desc"></p>
+            <div
+              class="md:w-1/2 flex flex-col gap-y-0.5 md:gap-y-4 md:pr-16 team-info"
+            >
+              <h2
+                class="text-xl sm:text-2xl md:text-4xl font-bold member-name"
+              ></h2>
+              <h4 class="text-base sm:text-xl font-bold member-role"></h4>
+              <p class="text-xs sm:text-base font-semibold member-desc"></p>
             </div>
             <!--- member image --->
             <div class="w-full md:w-1/2 h-[16rem] md:h-full team-image">
@@ -686,7 +690,7 @@
 
           <button
             id="slider-prev"
-            class="absolute left-0 md:left-5 lg:left-10 bottom-[25%] z-50 w-12 h-12 shadow-lg bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center shadow cursor-pointer"
+            class="absolute left-0 md:left-5 lg:left-10 top-[15%] md:top-[75%] z-50 w-12 h-12 shadow-lg bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center shadow cursor-pointer"
           >
             <i
               class="bi bi-chevron-compact-left text-[var(--primary-color)] text-xl"
@@ -694,7 +698,7 @@
           </button>
           <button
             id="slider-next"
-            class="absolute right-0 md:right-5 lg:right-10 bottom-[25%] z-50 w-12 h-12 shadow-lg bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center shadow cursor-pointer"
+            class="absolute right-0 md:right-5 lg:right-10 top-[15%] md:top-[75%] z-50 w-12 h-12 shadow-lg bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center shadow cursor-pointer"
           >
             <i
               class="bi bi-chevron-compact-right text-[var(--primary-color)] text-xl"
@@ -712,7 +716,7 @@
               expedita at consectetur recusandae accusamus ut quis, odio amet
               quas aspernatur."
                 data-image="assets/fahimaMam.jpeg"
-                class="card group rounded-[0.5rem] transition-all duration-500 p-4 h-[20rem] flex flex-col items-center gap-y-4 shadow-xl hover:shadow-sm bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 hover:border-white/40 ease-out"
+                class="card group rounded-[0.5rem] transition-all duration-500 p-4 h-[14rem] md:h-[16rem] flex flex-col items-center md:gap-y-2 shadow-xl hover:shadow-sm bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 hover:border-white/40 ease-out"
               >
                 <div
                   class="rounded-[0.2rem] self-end mr-4 mt-1 text-xs font-semibold border border-white/30 bg-[var(--primary-color)]/20 group-hover:text-black group-hover:border-black/30 backdrop-blur-md shadow-sm px-1.5 py-0.5"
@@ -720,7 +724,7 @@
                   Active
                 </div>
                 <div
-                  class="w-[6rem] h-[6rem] image-wrapper transition-all duration-200 ease-in rounded-full shadow-[0_0_25px_5px_var(--primary-color)] mt-2"
+                  class="w-[4rem] md:w-[6rem] h-[4rem] md:h-[6rem] image-wrapper transition-all duration-200 ease-in rounded-full shadow-[0_0_25px_5px_var(--primary-color)]"
                 >
                   <div
                     class="w-full h-full rounded-full bg-[var(--primary-color)] p-0.5"
@@ -733,7 +737,7 @@
                   </div>
                 </div>
                 <div
-                  class="flex flex-col items-center shape relative py-2 px-4 mt-12 text-white"
+                  class="flex flex-col items-center shape relative py-2 px-4 mt-4 text-white"
                 >
                   <h2 class="text-base font-semibold">Fahima Dipty</h2>
                   <p class="text-xs font-semibold">COO</p>
@@ -748,7 +752,7 @@
               expedita at consectetur recusandae accusamus ut quis, odio amet
               quas aspernatur."
                 data-image="assets/cardImage/testimonial-1.jpg"
-                class="card group rounded-[0.5rem] transition-all duration-500 p-4 h-[20rem] flex flex-col items-center gap-y-4 shadow-xl hover:shadow-sm bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 hover:border-white/40 ease-out"
+                class="card group rounded-[0.5rem] transition-all duration-500 p-4 h-[14rem] md:h-[16rem] flex flex-col items-center md:gap-y-2 shadow-xl hover:shadow-sm bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 hover:border-white/40 ease-out"
               >
                 <div
                   class="rounded-[0.2rem] self-end mr-4 mt-1 text-xs font-semibold border border-white/30 bg-[var(--primary-color)]/20 group-hover:text-black group-hover:border-black/30 backdrop-blur-md shadow-sm px-1.5 py-0.5"
@@ -756,7 +760,7 @@
                   Active
                 </div>
                 <div
-                  class="w-[6rem] h-[6rem] image-wrapper transition-all duration-200 ease-in rounded-full shadow-[0_0_25px_5px_var(--primary-color)] mt-2"
+                  class="w-[4rem] md:w-[6rem] h-[4rem] md:h-[6rem] image-wrapper transition-all duration-200 ease-in rounded-full shadow-[0_0_25px_5px_var(--primary-color)]"
                 >
                   <div
                     class="w-full h-full rounded-full bg-[var(--primary-color)] p-0.5"
@@ -769,7 +773,7 @@
                   </div>
                 </div>
                 <div
-                  class="flex flex-col items-center shape relative py-2 px-4 mt-12 text-white"
+                  class="flex flex-col items-center shape relative py-2 px-4 mt-4 text-white"
                 >
                   <h2 class="text-base font-semibold">Jhone Doe</h2>
                   <p class="text-xs font-semibold">Chief Officer</p>
@@ -784,7 +788,7 @@
               expedita at consectetur recusandae accusamus ut quis, odio amet
               quas aspernatur."
                 data-image="assets/cardImage/testimonial-2.jpg"
-                class="card group rounded-[0.5rem] transition-all duration-500 p-4 h-[20rem] flex flex-col items-center gap-y-4 shadow-xl hover:shadow-sm bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 hover:border-white/40 ease-out"
+                class="card group rounded-[0.5rem] transition-all duration-500 p-4 h-[14rem] md:h-[16rem] flex flex-col items-center md:gap-y-2 shadow-xl hover:shadow-sm bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 hover:border-white/40 ease-out"
               >
                 <div
                   class="rounded-[0.2rem] self-end mr-4 mt-1 text-xs font-semibold border border-white/30 bg-[var(--primary-color)]/20 group-hover:text-black group-hover:border-black/30 backdrop-blur-md shadow-sm px-1.5 py-0.5"
@@ -792,7 +796,7 @@
                   Active
                 </div>
                 <div
-                  class="w-[6rem] h-[6rem] image-wrapper transition-all duration-200 ease-in rounded-full shadow-[0_0_25px_5px_var(--primary-color)] mt-2"
+                  class="w-[4rem] md:w-[6rem] h-[4rem] md:h-[6rem] image-wrapper transition-all duration-200 ease-in rounded-full shadow-[0_0_25px_5px_var(--primary-color)]"
                 >
                   <div
                     class="w-full h-full rounded-full bg-[var(--primary-color)] p-0.5"
@@ -805,7 +809,7 @@
                   </div>
                 </div>
                 <div
-                  class="flex flex-col items-center shape relative py-2 px-4 mt-12 text-white"
+                  class="flex flex-col items-center shape relative py-2 px-4 mt-4 text-white"
                 >
                   <h2 class="text-base font-semibold">Martin Mars</h2>
                   <p class="text-xs font-semibold">Manager</p>
@@ -820,7 +824,7 @@
               expedita at consectetur recusandae accusamus ut quis, odio amet
               quas aspernatur."
                 data-image="assets/cardImage/testimonial-1.jpg"
-                class="card group rounded-[0.5rem] transition-all duration-500 p-4 h-[20rem] flex flex-col items-center gap-y-4 shadow-xl hover:shadow-sm bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 hover:border-white/40 ease-out"
+                class="card group rounded-[0.5rem] transition-all duration-500 p-4 h-[14rem] md:h-[16rem] flex flex-col items-center md:gap-y-2 shadow-xl hover:shadow-sm bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 hover:border-white/40 ease-out"
               >
                 <div
                   class="rounded-[0.2rem] self-end mr-4 mt-1 text-xs font-semibold border border-white/30 bg-[var(--primary-color)]/20 group-hover:text-black group-hover:border-black/30 backdrop-blur-md shadow-sm px-1.5 py-0.5"
@@ -828,7 +832,7 @@
                   Active
                 </div>
                 <div
-                  class="w-[6rem] h-[6rem] image-wrapper transition-all duration-200 ease-in rounded-full shadow-[0_0_25px_5px_var(--primary-color)] mt-2"
+                  class="w-[4rem] md:w-[6rem] h-[4rem] md:h-[6rem] image-wrapper transition-all duration-200 ease-in rounded-full shadow-[0_0_25px_5px_var(--primary-color)]"
                 >
                   <div
                     class="w-full h-full rounded-full bg-[var(--primary-color)] p-0.5"
@@ -841,7 +845,7 @@
                   </div>
                 </div>
                 <div
-                  class="flex flex-col items-center shape relative py-2 px-4 mt-12 text-white"
+                  class="flex flex-col items-center shape relative py-2 px-4 mt-4 text-white"
                 >
                   <h2 class="text-base font-semibold">Jhon Doe</h2>
                   <p class="text-xs font-semibold">Analysis</p>
@@ -856,7 +860,7 @@
               expedita at consectetur recusandae accusamus ut quis, odio amet
               quas aspernatur."
                 data-image="assets/cardImage/testimonial-2.jpg"
-                class="card group rounded-[0.5rem] transition-all duration-500 p-4 h-[20rem] flex flex-col items-center gap-y-4 shadow-xl hover:shadow-sm bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 hover:border-white/40 ease-out"
+                class="card group rounded-[0.5rem] transition-all duration-500 p-4 h-[14rem] md:h-[16rem] flex flex-col items-center md:gap-y-2 shadow-xl hover:shadow-sm bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 hover:border-white/40 ease-out"
               >
                 <div
                   class="rounded-[0.2rem] self-end mr-4 mt-1 text-xs font-semibold border border-white/30 bg-[var(--primary-color)]/20 group-hover:text-black group-hover:border-black/30 backdrop-blur-md shadow-sm px-1.5 py-0.5"
@@ -864,7 +868,7 @@
                   Active
                 </div>
                 <div
-                  class="w-[6rem] h-[6rem] image-wrapper transition-all duration-200 ease-in rounded-full shadow-[0_0_25px_5px_var(--primary-color)] mt-2"
+                  class="w-[4rem] md:w-[6rem] h-[4rem] md:h-[6rem] image-wrapper transition-all duration-200 ease-in rounded-full shadow-[0_0_25px_5px_var(--primary-color)]"
                 >
                   <div
                     class="w-full h-full rounded-full bg-[var(--primary-color)] p-0.5"
@@ -877,7 +881,7 @@
                   </div>
                 </div>
                 <div
-                  class="flex flex-col items-center shape relative py-2 px-4 mt-12 text-white"
+                  class="flex flex-col items-center shape relative py-2 px-4 mt-4 text-white"
                 >
                   <h2 class="text-base font-semibold">Martin Mars</h2>
                   <p class="text-xs font-semibold">Programer</p>
@@ -1025,7 +1029,7 @@
 
     <!-- footer section  start -->
 
-    <footer class="bg-[#0d0d10] text-gray-300 mt-[12rem] md:mt-0">
+    <footer class="bg-[#0d0d10] text-gray-300">
       <div
         class="border-b border-gray-700 flex flex-col md:flex-row justify-between items-center px-6 md:px-16 py-6 gap-4"
       >
@@ -1374,15 +1378,19 @@
         let currentIndex = 0;
         let sutoSlideInterval;
 
+        let fadeTimeOut;
+
         function updateMemberInfo(index) {
           const card = cards[index];
-
           const name = card.dataset.name;
           const role = card.dataset.role;
           const desc = card.dataset.desc;
           const image = card.dataset.image;
 
           const items = [memberName, memberRole, memberDesc];
+
+          // Clear any previous timer
+          if (fadeTimeOut) clearTimeout(fadeTimeOut);
 
           //fade animation
           memberImage.classList.add("fade-right");
@@ -1391,7 +1399,7 @@
           memberDesc.classList.add("fade-bottom");
 
           //update content
-          setTimeout(() => {
+          fadeTimeOut = setTimeout(() => {
             memberImage.src = image;
             memberName.textContent = name;
             memberRole.textContent = role;
@@ -1405,16 +1413,16 @@
                 item.classList.add("show");
               }, 80 * index);
             });
+
+            //reset animation
+            setTimeout(() => {
+              memberImage.classList.remove("fade-right", "show");
+
+              memberName.classList.remove("fade-right", "show");
+              memberRole.classList.remove("fade-bottom", "show");
+              memberDesc.classList.remove("fade-bottom", "show");
+            }, 500);
           }, 150);
-
-          //reset animation
-          setTimeout(() => {
-            memberImage.classList.remove("fade-right", "show");
-
-            memberName.classList.remove("fade-right", "show");
-            memberRole.classList.remove("fade-bottom", "show");
-            memberDesc.classList.remove("fade-bottom", "show");
-          }, 800);
 
           //remove active from all cards
           cards.forEach((c) => {
