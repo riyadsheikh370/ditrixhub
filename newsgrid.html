@@ -87,80 +87,42 @@
       transform: translateX(0) translateY(0);
     }
 
-    @media (max-width: 1240px) {
-      .team-section {
-        height: auto !important;
-        padding-bottom: 10rem;
-      }
+    .cards-wrapper {
+      overflow: hidden;
+      width: 100%;
+    }
 
-      /* Member info section full width */
-      .team-info {
-        width: 100% !important;
-        text-align: center;
-        padding: 0 1rem;
-      }
+    /* --- FIX CARD RESPONSIVE WIDTHS --- */
+    .cards-wrapper .card {
+      flex: 0 0 auto;
+      transition: all 0.3s ease;
+    }
 
-      /* Member image full width */
-      .team-image {
-        width: 100% !important;
-        margin-bottom: 1rem;
+    /* MOBILE (1 CARD) */
+    @media (max-width: 639px) {
+      .cards-wrapper .card {
+        width: calc(100vw - 3rem);
       }
+    }
 
-      .team-image img {
-        width: 100%;
-        height: 12rem;
-        border-radius: 0.5rem;
+    /* TABLET (2 CARDS) */
+    @media (min-width: 640px) and (max-width: 1023px) {
+      .cards-wrapper .card {
+        width: calc((100vw - 6rem) / 2);
       }
+    }
 
-      /* Slider arrows reposition */
-      #slider-prev,
-      #slider-next {
-        top: 45%;
-        transform: translateY(-50%);
-        width: 40px;
-        height: 40px;
+    /* LAPTOP (3 CARDS) */
+    @media (min-width: 1024px) and (max-width: 1279px) {
+      .cards-wrapper .card {
+        width: calc((100vw - 8rem) / 3);
       }
+    }
 
-      #slider-prev {
-        left: 10px;
-      }
-
-      #slider-next {
-        right: 10px;
-      }
-
-      /* Card slider wrapper */
-      .cards-wrapper {
-        display: flex;
-        overflow-x: auto;
-        scroll-behavior: smooth;
-        gap: 2rem;
-        padding: 1rem;
-        width: 100%;
-        bottom: 0;
-      }
-
-      .cards-wrapper::-webkit-scrollbar {
-        display: none;
-      }
-
-      /* Card size for mobile */
-      .card {
-        flex: 0 0 80%;
-        margin-right: 1rem;
-      }
-
-      .card .image-wrapper {
-        width: 5rem !important;
-        height: 5rem !important;
-      }
-
-      /* Make card text readable */
-      .card h2 {
-        font-size: 1rem;
-      }
-      .card p {
-        font-size: 0.75rem;
+    /* DESKTOP (5 CARDS) */
+    @media (min-width: 1280px) {
+      .cards-wrapper .card {
+        width: calc((100vw - 10rem) / 5);
       }
     }
   </style>
@@ -688,38 +650,43 @@
     </section>
     <!-- background section start -->
 
-    <section class="py-16 bg-gray-50">
+    <section class="py-5 bg-gray-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12">
           <h2 class="text-3xl font-bold text-gray-800">
             The People Behind Our Success
           </h2>
-          <p class="text-gray-500 mt-2">
+          <p class="text-gray-500">
             A talent group of individuals to excellence and innovation
           </p>
         </div>
 
+        
         <!--- team card view --->
 
-        <div
-          class="flex md:flex-row flex-col-reverse gap-6 relative md:h-[52rem] team-section"
-        >
-          <!--- member info --->
-          <div class="md:w-1/2 flex flex-col gap-y-6 md:pr-16 team-info">
-            <h2 class="text-2xl md:text-6xl font-bold member-name"></h2>
-            <h4 class="text-lg md:text-xl font-bold member-role"></h4>
-            <p class="text-sm md:text-base font-semibold member-desc"></p>
-          </div>
-          <!--- member image --->
-          <div class="md:w-1/2 team-image">
-            <img src="" alt="" class="object-cover w-full member-image" />
+        <div class="flex flex-col gap-4 relative team-section overflow-hidden">
+          <div class="flex md:flex-row flex-col-reverse gap-6 md:h-[23rem]">
+            <!--- member info --->
+            <div class="md:w-1/2 flex flex-col gap-y-2 md:pr-16 team-info">
+              <h2 class="text-2xl md:text-3xl font-bold member-name"></h2>
+              <h4 class="text-lg md:text-xl font-bold member-role"></h4>
+              <p class="text-sm md:text-base font-semibold member-desc"></p>
+            </div>
+            <!--- member image --->
+            <div class="w-full md:w-1/2 h-[16rem] md:h-full team-image">
+              <img
+                src=""
+                alt=""
+                class="object-contain w-full h-full member-image"
+              />
+            </div>
           </div>
 
           <!--- prev and next icons --->
 
           <button
             id="slider-prev"
-            class="absolute left-10 top-1/2 z-50 w-12 h-12 shadow-lg bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center shadow cursor-pointer"
+            class="absolute left-0 md:left-5 lg:left-10 bottom-[25%] z-50 w-12 h-12 shadow-lg bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center shadow cursor-pointer"
           >
             <i
               class="bi bi-chevron-compact-left text-[var(--primary-color)] text-xl"
@@ -727,194 +694,194 @@
           </button>
           <button
             id="slider-next"
-            class="absolute right-10 top-1/2 z-50 w-12 h-12 shadow-lg bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center shadow cursor-pointer"
+            class="absolute right-0 md:right-5 lg:right-10 bottom-[25%] z-50 w-12 h-12 shadow-lg bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center shadow cursor-pointer"
           >
             <i
               class="bi bi-chevron-compact-right text-[var(--primary-color)] text-xl"
             ></i>
           </button>
 
-          <div
-            class="cards-wrapper flex absolute -bottom-60 md:bottom-0 overflow-hidden"
-          >
-            <!--- card 1 --->
-            <div
-              data-name="Fahima Dipty"
-              data-role="COO"
-              data-desc="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum
+          <div class="cards-wrapper">
+            <div class="grid grid-flow-col gap-6 w-max">
+              <!--- card 1 --->
+              <div
+                data-name="Fahima Dipty"
+                data-role="COO"
+                data-desc="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum
               cum facere autem consequatur id. Ullam ea porro nobis iure
               expedita at consectetur recusandae accusamus ut quis, odio amet
               quas aspernatur."
-              data-image="assets/fahimaMam.jpeg"
-              class="card group rounded-[0.5rem] transition-all duration-500 p-4 w-[10rem] md:w-[15rem] h-[20rem] flex flex-col items-center gap-y-4 shadow-xl hover:shadow-sm bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 hover:border-white/40 ease-out"
-            >
-              <div
-                class="rounded-[0.2rem] self-end mr-4 mt-1 text-xs font-semibold border border-white/30 bg-[var(--primary-color)]/20 group-hover:text-black group-hover:border-black/30 backdrop-blur-md shadow-sm px-1.5 py-0.5"
-              >
-                Active
-              </div>
-              <div
-                class="w-[6rem] h-[6rem] image-wrapper transition-all duration-200 ease-in rounded-full shadow-[0_0_25px_5px_var(--primary-color)] mt-2"
+                data-image="assets/fahimaMam.jpeg"
+                class="card group rounded-[0.5rem] transition-all duration-500 p-4 h-[20rem] flex flex-col items-center gap-y-4 shadow-xl hover:shadow-sm bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 hover:border-white/40 ease-out"
               >
                 <div
-                  class="w-full h-full rounded-full bg-[var(--primary-color)] p-0.5"
+                  class="rounded-[0.2rem] self-end mr-4 mt-1 text-xs font-semibold border border-white/30 bg-[var(--primary-color)]/20 group-hover:text-black group-hover:border-black/30 backdrop-blur-md shadow-sm px-1.5 py-0.5"
                 >
-                  <img
-                    src="assets/fahimaMam.jpeg"
-                    alt=""
-                    class="w-full h-full rounded-full object-cover"
-                  />
+                  Active
+                </div>
+                <div
+                  class="w-[6rem] h-[6rem] image-wrapper transition-all duration-200 ease-in rounded-full shadow-[0_0_25px_5px_var(--primary-color)] mt-2"
+                >
+                  <div
+                    class="w-full h-full rounded-full bg-[var(--primary-color)] p-0.5"
+                  >
+                    <img
+                      src="assets/fahimaMam.jpeg"
+                      alt=""
+                      class="w-full h-full rounded-full object-cover"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="flex flex-col items-center shape relative py-2 px-4 mt-12 text-white"
+                >
+                  <h2 class="text-base font-semibold">Fahima Dipty</h2>
+                  <p class="text-xs font-semibold">COO</p>
                 </div>
               </div>
+              <!--- card 2 --->
               <div
-                class="flex flex-col items-center shape relative py-2 px-4 mt-12 text-white"
-              >
-                <h2 class="text-base font-semibold">Fahima Dipty</h2>
-                <p class="text-xs font-semibold">COO</p>
-              </div>
-            </div>
-            <!--- card 2 --->
-            <div
-              data-name="Jhone Doe"
-              data-role="Chief Officer"
-              data-desc="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum
+                data-name="Jhone Doe"
+                data-role="Chief Officer"
+                data-desc="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum
               cum facere autem consequatur id. Ullam ea porro nobis iure
               expedita at consectetur recusandae accusamus ut quis, odio amet
               quas aspernatur."
-              data-image="assets/cardImage/testimonial-1.jpg"
-              class="card group rounded-[0.5rem] transition-all duration-500 p-4 w-[10rem] md:w-[15rem] h-[20rem] flex flex-col items-center gap-y-4 shadow-xl hover:shadow-sm bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 hover:border-white/40 ease-out"
-            >
-              <div
-                class="rounded-[0.2rem] self-end mr-4 mt-1 text-xs font-semibold border border-white/30 bg-[var(--primary-color)]/20 group-hover:text-black group-hover:border-black/30 backdrop-blur-md shadow-sm px-1.5 py-0.5"
-              >
-                Active
-              </div>
-              <div
-                class="w-[6rem] h-[6rem] image-wrapper transition-all duration-200 ease-in rounded-full shadow-[0_0_25px_5px_var(--primary-color)] mt-2"
+                data-image="assets/cardImage/testimonial-1.jpg"
+                class="card group rounded-[0.5rem] transition-all duration-500 p-4 h-[20rem] flex flex-col items-center gap-y-4 shadow-xl hover:shadow-sm bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 hover:border-white/40 ease-out"
               >
                 <div
-                  class="w-full h-full rounded-full bg-[var(--primary-color)] p-0.5"
+                  class="rounded-[0.2rem] self-end mr-4 mt-1 text-xs font-semibold border border-white/30 bg-[var(--primary-color)]/20 group-hover:text-black group-hover:border-black/30 backdrop-blur-md shadow-sm px-1.5 py-0.5"
                 >
-                  <img
-                    src="assets/cardImage/testimonial-1.jpg"
-                    alt=""
-                    class="w-full h-full rounded-full object-cover"
-                  />
+                  Active
+                </div>
+                <div
+                  class="w-[6rem] h-[6rem] image-wrapper transition-all duration-200 ease-in rounded-full shadow-[0_0_25px_5px_var(--primary-color)] mt-2"
+                >
+                  <div
+                    class="w-full h-full rounded-full bg-[var(--primary-color)] p-0.5"
+                  >
+                    <img
+                      src="assets/cardImage/testimonial-1.jpg"
+                      alt=""
+                      class="w-full h-full rounded-full object-cover"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="flex flex-col items-center shape relative py-2 px-4 mt-12 text-white"
+                >
+                  <h2 class="text-base font-semibold">Jhone Doe</h2>
+                  <p class="text-xs font-semibold">Chief Officer</p>
                 </div>
               </div>
+              <!--- card 3 --->
               <div
-                class="flex flex-col items-center shape relative py-2 px-4 mt-12 text-white"
-              >
-                <h2 class="text-base font-semibold">Jhone Doe</h2>
-                <p class="text-xs font-semibold">Chief Officer</p>
-              </div>
-            </div>
-            <!--- card 3 --->
-            <div
-              data-name="Martin Mars"
-              data-role="Manager"
-              data-desc="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum
+                data-name="Martin Mars"
+                data-role="Manager"
+                data-desc="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum
               cum facere autem consequatur id. Ullam ea porro nobis iure
               expedita at consectetur recusandae accusamus ut quis, odio amet
               quas aspernatur."
-              data-image="assets/cardImage/testimonial-2.jpg"
-              class="card group rounded-[0.5rem] transition-all duration-500 p-4 w-[10rem] md:w-[15rem] h-[20rem] flex flex-col items-center gap-y-4 shadow-xl hover:shadow-sm bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 hover:border-white/40 ease-out"
-            >
-              <div
-                class="rounded-[0.2rem] self-end mr-4 mt-1 text-xs font-semibold border border-white/30 bg-[var(--primary-color)]/20 group-hover:text-black group-hover:border-black/30 backdrop-blur-md shadow-sm px-1.5 py-0.5"
-              >
-                Active
-              </div>
-              <div
-                class="w-[6rem] h-[6rem] image-wrapper transition-all duration-200 ease-in rounded-full shadow-[0_0_25px_5px_var(--primary-color)] mt-2"
+                data-image="assets/cardImage/testimonial-2.jpg"
+                class="card group rounded-[0.5rem] transition-all duration-500 p-4 h-[20rem] flex flex-col items-center gap-y-4 shadow-xl hover:shadow-sm bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 hover:border-white/40 ease-out"
               >
                 <div
-                  class="w-full h-full rounded-full bg-[var(--primary-color)] p-0.5"
+                  class="rounded-[0.2rem] self-end mr-4 mt-1 text-xs font-semibold border border-white/30 bg-[var(--primary-color)]/20 group-hover:text-black group-hover:border-black/30 backdrop-blur-md shadow-sm px-1.5 py-0.5"
                 >
-                  <img
-                    src="assets/cardImage/testimonial-2.jpg"
-                    alt=""
-                    class="w-full h-full rounded-full object-cover"
-                  />
+                  Active
+                </div>
+                <div
+                  class="w-[6rem] h-[6rem] image-wrapper transition-all duration-200 ease-in rounded-full shadow-[0_0_25px_5px_var(--primary-color)] mt-2"
+                >
+                  <div
+                    class="w-full h-full rounded-full bg-[var(--primary-color)] p-0.5"
+                  >
+                    <img
+                      src="assets/cardImage/testimonial-2.jpg"
+                      alt=""
+                      class="w-full h-full rounded-full object-cover"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="flex flex-col items-center shape relative py-2 px-4 mt-12 text-white"
+                >
+                  <h2 class="text-base font-semibold">Martin Mars</h2>
+                  <p class="text-xs font-semibold">Manager</p>
                 </div>
               </div>
+              <!--- card 4 --->
               <div
-                class="flex flex-col items-center shape relative py-2 px-4 mt-12 text-white"
-              >
-                <h2 class="text-base font-semibold">Martin Mars</h2>
-                <p class="text-xs font-semibold">Manager</p>
-              </div>
-            </div>
-            <!--- card 4 --->
-            <div
-              data-name="Jhon Doe"
-              data-role="Analysis"
-              data-desc="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum
+                data-name="Jhon Doe"
+                data-role="Analysis"
+                data-desc="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum
               cum facere autem consequatur id. Ullam ea porro nobis iure
               expedita at consectetur recusandae accusamus ut quis, odio amet
               quas aspernatur."
-              data-image="assets/cardImage/testimonial-1.jpg"
-              class="card group rounded-[0.5rem] transition-all duration-500 p-4 w-[10rem] md:w-[15rem] h-[20rem] flex flex-col items-center gap-y-4 shadow-xl hover:shadow-sm bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 hover:border-white/40 ease-out"
-            >
-              <div
-                class="rounded-[0.2rem] self-end mr-4 mt-1 text-xs font-semibold border border-white/30 bg-[var(--primary-color)]/20 group-hover:text-black group-hover:border-black/30 backdrop-blur-md shadow-sm px-1.5 py-0.5"
-              >
-                Active
-              </div>
-              <div
-                class="w-[6rem] h-[6rem] image-wrapper transition-all duration-200 ease-in rounded-full shadow-[0_0_25px_5px_var(--primary-color)] mt-2"
+                data-image="assets/cardImage/testimonial-1.jpg"
+                class="card group rounded-[0.5rem] transition-all duration-500 p-4 h-[20rem] flex flex-col items-center gap-y-4 shadow-xl hover:shadow-sm bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 hover:border-white/40 ease-out"
               >
                 <div
-                  class="w-full h-full rounded-full bg-[var(--primary-color)] p-0.5"
+                  class="rounded-[0.2rem] self-end mr-4 mt-1 text-xs font-semibold border border-white/30 bg-[var(--primary-color)]/20 group-hover:text-black group-hover:border-black/30 backdrop-blur-md shadow-sm px-1.5 py-0.5"
                 >
-                  <img
-                    src="assets/cardImage/testimonial-1.jpg"
-                    alt=""
-                    class="w-full h-full rounded-full object-cover"
-                  />
+                  Active
+                </div>
+                <div
+                  class="w-[6rem] h-[6rem] image-wrapper transition-all duration-200 ease-in rounded-full shadow-[0_0_25px_5px_var(--primary-color)] mt-2"
+                >
+                  <div
+                    class="w-full h-full rounded-full bg-[var(--primary-color)] p-0.5"
+                  >
+                    <img
+                      src="assets/cardImage/testimonial-1.jpg"
+                      alt=""
+                      class="w-full h-full rounded-full object-cover"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="flex flex-col items-center shape relative py-2 px-4 mt-12 text-white"
+                >
+                  <h2 class="text-base font-semibold">Jhon Doe</h2>
+                  <p class="text-xs font-semibold">Analysis</p>
                 </div>
               </div>
+              <!--- card 5 --->
               <div
-                class="flex flex-col items-center shape relative py-2 px-4 mt-12 text-white"
-              >
-                <h2 class="text-base font-semibold">Jhon Doe</h2>
-                <p class="text-xs font-semibold">Analysis</p>
-              </div>
-            </div>
-            <!--- card 5 --->
-            <div
-              data-name="Martin Mars"
-              data-role="Programer"
-              data-desc="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum
+                data-name="Martin Mars"
+                data-role="Programer"
+                data-desc="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum
               cum facere autem consequatur id. Ullam ea porro nobis iure
               expedita at consectetur recusandae accusamus ut quis, odio amet
               quas aspernatur."
-              data-image="assets/cardImage/testimonial-2.jpg"
-              class="card group rounded-[0.5rem] transition-all duration-500 p-4 w-[10rem] md:w-[15rem] h-[20rem] flex flex-col items-center gap-y-4 shadow-xl hover:shadow-sm bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 hover:border-white/40 ease-out"
-            >
-              <div
-                class="rounded-[0.2rem] self-end mr-4 mt-1 text-xs font-semibold border border-white/30 bg-[var(--primary-color)]/20 group-hover:text-black group-hover:border-black/30 backdrop-blur-md shadow-sm px-1.5 py-0.5"
-              >
-                Active
-              </div>
-              <div
-                class="w-[6rem] h-[6rem] image-wrapper transition-all duration-200 ease-in rounded-full shadow-[0_0_25px_5px_var(--primary-color)] mt-2"
+                data-image="assets/cardImage/testimonial-2.jpg"
+                class="card group rounded-[0.5rem] transition-all duration-500 p-4 h-[20rem] flex flex-col items-center gap-y-4 shadow-xl hover:shadow-sm bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 hover:border-white/40 ease-out"
               >
                 <div
-                  class="w-full h-full rounded-full bg-[var(--primary-color)] p-0.5"
+                  class="rounded-[0.2rem] self-end mr-4 mt-1 text-xs font-semibold border border-white/30 bg-[var(--primary-color)]/20 group-hover:text-black group-hover:border-black/30 backdrop-blur-md shadow-sm px-1.5 py-0.5"
                 >
-                  <img
-                    src="assets/cardImage/testimonial-2.jpg"
-                    alt=""
-                    class="w-full h-full rounded-full object-cover"
-                  />
+                  Active
                 </div>
-              </div>
-              <div
-                class="flex flex-col items-center shape relative py-2 px-4 mt-12 text-white"
-              >
-                <h2 class="text-base font-semibold">Martin Mars</h2>
-                <p class="text-xs font-semibold">Programer</p>
+                <div
+                  class="w-[6rem] h-[6rem] image-wrapper transition-all duration-200 ease-in rounded-full shadow-[0_0_25px_5px_var(--primary-color)] mt-2"
+                >
+                  <div
+                    class="w-full h-full rounded-full bg-[var(--primary-color)] p-0.5"
+                  >
+                    <img
+                      src="assets/cardImage/testimonial-2.jpg"
+                      alt=""
+                      class="w-full h-full rounded-full object-cover"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="flex flex-col items-center shape relative py-2 px-4 mt-12 text-white"
+                >
+                  <h2 class="text-base font-semibold">Martin Mars</h2>
+                  <p class="text-xs font-semibold">Programer</p>
+                </div>
               </div>
             </div>
           </div>
@@ -1463,14 +1430,34 @@
           imgWrapper.classList.add("card-active");
           imgWrapper.classList.remove("w-[6rem]", "h-[6rem]");
 
-          if (window.innerWidth <= 1260) {
-            const cardWidth = cards[0].offsetWidth + 32; // width + gap
-            wrapper.scrollTo({
-              left: currentIndex * cardWidth,
-              behavior: "smooth",
-            });
-          }
+          scrollToCard();
         }
+
+        function scrollToCard() {
+          const cardWidth = cards[0].offsetWidth + 16; // real width + gap
+          const scrollPosition = currentIndex * cardWidth;
+
+          wrapper.scrollTo({
+            left: scrollPosition,
+            behavior: "smooth",
+          });
+        }
+
+        let startX = 0;
+
+        wrapper.addEventListener("touchstart", (e) => {
+          startX = e.touches[0].clientX;
+        });
+
+        wrapper.addEventListener("touchend", (e) => {
+          const endX = e.changedTouches[0].clientX;
+
+          if (endX < startX - 50) {
+            nextSlide();
+          } else if (endX > startX + 50) {
+            prevSlide();
+          }
+        });
 
         function nextSlide() {
           currentIndex = (currentIndex + 1) % cards.length;
@@ -1486,7 +1473,7 @@
         function startSlide() {
           autoSlideInterval = setInterval(() => {
             nextSlide();
-          }, 3000);
+          }, 4000);
         }
 
         function stopSlide() {
